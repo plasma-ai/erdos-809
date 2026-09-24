@@ -1,5 +1,5 @@
 name = "Erdos809"
-defaultTargets = ["Erdos809"]
+defaultTargets = ["Erdos809", "Challenge", "Solution"]
 
 # No silently-introduced implicit binders anywhere in the corpus.
 [leanOptions]
@@ -13,3 +13,11 @@ rev = "v4.35.0-rc2"
 [[lean_lib]]
 name = "Erdos809"
 globs = ["Erdos809.+"]
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

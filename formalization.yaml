@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# Publication draft: replace the REQUIRED values before submission.
+version: "v0.4"
+
+project:
+  name: "Erdős Problem 809: rainbow odd cycles"
+  description: >-
+    A Lean proof that, for every fixed odd cycle of length at least seven,
+    the maximal anti-Ramsey threshold at floor(n²/4) + 1 edges is
+    n²/8 + o(n²). The development proves the seven-cycle branch and
+    formalizes the longer-cycle full-density result of Bucić, Chen, and Ma.
+  authors:
+    - "REQUIRED: human formalization author(s)"
+  license: "REQUIRED: SPDX repository license"
+  responsible_maintainers:
+    - "REQUIRED: human responsible maintainer(s)"
+
+classification:
+  arxiv: ["math.CO"]
+  msc2020: ["05C15", "05C35"]
+
+sources:
+  - title: "Maximal antiramsey graphs and the strong chromatic number"
+    authors: ["S. A. Burr", "P. Erdős", "R. L. Graham", "V. T. Sós"]
+    id: "https://doi.org/10.1002/jgt.3190130302"
+    type: "article"
+    relationship: "formalizes"
+    note: "Source of the odd-cycle threshold conjecture."
+  - title: "On a maximal anti-Ramsey conjecture of Burr, Erdős, Graham, and Sós"
+    authors: ["Matija Bucić", "Kaizhe Chen", "Jie Ma"]
+    id: "arXiv:2603.18952"
+    type: "preprint"
+    relationship: "formalizes"
+    note: "Source of the full-density result for odd cycles of length at least nine."
+
+status:
+  scope: >-
+    The compared theorem is the asymptotic threshold for every fixed odd cycle
+    of length at least seven at floor(n²/4) + 1 edges. The proof development
+    also contains a full-density theorem for the longer odd cycles; that
+    supporting theorem is not separately listed in comparator.json.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: "other"
+      models: []
+      tool_setup: "AI models were used; model names and tooling details remain to be supplied."
+  notes: "AI models were used; human direction and review details remain to be supplied."
+
+fidelity:
+  divergences: "REQUIRED: source-fidelity review and any known divergences"
+
+review:
+  status: "REQUIRED: honest mathematical review status"
+  reviewers: []
+  notes: "REQUIRED: describe statement and proof review"
+
+alignment:
+  namespace: "Erdos809"
+  statements:
+    - source: "Burr–Erdős–Graham–Sós odd-cycle threshold conjecture"
+      lean: "Erdos809.main_result"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        The formal statement uses the least palette size over n-vertex
+        graphs with at least floor(n²/4) + 1 edges and expresses the
+        o(n²) error as a limit after division by n².
+
+acknowledgements: "Mathlib and the authors of the cited mathematical sources."
