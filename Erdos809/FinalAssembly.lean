@@ -13,7 +13,35 @@ branch is proved in `C7LowerSequence`; the longer-cycle branch is the
 Bucić–Chen–Ma full-density theorem.
 -/
 
+open scoped Asymptotics
+
 namespace Erdos809
+
+/-- Asymptotic equivalence to `n²/8` is the normalized limit used by the
+seven-cycle and longer-cycle proofs. -/
+private theorem equivalent_iff_normalized_limit (f : ℕ → ℝ) :
+    (f ~[Filter.atTop] fun n => (n : ℝ) ^ 2 / 8) ↔
+      Filter.Tendsto (fun n => f n / (n : ℝ) ^ 2)
+        Filter.atTop (nhds (1 / 8 : ℝ)) := by
+  have hne : ∀ᶠ n : ℕ in Filter.atTop, (n : ℝ) ^ 2 / 8 ≠ 0 := by
+    filter_upwards [Filter.eventually_ne_atTop (0 : ℕ)] with n hn
+    exact div_ne_zero (pow_ne_zero _ (Nat.cast_ne_zero.mpr hn)) (by norm_num)
+  have hscale (n : ℕ) : f n / ((n : ℝ) ^ 2 / 8) * (1 / 8 : ℝ) =
+      f n / (n : ℝ) ^ 2 := by
+    rw [div_div_eq_mul_div]
+    ring
+  constructor
+  · intro h
+    have hratio := (Asymptotics.isEquivalent_iff_tendsto_one hne).mp h
+    have hscaled := hratio.mul_const (1 / 8 : ℝ)
+    simpa only [Pi.div_apply, hscale, one_mul] using hscaled
+  · intro h
+    have hscaled := h.mul_const (8 : ℝ)
+    apply (Asymptotics.isEquivalent_iff_tendsto_one hne).mpr
+    convert hscaled using 1
+    · ext n
+      simp [div_eq_mul_inv, mul_assoc, mul_comm]
+    · norm_num
 
 /-- The general graph-copy threshold agrees with the indexed-cycle threshold
 used in the longer-cycle proof. -/
@@ -21,6 +49,7 @@ private theorem thresholdFor_iff_cycleThresholdFormula (k : ℕ) (hk : 3 ≤ k) 
     ThresholdFor k ↔ BucicChenMa.ThresholdFormula k := by
   unfold ThresholdFor BucicChenMa.ThresholdFormula
   have hm : 3 ≤ 2 * k + 1 := by omega
+  rw [equivalent_iff_normalized_limit]
   simp only [maximalAntiRamsey_cycleGraph hm]
 
 /-- The exact-edge seven-cycle result and the longer-cycle thresholds imply

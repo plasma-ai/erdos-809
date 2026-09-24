@@ -1,3 +1,4 @@
+import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
 import Mathlib.Topology.Instances.Real.Lemmas
 import Erdos809.RainbowCycles
 
@@ -14,16 +15,16 @@ to the general function used here. The mathematical sources are listed in
 `formalization.yaml`.
 -/
 
+open scoped Asymptotics
+
 namespace Erdos809
 
 /-- The threshold conjecture for a fixed odd cycle of length 2k+1. -/
 def ThresholdFor (k : ℕ) : Prop :=
-  Filter.Tendsto
-    (fun n : ℕ =>
-      (maximalAntiRamsey n (n * n / 4 + 1)
-        (SimpleGraph.cycleGraph (2 * k + 1)) : ℝ) /
-        (n : ℝ) ^ 2)
-    Filter.atTop (nhds ((1 : ℝ) / (8 : ℝ)))
+  (fun n : ℕ =>
+    (maximalAntiRamsey n (n * n / 4 + 1)
+      (SimpleGraph.cycleGraph (2 * k + 1)) : ℝ))
+    ~[Filter.atTop] (fun n : ℕ => (n : ℝ) ^ 2 / 8)
 
 /-- The full Burr-Erdős-Graham-Sós conjecture, for every k at least three. -/
 def Statement : Prop :=

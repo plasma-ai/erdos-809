@@ -68,6 +68,6 @@ alignment:
       note: >-
         The formal statement uses the least palette size over n-vertex
         graphs with at least floor(n²/4) + 1 edges and expresses the
-        o(n²) error as a limit after division by n².
+        o(n²) error with Mathlib's asymptotic equivalence relation.
 
 acknowledgements: "Mathlib and the authors of the cited mathematical sources."

@@ -1,3 +1,4 @@
+import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
 import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
 import Mathlib.Combinatorics.SimpleGraph.CycleGraph
 import Mathlib.Order.Lattice.Nat
@@ -17,6 +18,8 @@ for every fixed odd cycle length at least seven.
 The theorem below has a deliberate proof hole. `Solution.lean` supplies the
 proof, and Comparator checks that it proves this exact statement.
 -/
+
+open scoped Asymptotics
 
 namespace Erdos809
 
@@ -40,12 +43,10 @@ noncomputable def maximalAntiRamsey (n e : ℕ) {U : Type*} (H : SimpleGraph U) 
 
 /-- The threshold conjecture for a fixed odd cycle of length `2 * k + 1`. -/
 def ThresholdFor (k : ℕ) : Prop :=
-  Filter.Tendsto
-    (fun n : ℕ =>
-      (maximalAntiRamsey n (n * n / 4 + 1)
-        (SimpleGraph.cycleGraph (2 * k + 1)) : ℝ) /
-        (n : ℝ) ^ 2)
-    Filter.atTop (nhds ((1 : ℝ) / (8 : ℝ)))
+  (fun n : ℕ =>
+    (maximalAntiRamsey n (n * n / 4 + 1)
+      (SimpleGraph.cycleGraph (2 * k + 1)) : ℝ))
+    ~[Filter.atTop] (fun n : ℕ => (n : ℝ) ^ 2 / 8)
 
 /-- The threshold claim for every odd cycle of length at least seven. -/
 def Statement : Prop := ∀ k ≥ 3, ThresholdFor k
