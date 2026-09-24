@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Analysis.Real.Sqrt
 import Mathlib.Data.Nat.Sqrt
 import Mathlib.Order.Filter.AtTopBot.Archimedean

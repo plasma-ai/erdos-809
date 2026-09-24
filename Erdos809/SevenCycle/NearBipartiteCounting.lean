@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Combinatorics.SimpleGraph.DegreeSum
 import Mathlib.Combinatorics.SimpleGraph.Sum
 import Mathlib.Combinatorics.SimpleGraph.Density

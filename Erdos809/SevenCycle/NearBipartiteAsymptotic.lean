@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearBipartiteBoundary
 import Erdos809.SevenCycle.NearBipartiteBoundaryRight
 import Erdos809.SevenCycle.NearBipartiteOrientation

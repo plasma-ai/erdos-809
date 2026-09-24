@@ -1,5 +1,5 @@
 import Erdos809.SevenCycle.C7WalkBridge
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 
 /-!
 # From seven-walk lifting to color separation

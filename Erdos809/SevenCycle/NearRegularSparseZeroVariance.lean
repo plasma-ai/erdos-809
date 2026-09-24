@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularSparseExtraction
 import Erdos809.SevenCycle.NearRegularSparseAlternating
 import Erdos809.SevenCycle.NearRegularVarianceBridge

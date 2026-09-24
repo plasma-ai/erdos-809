@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Order.Partition.Equipartition
 import Mathlib.Algebra.Order.BigOperators.Group.Finset
 import Mathlib.Tactic.GCongr

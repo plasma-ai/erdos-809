@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearBipartiteDensity
 import Erdos809.SevenCycle.NearBipartite
 

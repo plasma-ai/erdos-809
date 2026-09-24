@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SubgraphTransfer
 import Erdos809.TwoCliqueRainbow
 import Erdos809.TwoCliqueArithmetic

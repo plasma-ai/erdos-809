@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearBipartiteSqrt
 import Mathlib.Topology.Algebra.Order.Field
 import Mathlib.Topology.MetricSpace.Pseudo.Lemmas

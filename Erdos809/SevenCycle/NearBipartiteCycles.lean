@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearBipartiteFamily
 import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
 import Mathlib.Data.Fin.VecNotation

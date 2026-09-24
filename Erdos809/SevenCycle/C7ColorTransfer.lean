@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.C7ColorAllocation
 import Erdos809.SevenCycle.C7ColorMaximum
 import Erdos809.SevenCycle.CleaningWalkBridge

@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring

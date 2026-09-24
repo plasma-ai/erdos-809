@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Algebra.BigOperators.Sym
 import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic.Ring

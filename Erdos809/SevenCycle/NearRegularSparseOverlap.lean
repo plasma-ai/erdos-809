@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularVariableOverlap
 import Mathlib.Order.Filter.AtTopBot.Tendsto
 import Mathlib.Tactic.FieldSimp

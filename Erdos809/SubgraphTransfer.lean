@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Combinatorics.SimpleGraph.Finite
 import Mathlib.Data.Finset.Card
 

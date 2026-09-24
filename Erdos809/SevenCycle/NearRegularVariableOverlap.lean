@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularNonRobustAsymptotic
 import Erdos809.SevenCycle.NearRegularMaximumCutAsymptotic
 import Erdos809.SevenCycle.NearBipartiteConventional

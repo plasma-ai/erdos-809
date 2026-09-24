@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularDisjointCount
 import Erdos809.SevenCycle.NearRegularDisjointRelabel
 import Erdos809.SevenCycle.NearRegularDisjointFinite

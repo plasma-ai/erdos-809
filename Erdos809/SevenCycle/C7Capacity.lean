@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.C7FullSplit
 import Erdos809.SevenCycle.C7FiniteBound
 import Erdos809.SevenCycle.C7Sym2Sum

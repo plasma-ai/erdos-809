@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularExtraction
 import Erdos809.SevenCycle.NearRegularDisjointRelabel
 import Mathlib.Analysis.Real.Sqrt

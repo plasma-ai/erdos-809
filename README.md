@@ -8,6 +8,9 @@ number of edge colors that makes every such cycle rainbow is
 
 The seven-cycle proof in `Erdos809/SevenCycle/` and the longer-cycle proof in
 `Erdos809/BucicChenMa/` are assembled in `Erdos809/FinalAssembly.lean`.
+`Erdos809/SevenCycle/Statement.lean` contains the exact-edge formulation used
+by the seven-cycle proof; `Erdos809/Statement.lean` contains the final
+graph-copy threshold.
 The general maximal anti-Ramsey function and the two-clique construction live
 directly under `Erdos809/`. The longer-cycle branch formalizes the
 full-density result of Bucić, Chen, and Ma, [*On a maximal anti-Ramsey

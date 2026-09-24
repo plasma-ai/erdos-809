@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegular
 import Mathlib.Combinatorics.SimpleGraph.Density
 import Mathlib.Tactic.Linarith

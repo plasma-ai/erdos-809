@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.C7VarianceAsymptotic
 import Erdos809.SevenCycle.C7AsymptoticArithmetic
 import Erdos809.SevenCycle.CleaningRobust

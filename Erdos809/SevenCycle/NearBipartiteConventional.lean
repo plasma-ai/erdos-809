@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearBipartiteAsymptotic
 import Erdos809.SevenCycle.NearBipartiteMass
 import Erdos809.SevenCycle.NearBipartiteParameters

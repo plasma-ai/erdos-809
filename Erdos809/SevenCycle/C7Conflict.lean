@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.JointCliqueMass
 import Mathlib.Data.Sym.Sym2
 import Mathlib.Combinatorics.SimpleGraph.Basic

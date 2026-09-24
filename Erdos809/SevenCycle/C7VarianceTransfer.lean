@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.C7GraphReweight
 import Erdos809.SevenCycle.C7ColorTransfer
 

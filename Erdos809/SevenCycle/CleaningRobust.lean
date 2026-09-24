@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.CleaningSizes
 import Erdos809.SevenCycle.CleaningPatternRealization
 import Erdos809.SevenCycle.CleaningWalkCases

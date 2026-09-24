@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.C7GraphReweight
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring

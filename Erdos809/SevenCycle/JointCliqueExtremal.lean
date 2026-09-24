@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.JointCliqueMass
 import Erdos809.SevenCycle.FinitePerturbation
 import Erdos809.SevenCycle.CompactFeasible

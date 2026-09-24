@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.C7VarianceDichotomy
 import Erdos809.SevenCycle.C7PositiveVarianceSubsequence
 import Erdos809.SevenCycle.NearRegularVarianceBridge

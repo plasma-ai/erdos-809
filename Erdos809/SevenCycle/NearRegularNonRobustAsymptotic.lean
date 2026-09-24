@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularNonRobust
 import Mathlib.Order.Filter.AtTopBot.Archimedean
 import Mathlib.Topology.Instances.Real.Lemmas

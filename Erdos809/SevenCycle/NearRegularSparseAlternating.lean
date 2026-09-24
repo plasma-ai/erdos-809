@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearRegularSparseStructuralSplit
 import Erdos809.SevenCycle.NearRegularSparseRobust
 import Erdos809.SevenCycle.NearRegularSparseDisjoint

@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Erdos809.SevenCycle.NearBipartiteCounting
 import Erdos809.SevenCycle.NearBipartiteParameters
 import Mathlib.Analysis.Real.Sqrt

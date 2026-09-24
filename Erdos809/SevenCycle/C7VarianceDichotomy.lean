@@ -1,4 +1,4 @@
-import Erdos809.Statement
+import Erdos809.SevenCycle.Statement
 import Mathlib.Order.Filter.AtTopBot.Basic
 import Mathlib.Topology.Order.Basic
 
