@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
-# Publication draft: replace the REQUIRED values before submission.
 version: "v0.4"
 
 project:
@@ -10,10 +9,10 @@ project:
     n²/8 + o(n²). The development proves the seven-cycle branch and
     formalizes the longer-cycle full-density result of Bucić, Chen, and Ma.
   authors:
-    - "REQUIRED: human formalization author(s)"
-  license: "REQUIRED: SPDX repository license"
+    - "Jacob Parish"
+  license: "Apache-2.0"
   responsible_maintainers:
-    - "REQUIRED: human responsible maintainer(s)"
+    - "Jacob Parish"
 
 classification:
   arxiv: ["math.CO"]
@@ -23,13 +22,13 @@ sources:
   - title: "Maximal antiramsey graphs and the strong chromatic number"
     authors: ["S. A. Burr", "P. Erdős", "R. L. Graham", "V. T. Sós"]
     id: "https://doi.org/10.1002/jgt.3190130302"
-    type: "article"
+    type: "paper"
     relationship: "formalizes"
     note: "Source of the odd-cycle threshold conjecture."
   - title: "On a maximal anti-Ramsey conjecture of Burr, Erdős, Graham, and Sós"
     authors: ["Matija Bucić", "Kaizhe Chen", "Jie Ma"]
     id: "arXiv:2603.18952"
-    type: "preprint"
+    type: "paper"
     relationship: "formalizes"
     note: "Source of the full-density result for odd cycles of length at least nine."
 
@@ -45,18 +44,33 @@ status:
 
 automation:
   methods:
-    - method: "other"
-      models: []
-      tool_setup: "AI models were used; model names and tooling details remain to be supplied."
-  notes: "AI models were used; human direction and review details remain to be supplied."
+    - method: "agent"
+      models: ["gpt-6-sol"]
+      framework: "Codex"
+      tool_setup: "Lean 4.35.0-rc2, Mathlib, Lake, and Comparator."
+      prompting_notes: >-
+        Interactive human direction covered the target theorem, the use of
+        Mathlib graph copies and cycles, the publication layout, and the
+        readability of the formal statement.
+  notes: >-
+    GPT-6 Sol produced and revised the Lean formalization in Codex under
+    iterative human direction.
 
 fidelity:
-  divergences: "REQUIRED: source-fidelity review and any known divergences"
+  divergences: >-
+    No known divergence in the main result's mathematical content from the
+    cited odd-cycle threshold conjecture. The Lean statement uses graphs with
+    at least floor(n²/4) + 1 edges; deleting edges gives the equivalent
+    exact-edge formulation.
 
 review:
-  status: "REQUIRED: honest mathematical review status"
+  status: "self-assessed"
   reviewers: []
-  notes: "REQUIRED: describe statement and proof review"
+  notes: >-
+    The human project lead reviewed the formalization and confirmed that it
+    formalizes the claimed mathematical result. The Lean development was
+    built and the compared theorem checked by Comparator. No independent
+    mathematical proof review has been recorded.
 
 alignment:
   namespace: "Erdos809"
