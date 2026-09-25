@@ -1,5 +1,5 @@
 import Erdos809.SevenCycle.Statement
-import Erdos809.TwoCliqueCounts
+import Erdos809.TwoClique.Counts
 import Mathlib.Data.Nat.Sqrt
 import Mathlib.Data.Nat.Choose.Cast
 import Mathlib.Data.Nat.Cast.Order.Field

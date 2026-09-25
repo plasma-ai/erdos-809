@@ -1,5 +1,5 @@
 import Erdos809.BucicChenMa.Statement
-import Erdos809.TwoCliqueArithmetic
+import Erdos809.TwoClique.Arithmetic
 
 /-!
 # Clique sizes for the full-density upper construction

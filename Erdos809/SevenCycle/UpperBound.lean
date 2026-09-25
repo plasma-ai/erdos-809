@@ -1,7 +1,7 @@
 import Erdos809.SevenCycle.Statement
 import Erdos809.SubgraphTransfer
-import Erdos809.TwoCliqueRainbow
-import Erdos809.TwoCliqueArithmetic
+import Erdos809.TwoClique.Rainbow
+import Erdos809.TwoClique.Arithmetic
 
 /-!
 # The finite two-clique upper bound

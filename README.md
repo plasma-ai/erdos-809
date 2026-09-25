@@ -11,9 +11,10 @@ The seven-cycle proof in `Erdos809/SevenCycle/` and the longer-cycle proof in
 `Erdos809/SevenCycle/Statement.lean` contains the exact-edge formulation used
 by the seven-cycle proof; `Erdos809/Statement.lean` contains the final
 graph-copy threshold.
-The general maximal anti-Ramsey function and the two-clique construction live
-directly under `Erdos809/`. The longer-cycle branch formalizes the
-full-density result of Bucić, Chen, and Ma, [*On a maximal anti-Ramsey
+The general maximal anti-Ramsey function lives directly under `Erdos809/`,
+while the shared upper-bound construction lives in `Erdos809/TwoClique/`.
+The longer-cycle branch formalizes the full-density result of Bucić, Chen,
+and Ma, [*On a maximal anti-Ramsey
 conjecture of Burr, Erdős, Graham, and Sós*](https://arxiv.org/abs/2603.18952).
 
 ## Publication layout

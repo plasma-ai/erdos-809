@@ -1,5 +1,5 @@
 import Erdos809.BucicChenMa.Statement
-import Erdos809.TwoCliqueArithmetic
+import Erdos809.TwoClique.Arithmetic
 
 /-!
 # The uniform error in the two-clique construction

@@ -1,9 +1,9 @@
 import Erdos809.SevenCycle.Statement
-import Erdos809.TwoCliqueCounts
+import Erdos809.TwoClique.Counts
 import Erdos809.RainbowCyclesSum
 
 /-!
-# Rainbow seven-cycles in the two-clique construction
+# Rainbow cycles in the two-clique construction
 -/
 
 namespace Erdos809

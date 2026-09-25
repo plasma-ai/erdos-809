@@ -1,7 +1,7 @@
 import Erdos809.BucicChenMa.Statement
 import Erdos809.BucicChenMa.UpperConstruction
 import Erdos809.BucicChenMa.ExactEdgeTransfer
-import Erdos809.TwoCliqueRainbow
+import Erdos809.TwoClique.Rainbow
 import Mathlib.Order.Lattice.Nat
 
 /-!

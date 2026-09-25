@@ -1,5 +1,5 @@
 import Erdos809.BucicChenMa.Statement
-import Erdos809.TwoCliqueRainbow
+import Erdos809.TwoClique.Rainbow
 
 /-!
 # The two-clique upper-bound construction
