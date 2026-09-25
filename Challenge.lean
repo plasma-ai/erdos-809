@@ -8,12 +8,22 @@ import Mathlib.Topology.Instances.Real.Lemmas
 /-!
 # Erdős Problem 809: rainbow odd cycles
 
-This is the statement surface for the published result. An edge coloring uses
-at most `c` colors; every simple cycle of the specified length must have
-pairwise distinct edge colors. Cycles are copies of `cycleGraph`, so chords in
-the host graph are allowed. Among graphs on `n` vertices with at least
-`⌊n²/4⌋ + 1` edges, the least possible palette size is asymptotic to `n²/8`
-for every fixed odd cycle length at least seven.
+For a finite simple graph `H`, let `maximalAntiRamsey n e H` be the least
+number of colors needed to color the edges of *some* graph on `n` vertices
+with at least `e` edges so that every copy of `H` is rainbow. A rainbow copy
+has a different color on each of its edges. The copy need not be induced:
+extra edges between its vertices, such as chords of a cycle, are allowed.
+
+**Claim.** For every fixed `k ≥ 3`, the least number of colors for a graph
+with at least `⌊n²/4⌋ + 1` edges in which every cycle of length `2k + 1` is
+rainbow is asymptotic to `n²/8` as `n → ∞`. In symbols,
+
+`maximalAntiRamsey n (⌊n²/4⌋ + 1) (C_{2k+1}) ∼ n²/8`.
+
+Thus the assertion is about every fixed odd cycle length at least seven;
+equivalently, the least number of colors is `n²/8 + o(n²)`. The Lean code
+uses `SimpleGraph.cycleGraph` for `C_{2k+1}` and natural-number division for
+`⌊n²/4⌋`.
 
 The theorem below has a deliberate proof hole. `Solution.lean` supplies the
 proof, and Comparator checks that it proves this exact statement.

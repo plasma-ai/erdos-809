@@ -29,9 +29,8 @@ formulation used throughout the proof.
 [Comparator](https://github.com/leanprover/comparator). The proof development
 itself lives under `Erdos809/`.
 
-`formalization.yaml` is a local draft. Its marked authorship, licence,
-workflow, fidelity, and review fields must be completed before a registry
-submission.
+`formalization.yaml` records the mathematical sources, authorship, AI use,
+source fidelity, and review status for a registry submission.
 
 The Lean and Mathlib versions are fixed by `lean-toolchain`, `lakefile.toml`,
 and `lake-manifest.json`.
