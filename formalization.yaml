@@ -4,10 +4,12 @@ version: "v0.4"
 project:
   name: "Erdős Problem 809: rainbow odd cycles"
   description: >-
-    A Lean proof that, for every fixed odd cycle of length at least seven,
-    the maximal anti-Ramsey threshold at floor(n²/4) + 1 edges is
-    n²/8 + o(n²). The development proves the seven-cycle branch and
-    formalizes the longer-cycle full-density result of Bucić, Chen, and Ma.
+    A Lean proof resolving the Burr–Erdős–Graham–Sós conjecture (Erdős
+    Problem 809): for every fixed odd cycle of length at least seven, the
+    maximal anti-Ramsey threshold at floor(n²/4) + 1 edges is n²/8 + o(n²).
+    The seven-cycle case is new to our knowledge. The development proves it
+    and formalizes the stronger full-density result of Bucić, Chen, and Ma
+    for odd cycles of length at least nine.
   authors:
     - "Jacob Parish"
   license: "Apache-2.0"
@@ -24,20 +26,34 @@ sources:
     id: "https://doi.org/10.1002/jgt.3190130302"
     type: "paper"
     relationship: "formalizes"
-    note: "Source of the odd-cycle threshold conjecture."
+    note: >-
+      Source of the odd-cycle threshold conjecture. To our knowledge, the
+      seven-cycle case proved here is new; together with the longer-cycle
+      cases, it resolves the conjecture in full.
   - title: "On a maximal anti-Ramsey conjecture of Burr, Erdős, Graham, and Sós"
     authors: ["Matija Bucić", "Kaizhe Chen", "Jie Ma"]
     id: "arXiv:2603.18952"
     type: "paper"
     relationship: "formalizes"
-    note: "Source of the full-density result for odd cycles of length at least nine."
+    note: >-
+      Proves the conjectured threshold for odd cycles of length at least nine
+      and a stronger full-density formula, both formalized in this development.
+  - title: "Erdős Problem #809"
+    authors: ["Thomas F. Bloom"]
+    id: "https://www.erdosproblems.com/809"
+    relationship: "background"
+    note: >-
+      Accessed 2026-09-24. Bloom's catalog entry supplies the problem
+      number and statement; the original conjecture is credited to Burr,
+      Erdős, Graham, and Sós above.
 
 status:
   scope: >-
     The compared theorem is the asymptotic threshold for every fixed odd cycle
     of length at least seven at floor(n²/4) + 1 edges. The proof development
     also contains a full-density theorem for the longer odd cycles; that
-    supporting theorem is not separately listed in comparator.json.
+    supporting theorem is not separately listed in comparator.json. No
+    full-density formula for seven-cycles is claimed.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]

@@ -3,7 +3,7 @@ import Mathlib.Topology.Instances.Real.Lemmas
 import Erdos809.RainbowCycles
 
 /-!
-# Erdős Problem 809: rainbow odd cycles
+# Rainbow odd-cycle threshold statement
 
 The final target quantifies over every odd cycle of length at least seven.
 The general maximal anti-Ramsey function uses copies of Mathlib's

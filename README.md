@@ -6,6 +6,30 @@ among graphs on `n` vertices with at least `⌊n²/4⌋ + 1` edges, the least
 number of edge colors that makes every such cycle rainbow is
 `n²/8 + o(n²)`.
 
+To our knowledge, the seven-cycle case proved here is new. Together with
+the longer-cycle results, it resolves the conjecture in full and answers
+[Erdős Problem 809](https://www.erdosproblems.com/809), as cataloged by
+Thomas F. Bloom.
+
+Bucić, Chen, and Ma proved the cases of odd cycle length at least nine in
+[*On a maximal anti-Ramsey conjecture of Burr, Erdős, Graham, and
+Sós*](https://arxiv.org/abs/2603.18952). This project also formalizes their
+stronger full-density theorem for those cycles.
+
+## Literature and scope
+
+The [1989 paper of Burr, Erdős, Graham, and Sós](https://doi.org/10.1002/jgt.3190130302)
+posed the threshold conjecture and proved a quadratic lower bound. Bucić,
+Chen, and Ma's Theorem 1.2 proves a stronger formula for odd cycles of length
+at least nine throughout the nontrivial edge range. Their discussion after
+the proof identifies the seven-cycle case as needing a different argument.
+The result proved here settles the seven-cycle threshold; it does not assert
+a full-density formula for seven-cycles.
+
+The "to our knowledge" novelty claim reflects a targeted search of arXiv
+and Bloom's problem entry on September 24, 2026, alongside the cited papers.
+That search found no earlier proof of the seven-cycle threshold.
+
 The seven-cycle proof in `Erdos809/SevenCycle/` and the longer-cycle proof in
 `Erdos809/BucicChenMa/` are assembled in `Erdos809/FinalAssembly.lean`.
 `Erdos809/SevenCycle/Statement.lean` contains the exact-edge formulation used
@@ -13,9 +37,6 @@ by the seven-cycle proof; `Erdos809/Statement.lean` contains the final
 graph-copy threshold.
 The general maximal anti-Ramsey function lives directly under `Erdos809/`,
 while the shared upper-bound construction lives in `Erdos809/TwoClique/`.
-The longer-cycle branch formalizes the full-density result of Bucić, Chen,
-and Ma, [*On a maximal anti-Ramsey
-conjecture of Burr, Erdős, Graham, and Sós*](https://arxiv.org/abs/2603.18952).
 
 ## Publication layout
 
@@ -37,7 +58,7 @@ The Lean and Mathlib versions are fixed by `lean-toolchain`, `lakefile.toml`,
 and `lake-manifest.json`.
 
 ```sh
-lake update
+lake exe cache get
 lake build
 ```
 

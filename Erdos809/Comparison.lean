@@ -7,7 +7,7 @@ import Erdos809.RainbowCycles
 
 The maximal anti-Ramsey function allows more than the specified number of
 edges. Restricting a coloring to exactly that many edges shows that its value
-agrees with the exact-edge formulation of Erdős Problem 809.
+agrees with the exact-edge seven-cycle formulation.
 -/
 
 namespace Erdos809

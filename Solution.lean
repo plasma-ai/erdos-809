@@ -1,7 +1,7 @@
 import Erdos809.FinalAssembly
 
 /-!
-# Proof of Erdős Problem 809
+# Proof of the rainbow odd-cycle threshold
 
 Comparator checks this theorem against the Mathlib-only `Challenge.lean`.
 -/

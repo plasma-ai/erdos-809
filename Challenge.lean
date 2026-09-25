@@ -25,6 +25,14 @@ equivalently, the least number of colors is `n²/8 + o(n²)`. The Lean code
 uses `SimpleGraph.cycleGraph` for `C_{2k+1}` and natural-number division for
 `⌊n²/4⌋`.
 
+Burr, Erdős, Graham, and Sós conjectured this threshold. Bucić, Chen, and
+Ma (arXiv:2603.18952) proved the cases `k ≥ 4`, covering odd cycle lengths
+at least nine. To our knowledge, the remaining `k = 3` seven-cycle case
+proved here is new. Together, these results resolve the conjecture in full.
+Thomas F. Bloom catalogs the conjecture as
+[Erdős Problem 809](https://www.erdosproblems.com/809). The longer-cycle
+branch formalizes the Bucić–Chen–Ma result.
+
 The theorem below has a deliberate proof hole. `Solution.lean` supplies the
 proof, and Comparator checks that it proves this exact statement.
 -/

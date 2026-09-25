@@ -88,7 +88,7 @@ theorem eventual_palette_lower_of_sequence_lower
   exact (not_lt_of_ge hBound) hUpperRatio
 
 /-- The sequence formulation of the lower bound suffices for the
-seven-cycle branch of Erdős Problem 809. -/
+seven-cycle threshold statement. -/
 theorem sevenCycleThreshold_of_sequence_lower
     (hSequence :
       ∀ (k : ℕ → ℕ) (G : ∀ n : ℕ, SimpleGraph (Fin n))
