@@ -1,7 +1,6 @@
 import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.UpperConstruction
 import Erdos809.BucicChenMa.ExactEdgeTransfer
-import Erdos809.TwoClique.Rainbow
+import Erdos809.UpperBound.TwoCliqueRainbow
 import Mathlib.Order.Lattice.Nat
 
 /-!
@@ -15,6 +14,7 @@ so its natural-number infimum is itself witnessed by such a graph.
 namespace Erdos809.BucicChenMa
 
 open Erdos809
+open Erdos809.UpperBound
 
 /-- A uniform lower bound for every admissible palette transfers to the
 maximal anti-Ramsey minimum. -/

@@ -1,5 +1,6 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.TwoClique.Arithmetic
+import Erdos809.MainTerm
+import Mathlib.Data.Nat.Sqrt
+import Mathlib.Data.Nat.Choose.Cast
 
 /-!
 # Clique sizes for the full-density upper construction
@@ -8,7 +9,7 @@ The component sizes depend on the excess over the Turán edge count.  The
 larger component is clipped at `n` near the complete-graph endpoint.
 -/
 
-namespace Erdos809.BucicChenMa
+namespace Erdos809.UpperBound
 
 /-- The excess edge count over `⌊n²/4⌋`. -/
 def excess (n e : ℕ) : ℕ := e - n * n / 4
@@ -177,4 +178,4 @@ theorem palette_bound (n e : ℕ) (hn : 16 ≤ n)
     nlinarith only [ha2, hs2, hqUpper, hns, hsn, hv2, hnR, hanon, hnrnon]
   exact hreal
 
-end Erdos809.BucicChenMa
+end Erdos809.UpperBound

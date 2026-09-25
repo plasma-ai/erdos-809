@@ -1,21 +1,22 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.UpperConstruction
-import Erdos809.BucicChenMa.UpperError
-import Erdos809.BucicChenMa.UpperArithmetic
+import Erdos809.MainTerm
+import Erdos809.UpperBound.Construction
+import Erdos809.UpperBound.Error
+import Erdos809.UpperBound.Arithmetic
 
 /-!
-# The upper half of the Bucić–Chen–Ma asymptotic formula
+# The common upper half of the full-density formula
 
 The graph construction and the finite palette estimate are kept separate:
 the first uses the rainbow property of cycles in disjoint cliques, while the
-second estimates the chosen clique sizes.
+second estimates the chosen clique sizes. This upper estimate works for
+seven-cycles as well as the longer cycles in the Bucić–Chen–Ma theorem.
 -/
 
-namespace Erdos809.BucicChenMa
+namespace Erdos809.UpperBound
 
 /-- An edge-rich two-clique graph with a palette estimate bounds the maximal
 anti-Ramsey function at the same order and edge threshold. -/
-theorem upperBound_of_twoCliqueEstimates (k n e a b : ℕ) (hk : 4 ≤ k)
+theorem upperBound_of_twoCliqueEstimates (k n e a b : ℕ) (hk : 3 ≤ k)
     (hab : a + b = n) (he : e ≤ a.choose 2 + b.choose 2)
     (hp : (max (a.choose 2) (b.choose 2) : ℝ) ≤
       mainTerm n e + 3 * (n : ℝ) * ((Nat.sqrt n : ℝ) + 2))
@@ -38,8 +39,8 @@ def UpperDensityFormula (k : ℕ) : Prop :=
           mainTerm n e + ε * (n : ℝ) ^ 2
 
 /-- The two-clique construction proves the full-density upper asymptotic
-for each fixed `k ≥ 4`. -/
-theorem upperDensityFormula (k : ℕ) (hk : 4 ≤ k) : UpperDensityFormula k := by
+for each fixed `k ≥ 3`. -/
+theorem upperDensityFormula (k : ℕ) (hk : 3 ≤ k) : UpperDensityFormula k := by
   intro ε hε
   obtain ⟨N, hN⟩ := upperError_eventually_small ε hε
   refine ⟨max 16 N, ?_⟩
@@ -55,6 +56,6 @@ def UpperStatement : Prop :=
 
 theorem upperStatement : UpperStatement := by
   intro k hk
-  exact upperDensityFormula k hk
+  exact upperDensityFormula k (by omega)
 
-end Erdos809.BucicChenMa
+end Erdos809.UpperBound

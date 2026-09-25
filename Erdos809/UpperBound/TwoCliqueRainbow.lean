@@ -1,12 +1,11 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.TwoClique.Counts
-import Erdos809.RainbowCyclesSum
+import Erdos809.UpperBound.TwoCliqueCounts
+import Erdos809.UpperBound.SumRainbow
 
 /-!
 # Rainbow cycles in the two-clique construction
 -/
 
-namespace Erdos809
+namespace Erdos809.UpperBound
 
 /-- Transfer the rainbow condition from the sum vertex set to its standard
 `Fin (a + b)` numbering. -/
@@ -40,9 +39,4 @@ theorem twoCliqueRainbow_generic (m : ℕ) (hm : 2 ≤ m) (a b : ℕ) :
       (twoCliquesSumColoring_left_injective a b)
       (twoCliquesSumColoring_right_injective a b)
 
-/-- Specialization of the construction to seven-cycles. -/
-theorem twoCliqueRainbow (a b : ℕ) :
-    EverySevenCycleRainbow (twoCliqueGraph a b) (twoCliqueColoring a b) :=
-  twoCliqueRainbow_generic 6 (by omega) a b
-
-end Erdos809
+end Erdos809.UpperBound

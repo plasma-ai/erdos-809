@@ -1,5 +1,5 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.TwoClique.Rainbow
+import Erdos809.RainbowCycles
+import Erdos809.UpperBound.TwoCliqueRainbow
 
 /-!
 # The two-clique upper-bound construction
@@ -9,9 +9,7 @@ cycle lies in one component. At the top endpoint the construction takes a
 clique of size `n` and an empty second component.
 -/
 
-namespace Erdos809.BucicChenMa
-
-open Erdos809
+namespace Erdos809.UpperBound
 
 /-- Any two-clique graph with enough edges gives an upper bound on the
 maximal anti-Ramsey palette size for all odd cycles of length at least seven. -/
@@ -34,4 +32,4 @@ theorem maximalAntiRamseyCycle_le_completePalette (k n e : ℕ)
   have h := maximalAntiRamseyCycle_le_twoCliquePalette k n 0 e hk (by simpa using he)
   simpa using h
 
-end Erdos809.BucicChenMa
+end Erdos809.UpperBound

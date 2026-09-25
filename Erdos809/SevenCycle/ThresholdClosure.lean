@@ -1,43 +1,16 @@
 import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.UpperBound
+import Erdos809.UpperBound.SevenCycle
 import Mathlib.Topology.Order.Basic
 
 /-!
 # Closing the seven-cycle asymptotic argument
 
-The two-clique construction ensures that the exact-edge optimization problem is
-nonempty for every order at least sixteen, so its natural-number infimum is
-attained. Any eventual lower palette bound for all admissible colorings then
-combines with the proved upper bound to give the seven-cycle threshold.
+The exact-edge witness ensures the palette minimum is attained at large orders.
+An eventual lower bound for all admissible colorings then combines with the
+common upper bound to give the seven-cycle threshold.
 -/
 
 namespace Erdos809
-
-/-- An exact-edge rainbow-colored graph exists at every order `n ≥ 16`. -/
-theorem exists_admissible_of_sixteen_le (n : ℕ) (hn : 16 ≤ n) :
-    ∃ k : ℕ, Admissible n k := by
-  let a := twoCliqueLargeSize n
-  let b := twoCliqueSmallSize n
-  have hab : a + b = n := twoCliqueSizes_add n hn
-  have hEnough : (a + b) * (a + b) / 4 + 1 ≤
-      Nat.card (twoCliqueGraph a b).edgeSet := by
-    rw [twoCliqueGraph_edge_count]
-    simpa only [hab] using twoClique_edge_surplus n hn
-  obtain ⟨H, _, hEdges, C, hRainbow⟩ :=
-    rainbow_subgraph_exact_edges (twoCliqueGraph a b)
-      (twoCliqueColoring a b) (twoCliqueRainbow a b) hEnough
-  have hAdmissible : Admissible (a + b) (max (a.choose 2) (b.choose 2)) :=
-    ⟨H, C, hEdges, hRainbow⟩
-  exact ⟨max (a.choose 2) (b.choose 2), hab ▸ hAdmissible⟩
-
-/-- The minimum palette size is achieved by an exact-edge rainbow coloring
-at every order `n ≥ 16`. -/
-theorem rainbowChromatic_admissible_of_sixteen_le (n : ℕ) (hn : 16 ≤ n) :
-    Admissible n (rainbowChromatic n) := by
-  rcases exists_admissible_of_sixteen_le n hn with ⟨k, hk⟩
-  unfold rainbowChromatic
-  have hs : ({j : ℕ | Admissible n j} : Set ℕ).Nonempty := ⟨k, hk⟩
-  exact Nat.sInf_mem hs
 
 /-- A lower bound for every admissible palette applies to the actual
 minimum once the finite optimization problem is nonempty. -/

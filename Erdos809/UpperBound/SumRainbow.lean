@@ -8,7 +8,7 @@ A cycle in a disjoint union stays in one component. Thus edge colors can be
 reused between components, provided colors are injective within each.
 -/
 
-namespace Erdos809
+namespace Erdos809.UpperBound
 
 private def side {V W : Type*} : V ⊕ W → Bool
   | .inl _ => true
@@ -128,4 +128,4 @@ theorem everyCycleRainbow_sum {V W : Type*}
   intro v hv
   exact cycleEdges_injective (by omega : 3 ≤ m + 1) v hv
 
-end Erdos809
+end Erdos809.UpperBound

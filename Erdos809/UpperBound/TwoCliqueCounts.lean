@@ -1,11 +1,12 @@
-import Erdos809.SevenCycle.Statement
+import Erdos809.RainbowCycles
 import Mathlib.Combinatorics.SimpleGraph.Sum
+import Mathlib.Logic.Equiv.Fin.Basic
 
 /-!
 # Counting and labeling the edges of two disjoint cliques
 -/
 
-namespace Erdos809
+namespace Erdos809.UpperBound
 
 /-- Two complete graphs, on the left and right halves of a sum. -/
 def twoCliquesSum (a b : ℕ) : SimpleGraph (Fin a ⊕ Fin b) :=
@@ -148,4 +149,4 @@ theorem twoCliqueColoring_right_injective (a b : ℕ) :
   rw [twoCliqueColoring_right, twoCliqueColoring_right] at h
   exact (completeFinEdgeIndex b).injective (Fin.castLE_injective _ h)
 
-end Erdos809
+end Erdos809.UpperBound

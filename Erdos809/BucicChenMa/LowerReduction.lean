@@ -1,5 +1,5 @@
 import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.UpperBound
+import Erdos809.UpperBound.FullDensity
 
 /-!
 # The remaining lower bound for longer odd cycles
@@ -34,7 +34,7 @@ theorem fullDensityFormula_iff_lowerDensityFormula (k : ℕ) (hk : 4 ≤ k) :
     linarith
   · intro hLower ε hε
     obtain ⟨N₁, hN₁⟩ := hLower ε hε
-    obtain ⟨N₂, hN₂⟩ := upperDensityFormula k hk ε hε
+    obtain ⟨N₂, hN₂⟩ := UpperBound.upperDensityFormula k (by omega) ε hε
     refine ⟨max N₁ N₂, ?_⟩
     intro n hn e hlo hhi
     have hLo := hN₁ n (le_of_max_le_left hn) e hlo hhi

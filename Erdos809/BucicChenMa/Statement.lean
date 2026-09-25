@@ -1,5 +1,5 @@
 import Erdos809.RainbowCycles
-import Mathlib.Analysis.Real.Sqrt
+import Erdos809.MainTerm
 import Mathlib.Topology.Instances.Real.Lemmas
 
 /-!
@@ -13,13 +13,10 @@ Erdős, Graham, and Sós for these cycle lengths.
 
 These are statements of the 2026 preprint's results. The preprint is cited in
 `formalization.yaml`, and their proofs are developed in this directory.
+The shared leading term is defined in `Erdos809/MainTerm.lean`.
 -/
 
 namespace Erdos809.BucicChenMa
-
-/-- The main term in Theorem 1.2, as a real number. -/
-noncomputable def mainTerm (n e : ℕ) : ℝ :=
-  (e : ℝ) / 2 + (n : ℝ) / 2 * Real.sqrt ((e : ℝ) - (n : ℝ) ^ 2 / 4)
 
 /-- Theorem 1.2 for a fixed `k ≥ 4`: the error is `o(n²)` uniformly for all
 `⌊n²/4⌋ + 1 ≤ e ≤ (n choose 2)`. -/
