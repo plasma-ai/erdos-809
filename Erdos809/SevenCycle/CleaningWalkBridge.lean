@@ -24,19 +24,14 @@ def SevenWalkPairLifts (G H : SimpleGraph V) : Prop :=
           s(w a, w (a + 1)) = s(v i, v (i + 1)) ∧
           s(w b, w (b + 1)) = s(v j, v (j + 1))
 
-/-- Restrict an edge coloring of `G` to a spanning subgraph `H`. -/
-def restrictEdgeLabeling {Color : Type*} {G H : SimpleGraph V}
-    (hHG : H ≤ G) (C : G.EdgeLabeling Color) : H.EdgeLabeling Color :=
-  fun e => C ⟨e.1, SimpleGraph.edgeSet_mono hHG e.2⟩
-
 /-- Once the lifting property is proved for a cleaned subgraph, rainbow
 seven-cycles in the original graph force its colors to be separated on
 closed seven-walks. -/
 theorem noRepeatedColor_of_sevenWalkPairLifts {n k : ℕ}
     {G H : SimpleGraph (Fin n)} (C : G.EdgeLabeling (Fin k))
-    (hHG : H ≤ G) (hRainbow : EverySevenCycleRainbow G C)
+    (hHG : H ≤ G) (hRainbow : EveryCycleRainbow 7 G C)
     (hLift : SevenWalkPairLifts G H) :
-    NoRepeatedColorOnClosedSevenWalks H (restrictEdgeLabeling hHG C) := by
+    NoRepeatedColorOnClosedSevenWalks H (C.pullback (SimpleGraph.Hom.ofLE hHG)) := by
   intro v hv i j hdistinct
   obtain ⟨w, hw, hinj, a, b, ha, hb⟩ := hLift v hv i j hdistinct
   have hab : a ≠ b := by
@@ -45,12 +40,12 @@ theorem noRepeatedColor_of_sevenWalkPairLifts {n k : ℕ}
     exact hdistinct (ha.symm.trans hb)
   have hcolors := hRainbow w hinj hw
   have hcolorA :
-      (restrictEdgeLabeling hHG C).get (v i) (v (i + 1)) (hv i) =
+      (C.pullback (SimpleGraph.Hom.ofLE hHG)).get (v i) (v (i + 1)) (hv i) =
         C.get (w a) (w (a + 1)) (hw a) := by
     change C ⟨s(v i, v (i + 1)), _⟩ = C ⟨s(w a, w (a + 1)), _⟩
     exact congrArg C (Subtype.ext ha.symm)
   have hcolorB :
-      (restrictEdgeLabeling hHG C).get (v j) (v (j + 1)) (hv j) =
+      (C.pullback (SimpleGraph.Hom.ofLE hHG)).get (v j) (v (j + 1)) (hv j) =
         C.get (w b) (w (b + 1)) (hw b) := by
     change C ⟨s(v j, v (j + 1)), _⟩ = C ⟨s(w b, w (b + 1)), _⟩
     exact congrArg C (Subtype.ext hb.symm)

@@ -39,7 +39,7 @@ theorem palette_lower_sparse_of_robust_disjoint_and_overlap_bound
     (hDense : ∀ᶠ j : ℕ in Filter.atTop,
       m j * m j < 4 * (G j).edgeFinset.card)
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbowOn (G j) (C j))
+      EveryCycleRainbow 7 (G j) (C j))
     (hOverlap : ∀ ε : ℝ, 0 < ε →
       ∀ᶠ j : ℕ in Filter.atTop,
         (∃ (x y z : Fin (m j)) (S : Finset (Fin (m j))),
@@ -51,7 +51,7 @@ theorem palette_lower_sparse_of_robust_disjoint_and_overlap_bound
       ∀ᶠ j : ℕ in Filter.atTop,
         (1 / 8 : ℝ) - ε ≤ (colors j : ℝ) / (φ j : ℝ) ^ 2 := by
   have hRainbowRobust : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G j) (C j) := hRainbow
+      EveryCycleRainbow 7 (G j) (C j) := hRainbow
   exact palette_lower_sparse_of_casewise_bounds φ m colors G
     (robust_palette_lower_sparse_on_branch φ m colors δ G C hφ
       hm hδ hRainbowRobust hDense hMin)
@@ -88,7 +88,7 @@ theorem palette_lower_sparse_of_near_regular_hosts
     (hEdgeUpper : ∀ᶠ j : ℕ in Filter.atTop,
       4 * (G j).edgeFinset.card ≤ m j * m j + q j)
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbowOn (G j) (C j)) :
+      EveryCycleRainbow 7 (G j) (C j)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ j : ℕ in Filter.atTop,
         (1 / 8 : ℝ) - ε ≤ (colors j : ℝ) / (φ j : ℝ) ^ 2 := by

@@ -203,7 +203,7 @@ theorem exists_cleaned_lifting_threshold
   have hL : 0 < L := SzemerediRegularity.bound_pos ε l
   have hN : 0 < Q * L := Nat.mul_pos (by omega) hL
   have hn0 : 0 < n := lt_of_lt_of_le hN hn
-  haveI : Nonempty (Fin n) := ⟨⟨0, hn0⟩⟩
+  have : Nonempty (Fin n) := ⟨⟨0, hn0⟩⟩
   have hn' : Q * SzemerediRegularity.bound ε l ≤ Fintype.card (Fin n) := by
     simpa [L] using hn
   simpa [Fintype.card_fin] using
@@ -249,10 +249,10 @@ theorem exists_rainbow_seven_walk_cleaning_threshold
     ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
       ∀ (G : SimpleGraph (Fin n)) (k : ℕ)
         (C : G.EdgeLabeling (Fin k)),
-        EverySevenCycleRainbow G C →
+        EveryCycleRainbow 7 G C →
           ∃ (H : SimpleGraph (Fin n)) (hHG : H ≤ G),
             NoRepeatedColorOnClosedSevenWalks H
-              (restrictEdgeLabeling hHG C) ∧
+              (C.pullback (SimpleGraph.Hom.ofLE hHG)) ∧
             (G.edgeFinset.card : ℝ) - H.edgeFinset.card <
               η * (n : ℝ) ^ 2 := by
   obtain ⟨N, hN⟩ := exists_seven_walk_cleaning_threshold η hη

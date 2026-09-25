@@ -23,7 +23,7 @@ theorem rainbow_color_lower_asymptotic_of_positive_variance_subsequence
     (hcard : ∀ᶠ j : ℕ in Filter.atTop,
       Nat.card (G (φ j)).edgeSet = φ j * φ j / 4 + 1)
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G (φ j)) (C (φ j)))
+      EveryCycleRainbow 7 (G (φ j)) (C (φ j)))
     (hvariance : ∀ᶠ j : ℕ in Filter.atTop,
       v₀ ≤ degreeVariance (graphAdjacency (G (φ j)))
         (uniformGraphWeight (φ j))) :

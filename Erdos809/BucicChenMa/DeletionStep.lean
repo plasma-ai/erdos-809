@@ -11,21 +11,6 @@ remaining graph still makes every cycle rainbow.
 
 namespace Erdos809.BucicChenMa
 
-/-- Pulling a rainbow coloring back along a vertex embedding preserves the
-rainbow property. -/
-theorem everyCycleRainbow_comap {V W : Type*} {colors length : ℕ} [NeZero length]
-    (G : SimpleGraph W) (C : G.EdgeLabeling (Fin colors))
-    (hC : EveryCycleRainbow length G C) (f : V ↪ W) :
-    EveryCycleRainbow length (G.comap f)
-      (C.pullback (SimpleGraph.Embedding.comap f G)) := by
-  intro v hv h
-  let w : Fin length → W := f ∘ v
-  have hw : Function.Injective w := f.injective.comp hv
-  have hG : ∀ i : Fin length, G.Adj (w i) (w (i + 1)) := h
-  have hRainbow := hC w hw hG
-  simpa only [SimpleGraph.EdgeLabeling.get_pullback,
-    SimpleGraph.Embedding.comap_apply, w, Function.comp_def] using hRainbow
-
 /-- The graph obtained by deleting `v`, reindexed by `Fin n`, has exactly
 `G.degree v` fewer edges. -/
 theorem card_edgeSet_comap_succAbove {n : ℕ}
@@ -67,7 +52,7 @@ theorem maximalAntiRamseyCycle_le_deleteVertex {n colors k : ℕ}
   refine ⟨G.comap v.succAboveEmb, C.pullback
     (SimpleGraph.Embedding.comap v.succAboveEmb G), ?_, ?_⟩
   · exact (card_edgeSet_comap_succAbove G v).ge
-  · exact everyCycleRainbow_comap G C hC v.succAboveEmb
+  · exact Erdos809.everyCycleRainbow_comap (2 * k + 1) v.succAboveEmb G C hC
 
 /-- If `G` has at least `e` edges, deleting a vertex leaves a witness for
 the threshold `e - G.degree v`. -/
@@ -83,6 +68,6 @@ theorem maximalAntiRamseyCycle_le_deleteVertex_atLeast {n colors k e : ℕ}
     (SimpleGraph.Embedding.comap v.succAboveEmb G), ?_, ?_⟩
   · rw [card_edgeSet_comap_succAbove]
     exact Nat.sub_le_sub_right he _
-  · exact everyCycleRainbow_comap G C hC v.succAboveEmb
+  · exact Erdos809.everyCycleRainbow_comap (2 * k + 1) v.succAboveEmb G C hC
 
 end Erdos809.BucicChenMa

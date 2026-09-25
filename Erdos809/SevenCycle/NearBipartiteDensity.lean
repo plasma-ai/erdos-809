@@ -14,32 +14,6 @@ namespace Erdos809
 
 open Finset
 
-private theorem card_le_filter_add_missing {V : Type*} [DecidableEq V]
-    (T U : Finset V) (hTU : T ⊆ U) (p : V → Prop) [DecidablePred p] :
-    T.card ≤ (T.filter p).card + (U.filter fun x => ¬ p x).card := by
-  have hpartition := Finset.card_filter_add_card_filter_not (s := T) p
-  have hsub : T.filter (fun x => ¬ p x) ⊆ U.filter (fun x => ¬ p x) := by
-    intro x hx
-    exact Finset.mem_filter.mpr ⟨hTU (Finset.mem_filter.mp hx).1,
-      (Finset.mem_filter.mp hx).2⟩
-  have hcard := Finset.card_le_card hsub
-  omega
-
-private theorem card_le_common_add_two_missing {V : Type*} [DecidableEq V]
-    (T U : Finset V) (hTU : T ⊆ U) (p q : V → Prop)
-    [DecidablePred p] [DecidablePred q] :
-    T.card ≤ (T.filter fun x => p x ∧ q x).card +
-      (U.filter fun x => ¬ p x).card + (U.filter fun x => ¬ q x).card := by
-  have hp := card_le_filter_add_missing T U hTU p
-  have hq := card_le_filter_add_missing (T.filter p) U
-    ((Finset.filter_subset _ _).trans hTU) q
-  have hfilter : (T.filter p).filter q = T.filter (fun x => p x ∧ q x) := by
-    ext x
-    simp only [Finset.mem_filter]
-    tauto
-  rw [hfilter] at hq
-  omega
-
 /-- The right side is covered by common neighbors of `x,z` and their missing
 cross-neighbor sets. No adjacency between `x` and `z` is needed. -/
 theorem right_card_le_commonRightNeighbors_add_missing {a b : ℕ}

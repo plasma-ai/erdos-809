@@ -53,31 +53,14 @@ def inducedRelabelColoring {n : ℕ} {K : Type*}
   change (G.comap (inducedVertexEmbedding A : Fin A.card → Fin n)).EdgeLabeling K
   exact C.pullback (SimpleGraph.Embedding.comap (inducedVertexEmbedding A) G)
 
-/-- Rainbow seven-cycles stay rainbow in the induced subgraph. -/
-theorem everySevenCycleRainbowOn_inducedRelabel {n : ℕ} {K : Type*}
+/-- Rainbow cycles stay rainbow in the induced subgraph. -/
+theorem everyCycleRainbow_inducedRelabel {n length : ℕ} [NeZero length] {K : Type*}
     (G : SimpleGraph (Fin n)) (A : Finset (Fin n))
     (C : G.EdgeLabeling K)
-    (hRainbow : EverySevenCycleRainbowOn G C) :
-    EverySevenCycleRainbowOn (inducedRelabelGraph G A)
+    (hRainbow : EveryCycleRainbow length G C) :
+    EveryCycleRainbow length (inducedRelabelGraph G A)
       (inducedRelabelColoring G A C) := by
-  intro q hq hAdj
-  have hq' : Function.Injective
-      (fun i : Fin 7 => inducedVertexEmbedding A (q i)) :=
-    (inducedVertexEmbedding A).injective.comp hq
-  have hAdj' : ∀ i : Fin 7,
-      G.Adj (inducedVertexEmbedding A (q i))
-        (inducedVertexEmbedding A (q (i + 1))) := by
-    intro i
-    exact hAdj i
-  have h := hRainbow
-    (fun i : Fin 7 => inducedVertexEmbedding A (q i)) hq' hAdj'
-  have hlabels (i : Fin 7) :
-      (inducedRelabelColoring G A C).get
-          (q i) (q (i + 1)) (hAdj i) =
-        C.get (inducedVertexEmbedding A (q i))
-          (inducedVertexEmbedding A (q (i + 1))) (hAdj' i) := by
-    rfl
-  simpa only [hlabels] using h
+  exact everyCycleRainbow_comap length (inducedVertexEmbedding A) G C hRainbow
 
 private theorem inducedRelabelGraph_eq_induce_comap {n : ℕ}
     (G : SimpleGraph (Fin n)) (A : Finset (Fin n)) :

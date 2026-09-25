@@ -168,7 +168,7 @@ must have different colors. The four-edge path `y,x,p,z,w` is closed by a
 robust three-edge path from `w` to `y`. -/
 theorem disjoint_edge_colors_distinct_of_robust {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     {p x y z w : Fin n}
     (hxy : G.Adj x y) (hzw : G.Adj z w)
@@ -214,7 +214,7 @@ ends; robust closure then forces the two middle edges to have different
 colors. -/
 theorem adjacent_edge_colors_distinct_of_extension {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     {u a b c v : Fin n}
     (hua : G.Adj u a) (hab : G.Adj a b) (hbc : G.Adj b c)
@@ -266,7 +266,7 @@ theorem exists_neighbor_outside {n : ℕ} (G : SimpleGraph (Fin n))
 rainbow-seven-cycle coloring under robust three-path connectivity. -/
 theorem adjacent_edge_colors_distinct_of_robust {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     (hdegree : ∀ v : Fin n, 5 ≤ G.degree v)
     {a b c : Fin n} (hab : G.Adj a b) (hbc : G.Adj b c)
@@ -289,7 +289,7 @@ theorem adjacent_edge_colors_distinct_of_robust {n k : ℕ}
 neighborhood of `p`, excluding edges incident to `p`. -/
 theorem marked_edge_colors_distinct_of_robust {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     (hdegree : ∀ v : Fin n, 5 ≤ G.degree v)
     {p x y z w : Fin n}
@@ -348,7 +348,7 @@ def markedEdges {n : ℕ} (G : SimpleGraph (Fin n)) (p : Fin n) : Set G.edgeSet 
 
 theorem coloring_injective_on_markedEdges_of_robust {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     (hdegree : ∀ v : Fin n, 5 ≤ G.degree v) (p : Fin n) :
     Set.InjOn C (markedEdges G p) := by
@@ -437,7 +437,7 @@ theorem markedGraph_edge_count_lower {n : ℕ} (G : SimpleGraph (Fin n))
 connectivity, so its edge count is at most the palette size. -/
 theorem markedGraph_edge_count_le_colors_of_robust {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     (hdegree : ∀ v : Fin n, 5 ≤ G.degree v) (p : Fin n) :
     (markedGraph G p).edgeFinset.card ≤ k := by
@@ -476,7 +476,7 @@ theorem markedGraph_edge_count_le_colors_of_robust {n k : ℕ}
 anchor: each marked edge requires a different color. -/
 theorem robust_palette_lower {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     (hdegree : ∀ v : Fin n, 5 ≤ G.degree v)
     (p : Fin n) (δ : ℕ) (hmin : ∀ v : Fin n, δ ≤ G.degree v) :
@@ -514,7 +514,7 @@ theorem maximum_degree_anchor {n : ℕ} (G : SimpleGraph (Fin n))
 `n/2`, this is the `n²/8 - o(n²)` palette estimate. -/
 theorem robust_palette_quadratic_lower {n k : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hC : EverySevenCycleRainbow G C)
+    (hC : EveryCycleRainbow 7 G C)
     (hrobust : HasRobustThreePaths G)
     (hdegree : ∀ v : Fin n, 5 ≤ G.degree v)
     (p : Fin n) (hmax : ∀ v : Fin n, G.degree v ≤ G.degree p)

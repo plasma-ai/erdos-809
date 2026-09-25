@@ -29,7 +29,7 @@ theorem rainbow_color_lower_asymptotic_of_zero_graph_variance_sparse
     (hcard : ∀ᶠ j : ℕ in Filter.atTop,
       Nat.card (G j).edgeSet = φ j * φ j / 4 + 1)
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G j) (C j)) :
+      EveryCycleRainbow 7 (G j) (C j)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ j : ℕ in Filter.atTop,
         (1 / 8 : ℝ) - ε ≤ (colors j : ℝ) / (φ j : ℝ) ^ 2 := by
@@ -61,7 +61,7 @@ theorem rainbow_color_lower_asymptotic_of_zero_graph_variance_sparse
     filter_upwards [hFinite] with j hj
     exact hj.2.2.2.2.1
   have hRainbowH : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbowOn (H j) (D j) := by
+      EveryCycleRainbow 7 (H j) (D j) := by
     filter_upwards [hFinite] with j hj
     exact hj.2.2.2.2.2
   exact NearRegular.palette_lower_sparse_of_near_regular_hosts
@@ -82,7 +82,7 @@ theorem rainbow_color_lower_asymptotic_of_zero_weighted_variance_sparse
     (hcard : ∀ᶠ j : ℕ in Filter.atTop,
       Nat.card (G j).edgeSet = φ j * φ j / 4 + 1)
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G j) (C j)) :
+      EveryCycleRainbow 7 (G j) (C j)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ j : ℕ in Filter.atTop,
         (1 / 8 : ℝ) - ε ≤ (colors j : ℝ) / (φ j : ℝ) ^ 2 := by

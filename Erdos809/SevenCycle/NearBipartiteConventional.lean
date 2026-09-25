@@ -29,7 +29,7 @@ theorem colors_lower_asymptotic_of_sparse_maximum_cut
     (hInternal : Filter.Tendsto
       (fun n : ℕ => (internalEdgeCount (G n) : ℝ) / (n : ℝ) ^ 2)
       Filter.atTop (nhds 0))
-    (hRainbow : ∀ n, EverySevenCycleRainbowOn (G n) (C n)) :
+    (hRainbow : ∀ n, EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in Filter.atTop,
         1 / 8 - ε ≤ (colors n : ℝ) / (n : ℝ) ^ 2 := by

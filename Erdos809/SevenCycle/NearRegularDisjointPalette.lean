@@ -23,7 +23,7 @@ connectors. -/
 theorem disjoint_cleaned_palette_lower {n colors : ℕ}
     (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin colors))
     (x y : Fin n) (S : Finset (Fin n)) (δ r : ℕ)
-    (hRainbow : EverySevenCycleRainbowOn G C)
+    (hRainbow : EveryCycleRainbow 7 G C)
     (hmin : ∀ v : Fin n, δ ≤ G.degree v)
     (hn : n ≤ 2 * δ + r)
     (hpath : ¬ ThreePathAvoiding G x y S)
@@ -50,8 +50,8 @@ theorem disjoint_cleaned_palette_lower {n colors : ℕ}
     change A.card ≤ H.degree i + t
     rw [← hEq]
     simpa [t, A, Nat.add_assoc] using hdense
-  have hRainbowH : EverySevenCycleRainbow H D :=
-    everySevenCycleRainbowOn_inducedRelabel G A C hRainbow
+  have hRainbowH : EveryCycleRainbow 7 H D :=
+    everyCycleRainbow_inducedRelabel G A C hRainbow
   have hinj : Function.Injective D :=
     dense_edge_coloring_injective H D hRainbowH hdegree hlarge
   have hcard : H.edgeFinset.card ≤ colors := by

@@ -95,7 +95,7 @@ theorem colors_lower_asymptotic_of_left_boundary
         κ n + r n + 2 < α n ∧
         leftLower n + r n + 2 ≤ a n ∧
         rightLower n + r n ≤ α n)
-    (hRainbow : ∀ n, EverySevenCycleRainbowOn (G n) (C n))
+    (hRainbow : ∀ n, EveryCycleRainbow 7 (G n) (C n))
     (hLeft : Filter.Tendsto
       (fun n : ℕ => (leftLower n : ℝ) / (n : ℝ))
       Filter.atTop (nhds (1 / 2 : ℝ)))
@@ -139,7 +139,7 @@ theorem turan_excess_forces_colors
     (hMarkedSize : markedLower + r + 2 ≤ β)
     (hCommonSize : commonLower + r ≤ α)
     (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     markedLower * commonLower ≤ colors + missingCrossEdges G := by
   obtain ⟨u, v, huv, hCommon⟩ :=
     exists_internal_edge_large_common_cross_of_turan_excess G hSide
@@ -181,7 +181,7 @@ theorem colors_lower_asymptotic_of_turan_excess
       κ n + r n + 2 < α n ∧
       markedLower n + r n + 2 ≤ β n ∧
       commonLower n + r n ≤ α n)
-    (hRainbow : ∀ n, EverySevenCycleRainbowOn (G n) (C n))
+    (hRainbow : ∀ n, EveryCycleRainbow 7 (G n) (C n))
     (hMarked : Filter.Tendsto
       (fun n : ℕ => (markedLower n : ℝ) / (n : ℝ))
       Filter.atTop (nhds (1 / 2 : ℝ)))

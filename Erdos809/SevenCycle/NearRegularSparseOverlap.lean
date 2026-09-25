@@ -40,7 +40,7 @@ theorem variable_overlap_palette_lower_conditional_filter
     (hTuran : ∀ᶠ n : ℕ in B,
       m n * m n / 4 < Nat.card (G n).edgeSet)
     (hRainbow : ∀ᶠ n : ℕ in B,
-      EverySevenCycleRainbowOn (G n) (C n)) :
+      EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in B,
         HasSmallOverlapWitness (G n) →
@@ -127,9 +127,9 @@ theorem variable_overlap_palette_lower_conditional_filter
     exact relabeled_isMaximumCut_of_max_crossPairs (G n) (T n)
       (Amax_maximum (G n))
   have hRainbowH : ∀ᶠ n : ℕ in F,
-      EverySevenCycleRainbowOn (H n) (D n) := by
+      EveryCycleRainbow 7 (H n) (D n) := by
     filter_upwards [hRainbow.filter_mono hFB] with n hrainbow
-    exact everySevenCycleRainbowOn_comap (cutEquiv (T n)) (G n) (C n)
+    exact everyCycleRainbow_comap 7 (cutEquiv (T n)).toEmbedding (G n) (C n)
       hrainbow
   intro ε hε
   have hBound := NearBipartite.colors_lower_asymptotic_of_sparse_maximum_cut_variable_filter
@@ -164,7 +164,7 @@ theorem variable_overlap_palette_lower_sparse_conditional
     (hTuran : ∀ᶠ j : ℕ in Filter.atTop,
       m j * m j / 4 < Nat.card (G j).edgeSet)
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbowOn (G j) (C j)) :
+      EveryCycleRainbow 7 (G j) (C j)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ j : ℕ in Filter.atTop,
         HasSmallOverlapWitness (G j) →
@@ -222,10 +222,10 @@ theorem variable_overlap_palette_lower_sparse_conditional
     rw [hψ j]
     exact hj
   have hRainbowB : ∀ᶠ N : ℕ in B,
-      EverySevenCycleRainbowOn (G' N) (C' N) := by
+      EveryCycleRainbow 7 (G' N) (C' N) := by
     rw [Filter.eventually_map]
     filter_upwards [hRainbow] with j hj
-    change EverySevenCycleRainbowOn (G (ψ (φ j))) (C (ψ (φ j)))
+    change EveryCycleRainbow 7 (G (ψ (φ j))) (C (ψ (φ j)))
     rw [hψ j]
     exact hj
   intro ε hε

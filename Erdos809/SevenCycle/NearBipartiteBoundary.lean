@@ -29,7 +29,7 @@ theorem left_common_cross_forces_colors
     (hLeftSize : leftLower + r + 2 ≤ a)
     (hRightSize : rightLower + r ≤ α)
     (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     leftLower * rightLower ≤ colors + missingCrossEdges G := by
   let A := witnessLeft G κ u v
   let S := witnessRight G κ u v
@@ -85,7 +85,7 @@ theorem left_common_cross_forces_colors_of_sparse_missing
     (hLeftSize : leftLower + r + 2 ≤ a)
     (hRightSize : rightLower + r ≤ α)
     (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     leftLower * rightLower ≤ colors + missingCrossEdges G := by
   exact left_common_cross_forces_colors G u v huv hCommon
     (exceptional_card_le_of_sparse_missing G hSparse) hb hLeftConnect

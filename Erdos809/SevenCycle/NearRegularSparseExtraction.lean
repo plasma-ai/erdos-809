@@ -173,7 +173,7 @@ theorem variance_extraction_colored_sparse_asymptotic
     (hexact : ∀ᶠ j : ℕ in Filter.atTop,
       (G j).edgeFinset.card = φ j * φ j / 4 + 1)
     (hrainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G j) (C j)) :
+      EveryCycleRainbow 7 (G j) (C j)) :
     ∃ (m δ r q : ℕ → ℕ) (H : (j : ℕ) → SimpleGraph (Fin (m j)))
       (D : (j : ℕ) → (H j).EdgeLabeling (Fin (colors j))),
       Filter.Tendsto (fun j : ℕ => (m j : ℝ) / (φ j : ℝ))
@@ -190,7 +190,7 @@ theorem variance_extraction_colored_sparse_asymptotic
         4 * (H j).edgeFinset.card ≤ m j * m j + q j ∧
         (∀ v : Fin (m j), δ j ≤ (H j).degree v) ∧
         m j ≤ 2 * δ j + r j ∧
-        EverySevenCycleRainbow (H j) (D j) := by
+        EveryCycleRainbow 7 (H j) (D j) := by
   let V : ℕ → ℝ := fun j => graphDegreeVariance (G j)
   let gap : ℕ → ℕ := sparseGap φ V
   let cutoff : ℕ → ℕ := sparseCutoff φ V
@@ -403,9 +403,9 @@ theorem variance_extraction_colored_sparse_asymptotic
       _ ≤ m j * m j + 2 * φ j * bad j + 4 := by omega
       _ ≤ m j * m j + 8 * φ j * gap j + 4 := by omega
       _ = m j * m j + q j := by simp only [q]; omega
-  have hOn : EverySevenCycleRainbowOn (G j) (C j) := hrainbow_j
-  have hRainbow : EverySevenCycleRainbow (H j) (D j) :=
-    NearRegular.everySevenCycleRainbowOn_inducedRelabel
+  have hOn : EveryCycleRainbow 7 (G j) (C j) := hrainbow_j
+  have hRainbow : EveryCycleRainbow 7 (H j) (D j) :=
+    NearRegular.everyCycleRainbow_inducedRelabel
       (G j) (U j) (C j) hOn
   exact ⟨hmle, hedge, hEnvelope, hdegree, hsize, hRainbow⟩
 

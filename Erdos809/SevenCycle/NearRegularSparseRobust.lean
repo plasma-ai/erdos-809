@@ -57,7 +57,7 @@ theorem robust_palette_lower_sparse_on_branch
     (hδ : Filter.Tendsto (fun j : ℕ => (δ j : ℝ) / (φ j : ℝ))
       Filter.atTop (nhds (1 / 2 : ℝ)))
     (hrainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G j) (C j))
+      EveryCycleRainbow 7 (G j) (C j))
     (hedges : ∀ᶠ j : ℕ in Filter.atTop,
       m j * m j < 4 * (G j).edgeFinset.card)
     (hmin : ∀ᶠ j : ℕ in Filter.atTop,

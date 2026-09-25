@@ -89,7 +89,7 @@ theorem robust_three_paths_of_dense {m t : ℕ}
 colors in a coloring where every seven-cycle is rainbow. -/
 theorem dense_edge_colors_distinct {m t k : ℕ}
     (H : SimpleGraph (Fin m)) (C : H.EdgeLabeling (Fin k))
-    (hRainbow : EverySevenCycleRainbow H C)
+    (hRainbow : EveryCycleRainbow 7 H C)
     (hdegree : ∀ v : Fin m, m ≤ H.degree v + t)
     (hlarge : 2 * t + 13 < m)
     {x y z w : Fin m} (hxy : H.Adj x y) (hzw : H.Adj z w)
@@ -158,7 +158,7 @@ theorem dense_edge_colors_distinct {m t k : ℕ}
 color-injective. -/
 theorem dense_edge_coloring_injective {m t k : ℕ}
     (H : SimpleGraph (Fin m)) (C : H.EdgeLabeling (Fin k))
-    (hRainbow : EverySevenCycleRainbow H C)
+    (hRainbow : EveryCycleRainbow 7 H C)
     (hdegree : ∀ v : Fin m, m ≤ H.degree v + t)
     (hlarge : 2 * t + 13 < m) :
     Function.Injective C := by

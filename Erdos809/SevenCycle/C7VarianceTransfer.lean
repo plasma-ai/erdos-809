@@ -18,7 +18,7 @@ the reweighted cleaned graph denser than the quarter threshold. -/
 theorem rainbow_color_count_bound_of_variance
     {n k : ℕ} (hn : 0 < n)
     (G H : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hHG : H ≤ G) (hRainbow : EverySevenCycleRainbow G C)
+    (hHG : H ≤ G) (hRainbow : EveryCycleRainbow 7 G C)
     (hLift : SevenWalkPairLifts G H)
     (γ η v : ℝ) (hγpos : 0 < γ) (hγlt : γ < 1)
     (hGbase : (1 / 4 : ℝ) ≤

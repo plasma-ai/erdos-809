@@ -19,7 +19,7 @@ def IsClosedSevenWalk (G : SimpleGraph V) (v : Fin 7 → V) : Prop :=
   ∀ i : Fin 7, G.Adj (v i) (v (i + 1))
 
 /-- No closed seven-edge walk contains two distinct edge types of one color.
-Unlike `EverySevenCycleRainbow`, vertices and edges may repeat. -/
+Unlike `EveryCycleRainbow 7`, vertices and edges may repeat. -/
 def NoRepeatedColorOnClosedSevenWalks (G : SimpleGraph V)
     (C : G.EdgeLabeling Color) : Prop :=
   ∀ (v : Fin 7 → V) (hv : IsClosedSevenWalk G v) (i j : Fin 7),

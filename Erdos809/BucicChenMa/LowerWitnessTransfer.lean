@@ -1,5 +1,5 @@
 import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ExactEdgeTransfer
+import Erdos809.SubgraphTransfer
 import Erdos809.UpperBound.TwoCliqueRainbow
 import Mathlib.Order.Lattice.Nat
 

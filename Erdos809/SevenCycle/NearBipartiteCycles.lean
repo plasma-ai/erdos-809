@@ -44,42 +44,24 @@ def TwoCrossEdgesOnSevenCycle (G : SimpleGraph (Fin a ⊕ Fin b))
     (∃ i : Fin 7, s(q i, q (i + 1)) = s(Sum.inl x, Sum.inr y)) ∧
     (∃ i : Fin 7, s(q i, q (i + 1)) = s(Sum.inl z, Sum.inr w))
 
-/-- A seven-cycle rainbow condition for arbitrary vertex types. -/
-def EverySevenCycleRainbowOn {V K : Type*} (G : SimpleGraph V)
-    (C : G.EdgeLabeling K) : Prop :=
-  ∀ (q : Fin 7 → V), Function.Injective q →
-    ∀ (h : ∀ i : Fin 7, G.Adj (q i) (q (i + 1))),
-      Function.Injective (fun i : Fin 7 => C.get (q i) (q (i + 1)) (h i))
-
 /-- Distinct crossing edges in one simple rainbow seven-cycle have different colors. -/
 theorem colors_ne_of_twoCrossEdgesOnSevenCycle
     (G : SimpleGraph (Fin a ⊕ Fin b)) {K : Type*}
-    (C : G.EdgeLabeling K) (hRainbow : EverySevenCycleRainbowOn G C)
+    (C : G.EdgeLabeling K) (hRainbow : EveryCycleRainbow 7 G C)
     {x z : Fin a} {y w : Fin b}
     (hxy : G.Adj (.inl x) (.inr y)) (hzw : G.Adj (.inl z) (.inr w))
     (hne : s(Sum.inl x, Sum.inr y) ≠ s(Sum.inl z, Sum.inr w))
     (hcycle : TwoCrossEdgesOnSevenCycle G x z y w) :
     C.get (.inl x) (.inr y) hxy ≠ C.get (.inl z) (.inr w) hzw := by
   obtain ⟨q, hq, hAdj, ⟨i, hi⟩, ⟨j, hj⟩⟩ := hcycle
-  have hij : i ≠ j := by
-    intro heq
-    apply hne
-    calc
-      s(Sum.inl x, Sum.inr y) = s(q i, q (i + 1)) := hi.symm
-      _ = s(q j, q (j + 1)) := by rw [heq]
-      _ = s(Sum.inl z, Sum.inr w) := hj
-  have hci : C.get (.inl x) (.inr y) hxy =
-      C.get (q i) (q (i + 1)) (hAdj i) := by
-    change C ⟨s(Sum.inl x, Sum.inr y), hxy⟩ =
-      C ⟨s(q i, q (i + 1)), hAdj i⟩
-    exact congrArg C (Subtype.ext hi.symm)
-  have hcj : C.get (.inl z) (.inr w) hzw =
-      C.get (q j) (q (j + 1)) (hAdj j) := by
-    change C ⟨s(Sum.inl z, Sum.inr w), hzw⟩ =
-      C ⟨s(q j, q (j + 1)), hAdj j⟩
-    exact congrArg C (Subtype.ext hj.symm)
-  rw [hci, hcj]
-  exact (hRainbow q hq hAdj).ne hij
+  have hne' : (⟨s(Sum.inl x, Sum.inr y), hxy⟩ : G.edgeSet) ≠
+      ⟨s(Sum.inl z, Sum.inr w), hzw⟩ :=
+    fun h => hne (congrArg Subtype.val h)
+  have hcycle' : TwoEdgesOnCycle (m := 7) G
+      ⟨s(Sum.inl x, Sum.inr y), hxy⟩
+      ⟨s(Sum.inl z, Sum.inr w), hzw⟩ :=
+    ⟨q, hq, hAdj, i, j, Subtype.ext hi, Subtype.ext hj⟩
+  exact colors_ne_of_twoEdgesOnCycle G C hRainbow hne' hcycle'
 
 private theorem exists_outside_two {V : Type*} [DecidableEq V]
     (T : Finset V) (hT : 2 < T.card) (x y : V) :
@@ -257,7 +239,7 @@ theorem nearBipartite_cross_edge_colors_ne
     (hRightDegree : ∀ x ∈ A, 2 < (rightNeighborsIn G S x).card)
     (hCommonLeft : ∀ y ∈ S, ∀ w ∈ S,
       1 < (commonLeftNeighborsIn G A y w).card)
-    {K : Type*} (C : G.EdgeLabeling K) (hRainbow : EverySevenCycleRainbowOn G C)
+    {K : Type*} (C : G.EdgeLabeling K) (hRainbow : EveryCycleRainbow 7 G C)
     {x z : Fin a} {y w : Fin b}
     (hxA : x ∈ A) (hzA : z ∈ A) (hyS : y ∈ S) (hwS : w ∈ S)
     (hxy : G.Adj (.inl x) (.inr y)) (hzw : G.Adj (.inl z) (.inr w))

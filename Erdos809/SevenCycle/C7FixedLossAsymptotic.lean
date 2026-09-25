@@ -29,7 +29,7 @@ theorem rainbow_color_lower_asymptotic_of_fixed_cleaning
     (hcard : ∀ᶠ n : ℕ in Filter.atTop,
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hclean : ∀ η : ℝ, 0 < η →
       ∃ H : (n : ℕ) → SimpleGraph (Fin n),
         (∀ᶠ n : ℕ in Filter.atTop, H n ≤ G n) ∧
@@ -81,7 +81,7 @@ theorem rainbow_color_lower_asymptotic_of_variance_stability
     (hcard : ∀ᶠ n : ℕ in Filter.atTop,
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hstable : ∀ η : ℝ, 0 < η → η ≤ η₀ →
       ∀ᶠ n : ℕ in Filter.atTop,
         ∀ H : SimpleGraph (Fin n), H ≤ G n →
@@ -143,7 +143,7 @@ theorem rainbow_color_lower_asymptotic_of_positive_variance
     (hcard : ∀ᶠ n : ℕ in Filter.atTop,
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hvariance : ∀ᶠ n : ℕ in Filter.atTop,
       v₀ ≤ degreeVariance (graphAdjacency (G n))
         (uniformGraphWeight n)) :

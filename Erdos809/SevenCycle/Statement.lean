@@ -13,19 +13,12 @@ is related to the general graph-copy formulation in `Erdos809/Comparison.lean`.
 
 namespace Erdos809
 
-/-- Every simple seven-cycle in `G` has seven distinct edge colors. -/
-def EverySevenCycleRainbow {n k : ℕ} (G : SimpleGraph (Fin n))
-    (C : G.EdgeLabeling (Fin k)) : Prop :=
-  ∀ (v : Fin 7 → Fin n), Function.Injective v →
-    ∀ (h : ∀ i : Fin 7, G.Adj (v i) (v (i + 1))),
-      Function.Injective (fun i : Fin 7 => C.get (v i) (v (i + 1)) (h i))
-
 /-- A graph at the prescribed edge count with a `k`-color labeling in which
 every seven-cycle is rainbow. Natural-number division is the floor in
 `⌊n²/4⌋ + 1`. -/
 def Admissible (n k : ℕ) : Prop :=
   ∃ (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k)),
-    Nat.card G.edgeSet = n * n / 4 + 1 ∧ EverySevenCycleRainbow G C
+    Nat.card G.edgeSet = n * n / 4 + 1 ∧ EveryCycleRainbow 7 G C
 
 /-- The minimum admissible palette size. For the finitely many orders at
 which the prescribed edge count is impossible, `sInf` returns zero; this has

@@ -61,7 +61,7 @@ theorem disjoint_palette_lower_sparse_on_witness
       (fun j : ℕ => (r j : ℝ) / (φ j : ℝ))
       Filter.atTop (nhds 0))
     (hRainbow : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbowOn (G j) (C j)) :
+      EveryCycleRainbow 7 (G j) (C j)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ j : ℕ in Filter.atTop,
         (∃ x y : Fin (m j), ∃ S : Finset (Fin (m j)),

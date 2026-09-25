@@ -76,27 +76,33 @@ private theorem card_filter_le_common_add_missing {V : Type*} [DecidableEq V]
   rw [hinter, hmissing] at h
   exact h
 
-private theorem card_le_common_add_two_missing {V : Type*} [DecidableEq V]
-    (u : Finset V) (p q : V → Prop) [DecidablePred p] [DecidablePred q] :
-    #u ≤ #(u.filter fun x => p x ∧ q x) +
-      #(u.filter fun x => ¬ p x) + #(u.filter fun x => ¬ q x) := by
-  classical
-  have h := card_le_common_add_missing (u.filter p) (u.filter q) u
-    (Finset.filter_subset _ _)
-  have hinter : (u.filter p) ∩ (u.filter q) = u.filter (fun x => p x ∧ q x) := by
+/-- Counting a set through a filter and the elements missing it in a larger set. -/
+theorem card_le_filter_add_missing {V : Type*} [DecidableEq V]
+    (T U : Finset V) (hTU : T ⊆ U) (p : V → Prop) [DecidablePred p] :
+    T.card ≤ (T.filter p).card + (U.filter fun x => ¬ p x).card := by
+  have hpartition := Finset.card_filter_add_card_filter_not (s := T) p
+  have hsub : T.filter (fun x => ¬ p x) ⊆ U.filter (fun x => ¬ p x) := by
+    intro x hx
+    exact Finset.mem_filter.mpr ⟨hTU (Finset.mem_filter.mp hx).1,
+      (Finset.mem_filter.mp hx).2⟩
+  have hcard := Finset.card_le_card hsub
+  omega
+
+/-- Counting common filtered elements and those missing either predicate. -/
+theorem card_le_common_add_two_missing {V : Type*} [DecidableEq V]
+    (T U : Finset V) (hTU : T ⊆ U) (p q : V → Prop)
+    [DecidablePred p] [DecidablePred q] :
+    T.card ≤ (T.filter fun x => p x ∧ q x).card +
+      (U.filter fun x => ¬ p x).card + (U.filter fun x => ¬ q x).card := by
+  have hp := card_le_filter_add_missing T U hTU p
+  have hq := card_le_filter_add_missing (T.filter p) U
+    ((Finset.filter_subset _ _).trans hTU) q
+  have hfilter : (T.filter p).filter q = T.filter (fun x => p x ∧ q x) := by
     ext x
-    simp only [Finset.mem_inter, Finset.mem_filter]
+    simp only [Finset.mem_filter]
     tauto
-  have hmissingP : u \ (u.filter p) = u.filter (fun x => ¬ p x) := by
-    ext x
-    simp only [Finset.mem_sdiff, Finset.mem_filter]
-    tauto
-  have hmissingQ : u \ (u.filter q) = u.filter (fun x => ¬ q x) := by
-    ext x
-    simp only [Finset.mem_sdiff, Finset.mem_filter]
-    tauto
-  rw [hinter, hmissingP, hmissingQ] at h
-  exact h
+  rw [hfilter] at hq
+  omega
 
 /-- Cross-neighbors and missing cross-neighbors partition the opposite side. -/
 theorem crossDegree_add_missingCrossDegree {a b : ℕ}
@@ -153,7 +159,8 @@ theorem oppositePartSize_le_commonCrossDegree_add_missingCrossDegrees {a b : ℕ
       cases v with
       | inl y =>
           simpa [oppositePartSize, commonCrossDegree] using
-            (card_le_common_add_two_missing (univ : Finset (Fin b))
+            (card_le_common_add_two_missing (univ : Finset (Fin b)) univ
+              Finset.Subset.rfl
               (fun z => G.Adj (.inl x) (.inr z))
               (fun z => G.Adj (.inl y) (.inr z)))
       | inr y =>
@@ -164,7 +171,8 @@ theorem oppositePartSize_le_commonCrossDegree_add_missingCrossDegrees {a b : ℕ
           simp [internalGraph] at huv
       | inr y =>
           simpa [oppositePartSize, commonCrossDegree] using
-            (card_le_common_add_two_missing (univ : Finset (Fin a))
+            (card_le_common_add_two_missing (univ : Finset (Fin a)) univ
+              Finset.Subset.rfl
               (fun z => G.Adj (.inl z) (.inr x))
               (fun z => G.Adj (.inl z) (.inr y)))
 

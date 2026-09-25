@@ -28,7 +28,7 @@ theorem rainbow_color_lower_asymptotic_of_zero_sparse_case
     (hcard : ∀ᶠ n : ℕ in Filter.atTop,
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hZero : ∀ (φ : ℕ → ℕ), StrictMono φ →
       Filter.Tendsto
         (fun j => NearRegularExtraction.graphDegreeVariance (G (φ j)))
@@ -56,7 +56,7 @@ theorem rainbow_color_lower_asymptotic_of_zero_sparse_case
         Nat.card (G (φ j)).edgeSet = φ j * φ j / 4 + 1 :=
       hφ.tendsto_atTop.eventually hcard
     have hRainbowφ : ∀ᶠ j : ℕ in Filter.atTop,
-        EverySevenCycleRainbow (G (φ j)) (C (φ j)) :=
+        EveryCycleRainbow 7 (G (φ j)) (C (φ j)) :=
       hφ.tendsto_atTop.eventually hRainbow
     have hpositiveφ : ∀ᶠ j : ℕ in Filter.atTop,
         0 < φ j := by
@@ -82,7 +82,7 @@ theorem rainbow_color_lower_asymptotic_of_exact_count
     (hcard : ∀ᶠ n : ℕ in Filter.atTop,
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n)) :
+      EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in Filter.atTop,
         (1 / 8 : ℝ) - ε ≤ (colors n : ℝ) / (n : ℝ) ^ 2 := by
@@ -93,7 +93,7 @@ theorem rainbow_color_lower_asymptotic_of_exact_count
       Nat.card (G (φ j)).edgeSet = φ j * φ j / 4 + 1 :=
     hφ.tendsto_atTop.eventually hcard
   have hRainbowφ : ∀ᶠ j : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G (φ j)) (C (φ j)) :=
+      EveryCycleRainbow 7 (G (φ j)) (C (φ j)) :=
     hφ.tendsto_atTop.eventually hRainbow
   exact rainbow_color_lower_asymptotic_of_zero_graph_variance_sparse
     φ (colors ∘ φ) (fun j => G (φ j)) (fun j => C (φ j))
@@ -109,7 +109,7 @@ theorem sevenCycleThreshold_proved : SevenCycleThreshold := by
     filter_upwards [hValid] with n hn
     exact hn.1
   have hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n) := by
+      EveryCycleRainbow 7 (G n) (C n) := by
     filter_upwards [hValid] with n hn
     exact hn.2
   exact rainbow_color_lower_asymptotic_of_exact_count

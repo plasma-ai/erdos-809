@@ -69,7 +69,7 @@ theorem rainbow_color_lower_asymptotic_of_cleaning_variance
     (loss : ℕ → ℝ) (v : ℝ) (hv : 0 < v)
     (hHG : ∀ᶠ n : ℕ in Filter.atTop, H n ≤ G n)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hLift : ∀ᶠ n : ℕ in Filter.atTop, SevenWalkPairLifts (G n) (H n))
     (hGbase : ∀ᶠ n : ℕ in Filter.atTop,
       (1 / 4 : ℝ) ≤ supportedEdgeMass (G n).Adj (uniformGraphWeight n))
@@ -114,7 +114,7 @@ theorem rainbow_color_lower_asymptotic_of_exact_count_and_variance
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hHG : ∀ᶠ n : ℕ in Filter.atTop, H n ≤ G n)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hLift : ∀ᶠ n : ℕ in Filter.atTop, SevenWalkPairLifts (G n) (H n))
     (hloss : Filter.Tendsto loss Filter.atTop (nhds 0))
     (hdelete : ∀ᶠ n : ℕ in Filter.atTop,
@@ -145,7 +145,7 @@ theorem rainbow_color_lower_asymptotic_of_deleted_edges_and_variance
       Nat.card (G n).edgeSet = n * n / 4 + 1)
     (hHG : ∀ᶠ n : ℕ in Filter.atTop, H n ≤ G n)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbow (G n) (C n))
+      EveryCycleRainbow 7 (G n) (C n))
     (hLift : ∀ᶠ n : ℕ in Filter.atTop, SevenWalkPairLifts (G n) (H n))
     (hloss : Filter.Tendsto loss Filter.atTop (nhds 0))
     (hdeleted : ∀ᶠ n : ℕ in Filter.atTop,

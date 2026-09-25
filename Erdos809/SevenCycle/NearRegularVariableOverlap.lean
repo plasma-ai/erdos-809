@@ -3,7 +3,6 @@ import Erdos809.SevenCycle.NearRegularNonRobustAsymptotic
 import Erdos809.SevenCycle.NearRegularMaximumCutAsymptotic
 import Erdos809.SevenCycle.NearBipartiteConventional
 import Erdos809.SevenCycle.NearBipartiteRelabel
-import Erdos809.SevenCycle.NearBipartiteRelabelColor
 import Mathlib.Analysis.Real.Sqrt
 import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
 import Mathlib.Tactic.FieldSimp
@@ -122,7 +121,7 @@ theorem colors_lower_asymptotic_of_sparse_maximum_cut_variable_order
     (hInternal : Filter.Tendsto
       (fun n : ℕ => (internalEdgeCount (G n) : ℝ) / (n : ℝ) ^ 2)
       Filter.atTop (nhds 0))
-    (hRainbow : ∀ n, EverySevenCycleRainbowOn (G n) (C n)) :
+    (hRainbow : ∀ n, EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in Filter.atTop,
         1 / 8 - ε ≤ (colors n : ℝ) / (n : ℝ) ^ 2 := by
@@ -290,7 +289,7 @@ theorem variable_overlap_palette_lower_asymptotic
       Filter.atTop (nhds 0))
     (hTuran : ∀ᶠ n : ℕ in Filter.atTop,
       m n * m n / 4 < Nat.card (G n).edgeSet)
-    (hRainbow : ∀ n, EverySevenCycleRainbowOn (G n) (C n)) :
+    (hRainbow : ∀ n, EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in Filter.atTop,
         1 / 8 - ε ≤ (colors n : ℝ) / (n : ℝ) ^ 2 := by
@@ -339,9 +338,9 @@ theorem variable_overlap_palette_lower_asymptotic
       (fun n : ℕ => (internalEdgeCount (H n) : ℝ) / (n : ℝ) ^ 2)
       Filter.atTop (nhds 0) := by
     simpa only [H, T, relabeled_internalEdgeCount_eq_noncrossEdges] using hMass
-  have hRainbowH : ∀ n, EverySevenCycleRainbowOn (H n) (D n) := by
+  have hRainbowH : ∀ n, EveryCycleRainbow 7 (H n) (D n) := by
     intro n
-    exact everySevenCycleRainbowOn_comap (cutEquiv (T n)) (G n) (C n)
+    exact everyCycleRainbow_comap 7 (cutEquiv (T n)).toEmbedding (G n) (C n)
       (hRainbow n)
   exact NearBipartite.colors_lower_asymptotic_of_sparse_maximum_cut_variable_order
     m a b colors H D hOrder hm hTuranH hMaximumCut hInternal hRainbowH
@@ -426,7 +425,7 @@ theorem colors_lower_of_sparse_maximum_cut_margin {a b colors : ℕ}
     (hMargin :
       12 * (2 * (Nat.sqrt (missingCrossEdges G) + 1)) + 12 ≤ min a b)
     (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     let β := min a b
     let κ := 2 * (Nat.sqrt (missingCrossEdges G) + 1)
     (β - κ - 2) * ((β / 2 - 2 * κ) - κ) ≤
@@ -845,7 +844,7 @@ theorem colors_lower_asymptotic_of_sparse_maximum_cut_variable_filter
     (hInternal : Filter.Tendsto
       (fun n : ℕ => (internalEdgeCount (G n) : ℝ) / (n : ℝ) ^ 2)
       F (nhds 0))
-    (hRainbow : ∀ᶠ n : ℕ in F, EverySevenCycleRainbowOn (G n) (C n)) :
+    (hRainbow : ∀ᶠ n : ℕ in F, EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in F,
         1 / 8 - ε ≤ (colors n : ℝ) / (n : ℝ) ^ 2 := by
@@ -933,7 +932,7 @@ theorem variable_overlap_palette_lower_conditional
     (hTuran : ∀ᶠ n : ℕ in Filter.atTop,
       m n * m n / 4 < Nat.card (G n).edgeSet)
     (hRainbow : ∀ᶠ n : ℕ in Filter.atTop,
-      EverySevenCycleRainbowOn (G n) (C n)) :
+      EveryCycleRainbow 7 (G n) (C n)) :
     ∀ ε : ℝ, 0 < ε →
       ∀ᶠ n : ℕ in Filter.atTop,
         HasSmallOverlapWitness (G n) →
@@ -1019,9 +1018,9 @@ theorem variable_overlap_palette_lower_conditional
     exact relabeled_isMaximumCut_of_max_crossPairs (G n) (T n)
       (Amax_maximum (G n))
   have hRainbowH : ∀ᶠ n : ℕ in F,
-      EverySevenCycleRainbowOn (H n) (D n) := by
+      EveryCycleRainbow 7 (H n) (D n) := by
     filter_upwards [hRainbow.filter_mono hF] with n hrainbow
-    exact everySevenCycleRainbowOn_comap (cutEquiv (T n)) (G n) (C n)
+    exact everyCycleRainbow_comap 7 (cutEquiv (T n)).toEmbedding (G n) (C n)
       hrainbow
   intro ε hε
   have hBound := NearBipartite.colors_lower_asymptotic_of_sparse_maximum_cut_variable_filter

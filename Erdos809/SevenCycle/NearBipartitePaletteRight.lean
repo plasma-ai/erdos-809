@@ -75,8 +75,8 @@ theorem swappedCut_missingCrossEdges (G : SimpleGraph (Fin a ⊕ Fin b)) :
 
 theorem swappedCut_rainbow (G : SimpleGraph (Fin a ⊕ Fin b))
     {K : Type*} (C : G.EdgeLabeling K)
-    (hRainbow : EverySevenCycleRainbowOn G C) :
-    EverySevenCycleRainbowOn (swappedCutGraph G)
+    (hRainbow : EveryCycleRainbow 7 G C) :
+    EveryCycleRainbow 7 (swappedCutGraph G)
       (C.pullback (swappedCutEmbedding G)) := by
   intro q hq hAdj
   let e := Equiv.sumComm (Fin b) (Fin a)
@@ -106,7 +106,7 @@ theorem rightMarkedCrossPair_colors_ne_of_sparse_degrees
     (hAy : ∀ y ∈ A, missingCrossDegree G (.inr y) ≤ κ)
     (hSx : ∀ x ∈ S, missingCrossDegree G (.inl x) ≤ κ)
     {K : Type*} (C : G.EdgeLabeling K)
-    (hRainbow : EverySevenCycleRainbowOn G C)
+    (hRainbow : EveryCycleRainbow 7 G C)
     {x z : Fin a} {y w : Fin b}
     (hxS : x ∈ S) (hzS : z ∈ S) (hyA : y ∈ A) (hwA : w ∈ A)
     (hxy : G.Adj (.inl x) (.inr y))
@@ -133,7 +133,7 @@ theorem rightMarkedCrossPair_colors_ne_of_sparse_degrees
     exact hSx t ht
   obtain ⟨hScard, hRight, hDegree, hLeft⟩ :=
     nearBipartite_connector_bounds H A S κ ha hS hA hAyH hSxH
-  have hRainbowH : EverySevenCycleRainbowOn H C' :=
+  have hRainbowH : EveryCycleRainbow 7 H C' :=
     swappedCut_rainbow G C hRainbow
   have hyx : H.Adj (.inl y) (.inr x) := (swappedCut_cross G y x).2 hxy
   have hwz : H.Adj (.inl w) (.inr z) := (swappedCut_cross G w z).2 hzw
@@ -177,7 +177,7 @@ theorem rightMarkedCrossPairs_card_le_colors_of_rainbow
     (hAy : ∀ y ∈ A, missingCrossDegree G (.inr y) ≤ κ)
     (hSx : ∀ x ∈ S, missingCrossDegree G (.inl x) ≤ κ)
     (colors : ℕ) (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     (markedCrossPairs (swappedCutGraph G) A S).card ≤ colors := by
   let H := swappedCutGraph G
   let C' : H.EdgeLabeling (Fin colors) := C.pullback (swappedCutEmbedding G)
@@ -198,7 +198,7 @@ theorem rightMarkedCrossPairs_card_le_colors_of_rainbow
     exact hSx x hx
   obtain ⟨hScard, hRight, hDegree, hLeft⟩ :=
     nearBipartite_connector_bounds H A S κ ha hS hA hAyH hSxH
-  have hRainbowH : EverySevenCycleRainbowOn H C' :=
+  have hRainbowH : EveryCycleRainbow 7 H C' :=
     swappedCut_rainbow G C hRainbow
   exact markedCrossPairs_card_le_colors_of_rainbow H A S u v huvH huA hvA
     hCommonH hScard hRight hDegree hLeft colors C' hRainbowH
@@ -217,7 +217,7 @@ theorem rightMarked_rectangle_le_colors_add_missing
     (hAy : ∀ y ∈ A, missingCrossDegree G (.inr y) ≤ κ)
     (hSx : ∀ x ∈ S, missingCrossDegree G (.inl x) ≤ κ)
     (colors : ℕ) (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     A.card * S.card ≤ colors + missingCrossEdges G := by
   have hFamily := markedCrossPairs_card_add_missing_ge_product
     (swappedCutGraph G) A S

@@ -14,20 +14,8 @@ theorem twoCliqueRainbow_of_sum (m a b : ℕ)
       (twoCliquesSumColoring a b)) :
     EveryCycleRainbow (m + 1) (twoCliqueGraph a b)
       (twoCliqueColoring a b) := by
-  intro v hv h
-  let w : Fin (m + 1) → Fin a ⊕ Fin b :=
-    fun i => (twoCliqueGraphIso a b).symm (v i)
-  have hw : Function.Injective w :=
-    (twoCliqueGraphIso a b).symm.injective.comp hv
-  have hEdges : ∀ i : Fin (m + 1), (twoCliquesSum a b).Adj (w i) (w (i + 1)) := by
-    intro i
-    exact (twoCliqueGraphIso a b).symm.map_rel_iff.mpr (h i)
-  have hRainbow := hSum w hw hEdges
-  have hcolor (i : Fin (m + 1)) :
-      (twoCliqueColoring a b).get (v i) (v (i + 1)) (h i) =
-        (twoCliquesSumColoring a b).get (w i) (w (i + 1)) (hEdges i) := by
-    rfl
-  simpa only [hcolor] using hRainbow
+  exact everyCycleRainbow_pullback (m + 1)
+    (twoCliqueGraphIso a b).symm.toEmbedding (twoCliquesSumColoring a b) hSum
 
 /-- The two-clique coloring makes every cycle of length at least three
 rainbow. Each cycle lies in one clique, whose edges have distinct colors. -/

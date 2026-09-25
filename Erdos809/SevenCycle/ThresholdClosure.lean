@@ -58,7 +58,7 @@ theorem sevenCycleThreshold_of_eventual_graph_lower
       ∀ᶠ n : ℕ in Filter.atTop,
         ∀ (k : ℕ) (G : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k)),
           Nat.card G.edgeSet = n * n / 4 + 1 →
-          EverySevenCycleRainbow G C →
+          EveryCycleRainbow 7 G C →
           (1 / 8 - ε) * (n : ℝ) ^ 2 ≤ (k : ℝ)) :
     SevenCycleThreshold := by
   apply sevenCycleThreshold_of_eventual_palette_lower

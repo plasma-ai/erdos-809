@@ -45,7 +45,7 @@ theorem right_common_cross_forces_colors_of_sparse_missing
     (hMarkedSize : markedLower + r + 2 ≤ b)
     (hCommonSize : commonLower + r ≤ α)
     (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     markedLower * commonLower ≤ colors + missingCrossEdges G := by
   let H := swappedCutGraph G
   let C' : H.EdgeLabeling (Fin colors) := C.pullback (swappedCutEmbedding G)
@@ -56,7 +56,7 @@ theorem right_common_cross_forces_colors_of_sparse_missing
   have hSparseH : 2 * missingCrossEdges H < (r + 1) * (κ + 1) := by
     rw [show H = swappedCutGraph G from rfl, swappedCut_missingCrossEdges]
     exact hSparse
-  have hRainbowH : EverySevenCycleRainbowOn H C' :=
+  have hRainbowH : EveryCycleRainbow 7 H C' :=
     swappedCut_rainbow G C hRainbow
   have h := left_common_cross_forces_colors_of_sparse_missing H u v huvH
     hCommonH hSparseH ha hMarkedConnect hCommonConnect hMarkedSize

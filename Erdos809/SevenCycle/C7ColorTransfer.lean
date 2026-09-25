@@ -104,7 +104,7 @@ original rainbow-colored graph. The lifting and weighted-density hypotheses
 are the inputs still supplied by regularity and reweighting. -/
 theorem rainbow_color_count_bound_of_cleaning
     (G H : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hHG : H ≤ G) (hRainbow : EverySevenCycleRainbow G C)
+    (hHG : H ≤ G) (hRainbow : EveryCycleRainbow 7 G C)
     (hLift : SevenWalkPairLifts G H)
     (w : Fin n → ℝ) (hw : ∀ i, 0 ≤ w i)
     (hwt : totalMass w = 1)
@@ -113,7 +113,7 @@ theorem rainbow_color_count_bound_of_cleaning
     (hpoint : ∀ e : H.edgeSet,
       activeDemand H.Adj H.symm w e.1 ≤ B) :
     (1 / 8 : ℝ) < (k : ℝ) * B := by
-  let D := restrictEdgeLabeling hHG C
+  let D := C.pullback (SimpleGraph.Hom.ofLE hHG)
   have hD : NoRepeatedColorOnClosedSevenWalks H D :=
     noRepeatedColor_of_sevenWalkPairLifts C hHG hRainbow hLift
   exact separated_color_count_bound H D hD w hw hwt hQ B hB hpoint
@@ -121,7 +121,7 @@ theorem rainbow_color_count_bound_of_cleaning
 /-- The near-uniform vertex-weight form of the color-count inequality. -/
 theorem rainbow_color_count_bound_of_vertex_bound
     (G H : SimpleGraph (Fin n)) (C : G.EdgeLabeling (Fin k))
-    (hHG : H ≤ G) (hRainbow : EverySevenCycleRainbow G C)
+    (hHG : H ≤ G) (hRainbow : EveryCycleRainbow 7 G C)
     (hLift : SevenWalkPairLifts G H)
     (w : Fin n → ℝ) (hw : ∀ i, 0 ≤ w i)
     (hwt : totalMass w = 1)

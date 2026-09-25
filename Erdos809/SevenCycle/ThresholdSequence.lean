@@ -19,7 +19,7 @@ private structure SevenWitness (n : ℕ) where
 
 private def SevenWitness.Valid {n : ℕ} (w : SevenWitness n) : Prop :=
   Nat.card w.graph.edgeSet = n * n / 4 + 1 ∧
-    EverySevenCycleRainbow w.graph w.coloring
+    EveryCycleRainbow 7 w.graph w.coloring
 
 /-- A lower bound for every eventually admissible sequence gives an eventual
 lower bound for every individual exact-edge rainbow coloring. -/
@@ -29,7 +29,7 @@ theorem eventual_palette_lower_of_sequence_lower
         (C : ∀ n : ℕ, (G n).EdgeLabeling (Fin (k n))),
         (∀ᶠ n : ℕ in Filter.atTop,
           Nat.card (G n).edgeSet = n * n / 4 + 1 ∧
-            EverySevenCycleRainbow (G n) (C n)) →
+            EveryCycleRainbow 7 (G n) (C n)) →
         ∀ ε : ℝ, 0 < ε →
           ∀ᶠ n : ℕ in Filter.atTop,
             1 / 8 - ε ≤ (k n : ℝ) / (n : ℝ) ^ 2) :
@@ -95,7 +95,7 @@ theorem sevenCycleThreshold_of_sequence_lower
         (C : ∀ n : ℕ, (G n).EdgeLabeling (Fin (k n))),
         (∀ᶠ n : ℕ in Filter.atTop,
           Nat.card (G n).edgeSet = n * n / 4 + 1 ∧
-            EverySevenCycleRainbow (G n) (C n)) →
+            EveryCycleRainbow 7 (G n) (C n)) →
         ∀ ε : ℝ, 0 < ε →
           ∀ᶠ n : ℕ in Filter.atTop,
             1 / 8 - ε ≤ (k n : ℝ) / (n : ℝ) ^ 2) :

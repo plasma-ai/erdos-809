@@ -36,7 +36,7 @@ theorem markedCrossPairs_card_le_colors_of_rainbow
     (hCommonLeft : ∀ y ∈ S, ∀ w ∈ S,
       1 < (commonLeftNeighborsIn G A y w).card)
     (colors : ℕ) (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     (markedCrossPairs G A S).card ≤ colors := by
   classical
   let F := markedCrossPairs G A S
@@ -78,7 +78,7 @@ theorem marked_rectangle_le_colors_add_missing
     (hCommonLeft : ∀ y ∈ S, ∀ w ∈ S,
       1 < (commonLeftNeighborsIn G A y w).card)
     (colors : ℕ) (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     A.card * S.card ≤ colors + missingCrossEdges G := by
   have hFamily := markedCrossPairs_card_add_missing_ge_product G A S
   have hColors := markedCrossPairs_card_le_colors_of_rainbow G A S u v huv
@@ -97,7 +97,7 @@ theorem marked_rectangle_le_colors_add_missing_of_sparse_degrees
     (hAx : ∀ x ∈ A, missingCrossDegree G (.inl x) ≤ κ)
     (hSy : ∀ y ∈ S, missingCrossDegree G (.inr y) ≤ κ)
     (colors : ℕ) (C : G.EdgeLabeling (Fin colors))
-    (hRainbow : EverySevenCycleRainbowOn G C) :
+    (hRainbow : EveryCycleRainbow 7 G C) :
     A.card * S.card ≤ colors + missingCrossEdges G := by
   obtain ⟨hScard, hRight, hDegree, hLeft⟩ :=
     nearBipartite_connector_bounds G A S κ hb hS hA hAx hSy
