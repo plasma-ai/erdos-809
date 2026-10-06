@@ -6,6 +6,8 @@ To our knowledge, the seven-cycle case proved here is new. Together with the lon
 
 Bucić, Chen, and Ma proved the cases of odd cycle length at least nine in [*On a maximal anti-Ramsey conjecture of Burr, Erdős, Graham, and Sós*](https://arxiv.org/abs/2603.18952). This project also formalizes their stronger full-density theorem for those cycles.
 
+This formalization has been [accepted by the Palomar registry](https://palomar-registry.org/entry?id=PALOMAR-2026-09-30-000004).
+
 ## Literature and scope
 
 The [1989 paper of Burr, Erdős, Graham, and Sós](https://doi.org/10.1002/jgt.3190130302) posed the threshold conjecture and proved a quadratic lower bound. Bucić, Chen, and Ma's Theorem 1.2 proves a stronger formula for odd cycles of length at least nine throughout the nontrivial edge range. Their discussion after the proof identifies the seven-cycle case as needing a different argument. The result proved here settles the seven-cycle threshold; it does not assert a full-density formula for seven-cycles.
