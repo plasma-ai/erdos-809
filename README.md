@@ -8,7 +8,7 @@ Bucić, Chen, and Ma proved the cases of odd cycle length at least nine in [*On 
 
 A [companion writeup](paper/c7_threshold.pdf) presents the seven-cycle proof and additional bounds at higher edge densities. The [LaTeX source](paper/c7_threshold.tex) is also available.
 
-This formalization has been [accepted by the Palomar registry](https://palomar-registry.org/entry?id=PALOMAR-2026-09-30-000004).
+This formalization has been [registered in Palomar](https://palomar-registry.org/entry?id=PALOMAR-2026-09-30-000004).
 
 ## Literature and scope
 
