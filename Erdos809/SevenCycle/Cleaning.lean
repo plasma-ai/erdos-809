@@ -1,14 +1,16 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Combinatorics.SimpleGraph.Regularity.Uniform
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.GCongr
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.FinCases
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Regularity.Uniform
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.GCongr
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.FinCases
 
 /-!
 # Removing collisions from counted path realizations
@@ -19,6 +21,8 @@ they remain separate variables. This module bounds the assignments spoiled by
 vertex collisions or a prescribed forbidden set, so a sufficiently large
 family of walks contains a simple path avoiding that set.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

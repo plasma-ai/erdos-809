@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseCycleEmbedding
-import Erdos809.BucicChenMa.CycleEdgeColors
-import Erdos809.BucicChenMa.DenseGoodEdgeCount
-import Mathlib.Combinatorics.SimpleGraph.Walk.Traversal
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseCycleEmbedding
+public import Erdos809.BucicChenMa.CycleEdgeColors
+public import Erdos809.BucicChenMa.DenseGoodEdgeCount
+public import Mathlib.Combinatorics.SimpleGraph.Walk.Traversal
 
 /-!
 # Converting a cycle walk to the rainbow-cycle interface
@@ -12,6 +14,8 @@ The graph-theoretic construction naturally produces a closed walk with
 from `Fin m`. This module connects the two representations, including the
 two marked edges.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

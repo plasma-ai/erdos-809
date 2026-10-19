@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2NoCommonSelect
-import Erdos809.BucicChenMa.Case2NoCommonDistinct
-import Erdos809.BucicChenMa.Case2NoCommonCycle
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2NoCommonSelect
+public import Erdos809.BucicChenMa.Case2NoCommonDistinct
+public import Erdos809.BucicChenMa.Case2NoCommonCycle
 
 /-!
 # The full no-common-neighbor subcase of Case 2
@@ -10,6 +12,8 @@ The book bound and near-half minimum degree select a common neighbor of
 `p,q` adjacent to one of `y,w`. The two orientations of the cycle
 construction cover those two possibilities.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

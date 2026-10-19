@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.GreedyPath
-import Mathlib.Combinatorics.SimpleGraph.Finite
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.GreedyPath
+public import Mathlib.Combinatorics.SimpleGraph.Finite
 
 /-!
 # The greedy path in the common-neighbor subcase
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.Finite
 Seven vertices are forbidden before growing the path of length `2k-8` from
 `x`. The minimum degree `2k` leaves one spare neighbor at every step.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -15,6 +15,7 @@ project:
   license: "Apache-2.0"
   responsible_maintainers:
     - "Jacob Parish"
+    - "Andrew Turner"
 
 classification:
   arxiv: ["math.CO"]

@@ -1,12 +1,14 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegular
-import Mathlib.Order.Filter.AtTopBot.Archimedean
-import Mathlib.Order.Filter.AtTopBot.Tendsto
-import Mathlib.Topology.Instances.Real.Lemmas
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegular
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
+public import Mathlib.Order.Filter.AtTopBot.Tendsto
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Ring
 
 /-!
 # The robust-path bound along a sparse order sequence
@@ -15,6 +17,8 @@ The index `j` may enumerate a sparse sequence of graph orders `φ j`.
 The finite robust-path estimate depends only on the graph at that index;
 all asymptotic ratios below use its actual order `φ j`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

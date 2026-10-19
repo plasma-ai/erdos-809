@@ -1,13 +1,17 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Algebra.BigOperators.Sym
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Algebra.BigOperators.Sym
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Ring
 
 /-!
 # Summing a symmetric function over unordered pairs
 
 The diagonal has one ordered representative and each off-diagonal pair has two.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

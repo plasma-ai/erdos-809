@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCutBridge
-import Erdos809.SevenCycle.NearBipartiteMaxCut
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCutBridge
+public import Erdos809.SevenCycle.NearBipartiteMaxCut
 
 /-!
 # Relabeling a finite cut
@@ -9,6 +11,8 @@ A cut of a graph on `Fin n` can be viewed as the displayed two-class cut of a
 graph on `Fin A.card ⊕ Fin Aᶜ.card`. The relabeling preserves the graph and
 the counts used by the near-bipartite argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

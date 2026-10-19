@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseDeletionBounds
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseDeletionBounds
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Lemma 3.2 after small vertex deletions
@@ -10,6 +12,8 @@ The global dense-case edge and degree margins survive deletion of at most
 `2k - 4` vertices. This is the numerical step between equation (15) and
 the repeated use of Lemma 3.2 in Bucić–Chen–Ma.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

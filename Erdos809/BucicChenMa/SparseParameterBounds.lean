@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.SparseDegreeBound
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.SparseDegreeBound
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Large-order consequences in the sparse branch
@@ -10,6 +12,8 @@ The induction assumes `2k ≤ ε¹³n`, with `ε < 1/100` and `k ≥ 4`.
 This single condition supplies all elementary order bounds used by
 Claim 2, the book edge, and the greedy path construction.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

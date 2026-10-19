@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Common neighbors under a large minimum degree
@@ -9,6 +11,8 @@ The minimum-degree estimate used in Claim 2 leaves many common neighbors
 for any pair of vertices. This also lets us choose a common neighbor while
 avoiding a prescribed set of vertices.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

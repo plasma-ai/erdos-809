@@ -1,11 +1,13 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.BookLemma
-import Erdos809.BucicChenMa.BookPigeonhole
-import Erdos809.BucicChenMa.BookDoubleCount
-import Mathlib.Algebra.Order.Chebyshev
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Zify
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.BookLemma
+public import Erdos809.BucicChenMa.BookPigeonhole
+public import Erdos809.BucicChenMa.BookDoubleCount
+public import Mathlib.Algebra.Order.Chebyshev
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Zify
 
 /-!
 # The book lemma
@@ -16,6 +18,8 @@ then over edges gives the weighted inequality behind the
 Edwards–Khadžiivanov–Nikiforov book theorem. A degree-square estimate and
 Cauchy–Schwarz finish the argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

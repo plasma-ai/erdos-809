@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPaths
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Combinatorics.SimpleGraph.Walk.Maps
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPaths
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Combinatorics.SimpleGraph.Walk.Maps
 
 /-!
 # Adding the edge between two endpoints
@@ -12,6 +14,8 @@ length four cannot use that new edge: if it did, its length would be one.
 The reduction below also records the changes in edge count and minimum
 degree.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

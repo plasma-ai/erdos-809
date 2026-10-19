@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LowerInduction
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LowerInduction
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Minimum degree in the sparse branch
@@ -10,6 +12,8 @@ This is the direct implication from equation (13) to the first inequality
 in equation (19) of Bucić–Chen–Ma. The square-root comparison is valid
 without differentiating the auxiliary function in the paper.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

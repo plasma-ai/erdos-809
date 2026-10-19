@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularStructuralSplit
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularStructuralSplit
 
 /-!
 # Alternating C7 cases along sparse graph orders
@@ -8,6 +10,8 @@ The finite robust, disjoint, and overlap alternatives hold at each graph,
 independently of how its order was selected. Pointwise conditional palette
 bounds therefore combine along an arbitrary order sequence.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

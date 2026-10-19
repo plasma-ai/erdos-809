@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LowerInduction
-import Erdos809.BucicChenMa.LowerReduction
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LowerInduction
+public import Erdos809.BucicChenMa.LowerReduction
 
 /-!
 # From the quantitative induction bound to the asymptotic theorem
@@ -8,6 +10,8 @@ import Erdos809.BucicChenMa.LowerReduction
 For fixed `k` and `ε`, the correction `2k² ε⁻²⁶` in equation (12) is
 independent of `n`, so it is absorbed by an `o(n²)` error.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

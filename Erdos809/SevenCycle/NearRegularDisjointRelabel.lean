@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCycles
-import Erdos809.SevenCycle.NearRegularDisjointCount
-import Mathlib.Combinatorics.SimpleGraph.Finite
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCycles
+public import Erdos809.SevenCycle.NearRegularDisjointCount
+public import Mathlib.Combinatorics.SimpleGraph.Finite
 
 /-!
 # Relabeling an induced subgraph
@@ -10,6 +12,8 @@ An induced graph on a finite vertex set can be indexed by `Fin A.card`.
 The edge count, degrees, and rainbow condition then retain their original
 meaning inside `A`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

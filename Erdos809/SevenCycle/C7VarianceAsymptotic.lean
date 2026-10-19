@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7VarianceTransfer
-import Erdos809.SevenCycle.C7AsymptoticArithmetic
-import Mathlib.Order.Filter.AtTopBot.Archimedean
-import Mathlib.Topology.Instances.Real.Lemmas
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7VarianceTransfer
+public import Erdos809.SevenCycle.C7AsymptoticArithmetic
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
+public import Mathlib.Topology.Instances.Real.Lemmas
 
 /-!
 # Asymptotic color lower bound from cleaning and variance
@@ -14,6 +16,8 @@ seven-walks lift to simple rainbow seven-cycles. Under precisely these
 quantitative assumptions, the palette theorem gives the one-eighth lower
 bound on normalized color counts.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

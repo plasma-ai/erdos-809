@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Metric
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Metric
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Large sets of vertices at distance at most three
@@ -10,6 +12,8 @@ The elementary branches of Lemma 3.1 of Bucić, Chen, and Ma (2026).
 The distance here is measured in the original graph, not in the subgraph
 induced by the set.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

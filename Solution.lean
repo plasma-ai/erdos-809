@@ -1,10 +1,14 @@
-import Erdos809.FinalAssembly
+module
+
+public import Erdos809.FinalAssembly
 
 /-!
 # Proof of the rainbow odd-cycle threshold
 
 Comparator checks this theorem against the Mathlib-only `Challenge.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

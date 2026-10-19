@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.CycleEdgeColors
-import Mathlib.Combinatorics.SimpleGraph.Maps
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.CycleEdgeColors
+public import Mathlib.Combinatorics.SimpleGraph.Maps
 
 /-!
 # Transporting a common cycle along a graph embedding
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.Maps
 The cycles built in Claim 2 first live in an induced graph. An injective graph
 homomorphism carries them to cycles in the ambient graph.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

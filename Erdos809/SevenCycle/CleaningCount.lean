@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.Cleaning
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.Cleaning
 
 /-!
 # Counts from a regular pair
@@ -8,6 +10,8 @@ The internal occurrences in a path pattern are separate variables, even when
 their prescribed clusters coincide. This file starts the path count with the
 two-internal-vertex case, using Mathlib's pair regularity directly.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

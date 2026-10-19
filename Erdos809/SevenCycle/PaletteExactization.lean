@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.PaletteSavings
-import Mathlib.Tactic.FieldSimp
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.PaletteSavings
+public import Mathlib.Tactic.FieldSimp
 
 /-!
 # Exactizing fractional palette covers
@@ -9,6 +11,8 @@ Excess coverage at a vertex can be moved from each palette to the palette
 obtained by deleting that vertex. Empty palettes are discarded. This preserves
 the coverage of every other vertex and cannot increase the total cost.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LargeDiameterThree
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LargeDiameterThree
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Distant pairs and their closed neighborhoods
@@ -10,6 +12,8 @@ If two vertices are farther than three apart, their closed neighborhoods
 are disjoint, with no edge between them. A vertex in either neighborhood
 therefore misses every vertex in the other neighborhood.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

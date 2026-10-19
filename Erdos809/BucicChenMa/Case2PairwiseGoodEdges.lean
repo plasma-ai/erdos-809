@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2GoodEdgeOrientation
-import Erdos809.BucicChenMa.Case2AdjacentPairwise
-import Erdos809.BucicChenMa.Case2DisjointPairCycle
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2GoodEdgeOrientation
+public import Erdos809.BucicChenMa.Case2AdjacentPairwise
+public import Erdos809.BucicChenMa.Case2DisjointPairCycle
 
 /-!
 # Any two good edges lie on a common odd cycle
@@ -9,6 +11,8 @@ import Erdos809.BucicChenMa.Case2DisjointPairCycle
 The good-edge set is split by whether the two edges share an endpoint. The
 adjacent and disjoint constructions are in separate modules.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7Conflict
-import Erdos809.SevenCycle.C7CutProjection
-import Erdos809.SevenCycle.PaletteRestriction
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7Conflict
+public import Erdos809.SevenCycle.C7CutProjection
+public import Erdos809.SevenCycle.PaletteRestriction
 
 /-!
 # Splitting a full C7 palette allocation
@@ -12,17 +14,11 @@ allocation to its cut types therefore leaves enough cost to pay for all
 internal demands and an exact cut allocation.
 -/
 
+@[expose] public section
+
 namespace Erdos809
 
 variable {V : Type*} [Fintype V] [DecidableEq V]
-
-private noncomputable instance cutTypeFintype (A : V → V → Prop) (K : Finset V) :
-    Fintype (CutType A K) := by
-  classical
-  infer_instance
-
-private noncomputable instance cutTypeDecidableEq (A : V → V → Prop) (K : Finset V) :
-    DecidableEq (CutType A K) := Classical.decEq _
 
 /-- All supported edge types with both endpoints in `K`. -/
 noncomputable def internalTypes (A : V → V → Prop) (K : Finset V) :

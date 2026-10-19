@@ -1,9 +1,11 @@
-import Erdos809.Statement
-import Erdos809.SevenCycle.C7LowerSequence
-import Erdos809.Comparison
-import Erdos809.CycleCopyBridge
-import Erdos809.BucicChenMa.ThresholdConsequence
-import Erdos809.BucicChenMa.QuantitativeInductionAssembly
+module
+
+public import Erdos809.Statement
+public import Erdos809.SevenCycle.C7LowerSequence
+public import Erdos809.Comparison
+public import Erdos809.CycleCopyBridge
+public import Erdos809.BucicChenMa.ThresholdConsequence
+public import Erdos809.BucicChenMa.QuantitativeInductionAssembly
 
 /-!
 # Assembling the full odd-cycle threshold statement
@@ -12,6 +14,8 @@ The final Erdős 809 statement covers every k at least three. The seven-cycle
 branch is proved in `C7LowerSequence`; the longer-cycle branch is the
 Bucić–Chen–Ma full-density theorem.
 -/
+
+@[expose] public section
 
 open scoped Asymptotics
 

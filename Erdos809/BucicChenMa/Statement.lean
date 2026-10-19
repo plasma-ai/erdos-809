@@ -1,6 +1,8 @@
-import Erdos809.RainbowCycles
-import Erdos809.MainTerm
-import Mathlib.Topology.Instances.Real.Lemmas
+module
+
+public import Erdos809.RainbowCycles
+public import Erdos809.MainTerm
+public import Mathlib.Topology.Instances.Real.Lemmas
 
 /-!
 # Bucić–Chen–Ma (2026): longer odd cycles
@@ -15,6 +17,8 @@ These are statements of the 2026 preprint's results. The preprint is cited in
 `formalization.yaml`, and their proofs are developed in this directory.
 The shared leading term is defined in `Erdos809/MainTerm.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

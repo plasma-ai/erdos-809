@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPathDenseCase
-import Erdos809.BucicChenMa.ShortPathDegreeBudget
-import Mathlib.Data.Nat.Choose.Cast
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPathDenseCase
+public import Erdos809.BucicChenMa.ShortPathDegreeBudget
+public import Mathlib.Data.Nat.Choose.Cast
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The adjacent case of the four-path lemma
@@ -11,6 +13,8 @@ This instantiates the numerical parameters in the adjacent-vertex case
 of Bucić, Chen, and Ma's Lemma 3.2. The graph's edge count supplies the
 upper bound needed for the adjusted minimum-degree threshold.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,9 +1,11 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2NoCommonGreedy
-import Erdos809.BucicChenMa.Case2NoCommonShortPath
-import Erdos809.BucicChenMa.Case2NoCommonBase
-import Erdos809.BucicChenMa.Case2NoCommonAdjuster
-import Erdos809.BucicChenMa.Claim2CycleWalkBridge
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2NoCommonGreedy
+public import Erdos809.BucicChenMa.Case2NoCommonShortPath
+public import Erdos809.BucicChenMa.Case2NoCommonBase
+public import Erdos809.BucicChenMa.Case2NoCommonAdjuster
+public import Erdos809.BucicChenMa.Claim2CycleWalkBridge
 
 /-!
 # Disjoint good edges with no common neighbor at their outer endpoints
@@ -12,6 +14,8 @@ This is the cycle construction in Figure 4(c) of Bucić, Chen, and Ma. A
 short return path of length two or three is compensated by the two routes
 through the triangle `pqr`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

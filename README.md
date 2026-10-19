@@ -22,6 +22,8 @@ The seven-cycle proof in `Erdos809/SevenCycle/` and the longer-cycle proof in `E
 
 `Challenge.lean` states the result using only Mathlib imports. Its `sorry` is deliberate: this file is the statement to be audited, not the proof. It defines the maximal anti-Ramsey function for any pattern graph and applies it to Mathlib's `cycleGraph`; `SimpleGraph.Copy` includes cycles with chords. `Erdos809/CycleCopyBridge.lean` proves this agrees with the indexed-cycle formulation used throughout the proof. `Solution.lean` imports the proof development and supplies the same theorem. `comparator.json` selects `Erdos809.main_result` and the allowed axioms for [Comparator](https://github.com/leanprover/comparator). The proof development itself lives under `Erdos809/`.
 
+Every Lean file uses the module system: it begins with `module`, imports with `public import`, and exposes its definitions with `@[expose] public section`. No file imports all of Mathlib.
+
 `formalization.yaml` records the mathematical sources, authorship, AI use, source fidelity, and review status for a registry submission.
 
 The Lean and Mathlib versions are fixed by `lean-toolchain`, `lakefile.toml`, and `lake-manifest.json`.

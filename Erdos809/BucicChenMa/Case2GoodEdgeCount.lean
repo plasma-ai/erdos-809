@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Counting the good edges in the sparse case
@@ -10,6 +12,8 @@ In Case 2, fix an edge `pq` and put `A = N(p) \ {q}`. An edge is good when
 it meets `A` and avoids both `p` and `q`. We retain exactly these edges in
 `case2GoodGraph`, so the degree-sum formula gives the count directly.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

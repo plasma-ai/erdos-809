@@ -1,8 +1,10 @@
-import Erdos809.Comparison
-import Erdos809.UpperBound.Threshold
-import Erdos809.UpperBound.TwoCliqueRainbow
-import Erdos809.UpperBound.Arithmetic
-import Erdos809.SubgraphTransfer
+module
+
+public import Erdos809.Comparison
+public import Erdos809.UpperBound.Threshold
+public import Erdos809.UpperBound.TwoCliqueRainbow
+public import Erdos809.UpperBound.Arithmetic
+public import Erdos809.SubgraphTransfer
 
 /-!
 # The seven-cycle upper bound
@@ -10,6 +12,8 @@ import Erdos809.SubgraphTransfer
 The full-density two-clique upper estimate applies at the first edge count
 above `⌊n²/4⌋`. The exact-edge formulation has the same minimum palette size.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

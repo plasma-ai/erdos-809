@@ -1,9 +1,11 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Data.Nat.Sqrt
-import Mathlib.Order.Filter.AtTopBot.Archimedean
-import Mathlib.Topology.Algebra.Order.Field
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Data.Nat.Sqrt
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
+public import Mathlib.Topology.Algebra.Order.Field
+public import Mathlib.Tactic.Linarith
 
 /-!
 # A square-root cutoff for sparse missing pairs
@@ -12,6 +14,8 @@ The cutoff is large enough for the finite exceptional-set estimate and is
 still negligible compared with the number of vertices when the missing pairs
 are `o(n²)`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

@@ -1,5 +1,7 @@
-import Erdos809.RainbowCycles
-import Mathlib.Combinatorics.SimpleGraph.Sum
+module
+
+public import Erdos809.RainbowCycles
+public import Mathlib.Combinatorics.SimpleGraph.Sum
 
 /-!
 # Rainbow cycles in a disjoint union
@@ -7,6 +9,8 @@ import Mathlib.Combinatorics.SimpleGraph.Sum
 A cycle in a disjoint union stays in one component. Thus edge colors can be
 reused between components, provided colors are injective within each.
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

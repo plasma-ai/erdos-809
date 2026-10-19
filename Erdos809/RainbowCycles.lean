@@ -1,7 +1,9 @@
-import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
-import Mathlib.Combinatorics.SimpleGraph.CycleGraph
-import Mathlib.Order.Lattice.Nat
-import Mathlib.SetTheory.Cardinal.NatCard
+module
+
+public import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
+public import Mathlib.Combinatorics.SimpleGraph.CycleGraph
+public import Mathlib.Order.Lattice.Nat
+public import Mathlib.SetTheory.Cardinal.NatCard
 
 /-!
 # Rainbow copies and the maximal anti-Ramsey function
@@ -11,6 +13,8 @@ The general function minimizes this palette size over graphs with **at least**
 the specified number of edges, as in the maximal anti-Ramsey definition of
 Bucić, Chen, and Ma. The indexed-cycle formulation below is used in the proofs.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

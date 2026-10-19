@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteDensity
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteDensity
 
 /-!
 # Colors forced by a near-bipartite crossing family
@@ -8,6 +10,8 @@ Under the finite connector hypotheses, every pair of distinct marked crossing
 edges belongs to a common seven-cycle. A rainbow coloring therefore assigns
 distinct colors to the whole family.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

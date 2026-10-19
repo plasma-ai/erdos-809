@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseDegreeBound
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Data.Nat.Choose.Cast
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseDegreeBound
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Data.Nat.Choose.Cast
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Parameter estimates for the dense branch
@@ -11,6 +13,8 @@ The proof of equation (15) uses `n ≥ 2k ε⁻¹³`. We express this without
 division as `2k ≤ ε¹³ n`, then discharge the explicit hypotheses of
 `DenseDegreeBound`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

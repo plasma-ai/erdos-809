@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteLocal
-import Erdos809.SevenCycle.NearBipartiteMaxCut
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteLocal
+public import Erdos809.SevenCycle.NearBipartiteMaxCut
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
 
 /-!
 # The near-bipartite boundary case for rainbow seven-cycles
@@ -11,6 +13,8 @@ The finite combinatorial core takes a cut with few missing cross edges and
 strictly more internal than missing edges. A local maximum-cut inequality
 forces an internal edge to have a large common neighborhood across the cut.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

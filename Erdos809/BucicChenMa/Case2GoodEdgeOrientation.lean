@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2GoodEdgeCount
-import Mathlib.Data.Sym.Sym2
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2GoodEdgeCount
+public import Mathlib.Data.Sym.Sym2
 
 /-!
 # Orienting a good edge toward the distinguished neighborhood
@@ -8,6 +10,8 @@ import Mathlib.Data.Sym.Sym2
 Every good edge can be written as `xy` with `x` in `N(p) \ {q}` and
 both endpoints distinct from `p,q`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

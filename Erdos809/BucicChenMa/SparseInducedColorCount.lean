@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.CycleEdgeColors
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Data.Finset.Card
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.CycleEdgeColors
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Data.Finset.Card
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Counting colors in a dense induced subgraph
@@ -12,6 +14,8 @@ In Claim 2 of Bucić–Chen–Ma's lower-bound proof, every pair of edges in
 therefore have different colors, while the degree-sum formula bounds their
 number below from the internal minimum degree.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

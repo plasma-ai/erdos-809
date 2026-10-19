@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2Graph
-import Erdos809.BucicChenMa.SparseCaseArithmetic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2Graph
+public import Erdos809.BucicChenMa.SparseCaseArithmetic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The induced minimum degree in Case 2, Claim 2
@@ -9,6 +11,8 @@ import Mathlib.Tactic.Linarith
 Combines the graph separation with the numerical margins following (19).
 The conclusion is inequality (21) for the graph induced by `Y`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

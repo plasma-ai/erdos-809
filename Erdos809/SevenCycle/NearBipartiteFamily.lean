@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCounting
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCounting
 
 /-!
 # The marked crossing-edge family
@@ -7,6 +9,8 @@ import Erdos809.SevenCycle.NearBipartiteCounting
 For vertex sets on opposite sides of a cut, at most the graph's total number
 of missing crossing pairs can be absent from their Cartesian product.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

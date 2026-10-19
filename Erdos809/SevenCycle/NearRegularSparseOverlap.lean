@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularVariableOverlap
-import Mathlib.Order.Filter.AtTopBot.Tendsto
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularVariableOverlap
+public import Mathlib.Order.Filter.AtTopBot.Tendsto
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Overlap palette bound along a sparse subsequence
@@ -12,6 +14,8 @@ normalization by a strictly increasing subsequence scale `φ j`: transport
 its graph sequence to the image filter of `φ`, apply the conditional overlap
 bound there, then read the result back at the original subsequence indices.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.CycleEdgeColors
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.CycleEdgeColors
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Counting edges that meet a large vertex set
@@ -10,6 +12,8 @@ At most `choose (n - |A|) 2` edges avoid `A`. If every pair of edges meeting
 `A` lies on a common cycle, a rainbow coloring uses at least one color per
 such edge.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

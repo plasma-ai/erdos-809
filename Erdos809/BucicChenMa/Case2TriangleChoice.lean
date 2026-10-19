@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.BookFull
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.BookFull
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Choosing a triangle vertex outside a short list
@@ -10,6 +12,8 @@ The book edge in Case 2 has many common neighbors. Five vertices suffice
 to exclude the endpoints of the two good edges and their auxiliary common
 neighbor in the first disjoint-edge subcase.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

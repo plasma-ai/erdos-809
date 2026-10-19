@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Ring
 
 /-!
 # Arithmetic for the asymptotic C7 lower bound
@@ -11,6 +13,8 @@ weights. The first lemma chooses the enlargement small enough for any desired
 error in the final normalized color count. The second lemma removes the
 enlargement from that count.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

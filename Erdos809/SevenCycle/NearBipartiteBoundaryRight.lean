@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteBoundary
-import Erdos809.SevenCycle.NearBipartitePaletteRight
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteBoundary
+public import Erdos809.SevenCycle.NearBipartitePaletteRight
 
 /-!
 # A finite color bound from a right internal edge
@@ -8,6 +10,8 @@ import Erdos809.SevenCycle.NearBipartitePaletteRight
 The left-side boundary theorem applies after exchanging the two sides of the
 cut. This version states the resulting bound in the original graph's counts.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

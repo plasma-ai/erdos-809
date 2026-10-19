@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.Reweighting
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.Reweighting
 
 /-!
 # A finite-constraint perturbation
@@ -8,6 +10,8 @@ At a feasible point, increase all weights proportionally and subtract the
 constraint cap at a coordinate shared by the tight constraints. Finiteness
 keeps the remaining strict constraints feasible for a small positive step.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

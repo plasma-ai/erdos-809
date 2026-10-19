@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteFamily
-import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
-import Mathlib.Data.Fin.VecNotation
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteFamily
+public import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
+public import Mathlib.Data.Fin.VecNotation
 
 /-!
 # Seven-cycles through pairs of near-bipartite crossing edges
@@ -10,6 +12,8 @@ These finite connector hypotheses isolate the cycle construction in the
 near-bipartite argument. They are phrased as lower bounds on common-neighbor
 sets, so they can be supplied by estimates on missing crossing edges.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

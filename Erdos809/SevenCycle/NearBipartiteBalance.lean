@@ -1,10 +1,12 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCounting
-import Erdos809.SevenCycle.NearBipartiteParameters
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCounting
+public import Erdos809.SevenCycle.NearBipartiteParameters
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Balance forced by sparse internal edges
@@ -13,6 +15,8 @@ A graph above the Turán edge threshold has a cut with nearly equal sides
 whenever the internal edges have zero quadratic density. The graph order is
 the index of the sequence.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

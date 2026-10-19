@@ -1,12 +1,16 @@
-import Erdos809.MainTerm
-import Mathlib.Data.Nat.Sqrt
-import Mathlib.Analysis.SpecificLimits.Basic
+module
+
+public import Erdos809.MainTerm
+public import Mathlib.Data.Nat.Sqrt
+public import Mathlib.Analysis.SpecificLimits.Basic
 
 /-!
 # The uniform error in the two-clique construction
 
 The construction below needs an error of order `n√n`, which is `o(n²)`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

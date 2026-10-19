@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Combinatorics.SimpleGraph.Clique
-import Mathlib.Basic.Real.Basic
-import Mathlib.Data.Fintype.Lattice
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Clique
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Data.Fintype.Lattice
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Weighted Hajnal inequality
@@ -10,6 +12,8 @@ import Mathlib.Tactic.Linarith
 A weighted form of Hajnal's intersection inequality for finitely many
 maximum-weight cliques in a finite graph.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

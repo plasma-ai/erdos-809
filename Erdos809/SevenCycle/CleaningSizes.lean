@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Order.Partition.Equipartition
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Tactic.GCongr
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Order.Partition.Equipartition
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Tactic.GCongr
+public import Mathlib.Tactic.Ring
 
 /-!
 # Cluster sizes in an equipartition
@@ -11,6 +13,8 @@ For a bounded equipartition of a sufficiently large finite vertex set, the
 integer average cluster size is a common scale for every part. These bounds
 are used in counting paths across regular pairs.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

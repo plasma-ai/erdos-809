@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.JointCliqueMass
-import Erdos809.SevenCycle.FinitePerturbation
-import Erdos809.SevenCycle.CompactFeasible
-import Mathlib.Analysis.Real.Sqrt
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.JointCliqueMass
+public import Erdos809.SevenCycle.FinitePerturbation
+public import Erdos809.SevenCycle.CompactFeasible
+public import Mathlib.Analysis.Real.Sqrt
 
 /-!
 # Extremal contradiction for the joint-clique mass bound
@@ -11,6 +13,8 @@ This module proves that a feasible global maximizer of the proposed defect
 cannot have positive defect. The finite-box attainment and clipping argument
 that supplies a global maximizer is kept separate.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

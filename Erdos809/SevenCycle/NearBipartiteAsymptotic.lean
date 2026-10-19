@@ -1,15 +1,17 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteBoundary
-import Erdos809.SevenCycle.NearBipartiteBoundaryRight
-import Erdos809.SevenCycle.NearBipartiteOrientation
-import Erdos809.SevenCycle.NearBipartite
-import Mathlib.Basic.Real.Basic
-import Mathlib.Topology.Instances.Real.Lemmas
-import Mathlib.Topology.Algebra.Order.Field
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteBoundary
+public import Erdos809.SevenCycle.NearBipartiteBoundaryRight
+public import Erdos809.SevenCycle.NearBipartiteOrientation
+public import Erdos809.SevenCycle.NearBipartite
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Mathlib.Topology.Algebra.Order.Field
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Ring
 
 /-!
 # Asymptotic consequence of the near-bipartite boundary count
@@ -19,6 +21,8 @@ present crossing edges as its area minus the missing crossing pairs. This
 module records the resulting lower bound for a sequence whose rectangle
 sides approach `n/2` and `n/4` and whose missing crossing pairs are `o(n²)`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

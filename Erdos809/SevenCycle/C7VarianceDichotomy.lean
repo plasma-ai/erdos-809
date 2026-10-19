@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Order.Filter.AtTopBot.Basic
-import Mathlib.Topology.Order.Basic
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import Mathlib.Topology.Order.Basic
 
 /-!
 # A variance subsequence dichotomy
@@ -10,6 +12,8 @@ infinite subsequence, or tends to zero. This suffices to combine lower bounds
 proved in the two branches of the seven-cycle argument: any failure of an
 eventual bound can first be restricted to an infinite bad subsequence.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

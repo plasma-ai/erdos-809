@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartitePalette
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartitePalette
 
 /-!
 # The near-bipartite palette with the internal edge on the right
@@ -7,6 +9,8 @@ import Erdos809.SevenCycle.NearBipartitePalette
 Interchanging the sides of the cut turns a right internal edge into the left
 internal edge of the marked-rectangle argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

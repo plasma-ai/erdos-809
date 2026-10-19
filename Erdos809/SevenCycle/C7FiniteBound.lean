@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7FullSplit
-import Erdos809.SevenCycle.C7CutSavings
-import Erdos809.SevenCycle.OutsideMass
-import Erdos809.SevenCycle.JointCliqueExtremal
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7FullSplit
+public import Erdos809.SevenCycle.C7CutSavings
+public import Erdos809.SevenCycle.OutsideMass
+public import Erdos809.SevenCycle.JointCliqueExtremal
 
 /-!
 # Finite C7 palette inequality from a joint clique
@@ -12,6 +14,8 @@ calculation, and the sharp joint-clique theorem. The decomposition of total
 edge mass into internal, cut, and outside contributions is an explicit
 hypothesis here; a separate capacity identity can discharge it.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

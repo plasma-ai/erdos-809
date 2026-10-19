@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.GreedyPath
-import Mathlib.Combinatorics.SimpleGraph.Finite
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.GreedyPath
+public import Mathlib.Combinatorics.SimpleGraph.Finite
 
 /-!
 # The greedy extension in Case 2 for adjacent edges
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.Finite
 After the first short path is fixed, Lemma 3.3 supplies the long path from
 `y` while avoiding that path and the vertices `x,q,r`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

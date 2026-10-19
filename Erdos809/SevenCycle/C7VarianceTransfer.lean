@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7GraphReweight
-import Erdos809.SevenCycle.C7ColorTransfer
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7GraphReweight
+public import Erdos809.SevenCycle.C7ColorTransfer
 
 /-!
 # Color cost after variance reweighting
@@ -10,6 +12,8 @@ an edge-mass loss bound for the cleaned graph, a positive degree-variance
 bound, and a lifting condition for pairs of marked edges on seven-walks.
 The finite reweighting and palette theorems then force a color lower bound.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

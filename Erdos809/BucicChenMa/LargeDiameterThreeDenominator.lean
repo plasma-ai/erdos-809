@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LargeDiameterThreeCounting
-import Erdos809.BucicChenMa.LargeDiameterThreeFarPair
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LargeDiameterThreeCounting
+public import Erdos809.BucicChenMa.LargeDiameterThreeFarPair
 
 /-!
 # Strict room outside a distant pair
@@ -10,6 +12,8 @@ Lemma 3.1 is positive. The equality case has a short graph-theoretic
 proof: the two anticomplete closed neighborhoods then cover every vertex,
 so the maximum degree is at most `X`, contradicting Claim 1.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

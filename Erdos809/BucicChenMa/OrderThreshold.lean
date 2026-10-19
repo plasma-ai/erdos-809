@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LowerInduction
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LowerInduction
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The order split in the quantitative induction
@@ -9,6 +11,8 @@ import Mathlib.Tactic.Linarith
 The large constant in equation (12) makes the target nonpositive below
 the order threshold `2k ε⁻¹³`. Above it, the paper's degree estimates apply.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

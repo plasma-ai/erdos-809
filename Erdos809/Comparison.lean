@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SubgraphTransfer
-import Erdos809.RainbowCycles
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SubgraphTransfer
+public import Erdos809.RainbowCycles
 
 /-!
 # Comparing the exact-edge and at-least-edge formulations
@@ -9,6 +11,8 @@ The maximal anti-Ramsey function allows more than the specified number of
 edges. Restricting a coloring to exactly that many edges shows that its value
 agrees with the exact-edge seven-cycle formulation.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

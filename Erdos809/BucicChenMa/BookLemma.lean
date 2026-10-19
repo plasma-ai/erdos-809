@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Extremal.Turan
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Extremal.Turan
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Triangle counts and existence at the book threshold
@@ -10,6 +12,8 @@ The unconditional book theorem is proved in `BookFull`. This module provides
 its triangle-count definitions and the elementary triangle-existence consequence
 of Turán's theorem.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

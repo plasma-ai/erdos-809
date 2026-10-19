@@ -1,12 +1,14 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularNonRobustAsymptotic
-import Erdos809.SevenCycle.NearRegularMaximumCutAsymptotic
-import Erdos809.SevenCycle.NearBipartiteConventional
-import Erdos809.SevenCycle.NearBipartiteRelabel
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularNonRobustAsymptotic
+public import Erdos809.SevenCycle.NearRegularMaximumCutAsymptotic
+public import Erdos809.SevenCycle.NearBipartiteConventional
+public import Erdos809.SevenCycle.NearBipartiteRelabel
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The overlap branch for graphs of asymptotically full order
@@ -15,6 +17,8 @@ After removing a negligible exceptional set, the retained graphs have orders
 `m n` with `m n / n → 1`. The overlap estimate and the near-bipartite palette
 bound continue to use the original scale `n`.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

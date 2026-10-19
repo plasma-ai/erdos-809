@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.WeightedHajnal
-import Erdos809.SevenCycle.Reweighting
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.WeightedHajnal
+public import Erdos809.SevenCycle.Reweighting
 
 /-!
 # Joint walk cliques for a symmetric support
@@ -9,6 +11,8 @@ The support relation here is fixed while weights vary. Walk witnesses may use
 vertices of weight zero. Loops are allowed, and joint-clique compatibility is
 required on the diagonal as well as on distinct pairs.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

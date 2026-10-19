@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # A path avoiding a small set
@@ -10,6 +12,8 @@ path of length `k` from any vertex outside a forbidden set of at most `δ - k`
 vertices. We state the degree condition as `|S| + k ≤ δ` to avoid truncated
 natural-number subtraction.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

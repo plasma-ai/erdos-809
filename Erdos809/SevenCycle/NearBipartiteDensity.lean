@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCycles
-import Erdos809.SevenCycle.NearBipartiteLocal
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCycles
+public import Erdos809.SevenCycle.NearBipartiteLocal
 
 /-!
 # Connector bounds from missing crossing pairs
@@ -9,6 +11,8 @@ The cycle construction needs a few common neighbors for each pair of marked
 endpoints. These finite estimates obtain them from the number of crossing
 neighbors missed by each endpoint.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

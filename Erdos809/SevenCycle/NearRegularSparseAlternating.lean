@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularSparseStructuralSplit
-import Erdos809.SevenCycle.NearRegularSparseRobust
-import Erdos809.SevenCycle.NearRegularSparseDisjoint
-import Erdos809.SevenCycle.NearRegularSparseOverlap
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularSparseStructuralSplit
+public import Erdos809.SevenCycle.NearRegularSparseRobust
+public import Erdos809.SevenCycle.NearRegularSparseDisjoint
+public import Erdos809.SevenCycle.NearRegularSparseOverlap
 
 /-!
 # Combining sparse near-regular C7 branches
@@ -11,6 +13,8 @@ The robust and disjoint palette estimates hold conditionally at each sparse
 index. Together with a corresponding overlap estimate, the pointwise
 structural split gives the full lower bound even when the cases alternate.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

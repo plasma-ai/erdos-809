@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCutBridge
-import Erdos809.SevenCycle.NearRegularNonRobustAsymptotic
-import Mathlib.Topology.Order.Basic
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCutBridge
+public import Erdos809.SevenCycle.NearRegularNonRobustAsymptotic
+public import Mathlib.Topology.Order.Basic
 
 /-!
 # Maximum cuts inherit the overlap branch's small internal edge count
@@ -10,6 +12,8 @@ Choose one maximum cut for each finite graph. It has no more internal edges
 than the cleaned-neighborhood cut, so the `o(n²)` estimate transfers to a
 cut suited to the near-bipartite degree argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

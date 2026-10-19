@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7Capacity
-import Erdos809.SevenCycle.C7WalkBridge
-import Mathlib.Data.Finset.Max
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7Capacity
+public import Erdos809.SevenCycle.C7WalkBridge
+public import Mathlib.Data.Finset.Max
 
 /-!
 # Maximum demand carried by one color
@@ -11,6 +13,8 @@ edge-type demand among its edges. An unused color has charge zero. The
 explicit zero also makes the charge nonnegative without any assumption on
 the vertex weights.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

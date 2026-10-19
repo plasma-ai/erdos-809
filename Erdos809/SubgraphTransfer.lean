@@ -1,6 +1,8 @@
-import Erdos809.RainbowCycles
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.RainbowCycles
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Trimming a rainbow-colored graph to an exact edge count
@@ -9,6 +11,8 @@ Deleting edges cannot create a cycle or change the colors of retained edges.
 This lets both cycle branches pass from an at-least-edge witness to an
 exact-edge witness with the inherited coloring.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

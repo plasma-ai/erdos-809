@@ -1,11 +1,13 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseCycleColors
-import Erdos809.BucicChenMa.DenseGoodEdgeCount
-import Erdos809.BucicChenMa.DenseGoodEdgeArithmetic
-import Erdos809.BucicChenMa.LargeDiameterThreeTheorem
-import Erdos809.BucicChenMa.DenseParameterBounds
-import Erdos809.BucicChenMa.DenseInducedThresholds
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseCycleColors
+public import Erdos809.BucicChenMa.DenseGoodEdgeCount
+public import Erdos809.BucicChenMa.DenseGoodEdgeArithmetic
+public import Erdos809.BucicChenMa.LargeDiameterThreeTheorem
+public import Erdos809.BucicChenMa.DenseParameterBounds
+public import Erdos809.BucicChenMa.DenseInducedThresholds
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The dense-case color bound
@@ -14,6 +16,8 @@ Given the robust four-path conclusion of Lemma 3.2 and the large
 diameter-three set from Lemma 3.1, the constructed common cycles force
 enough distinct edge colors for the quantitative induction target.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

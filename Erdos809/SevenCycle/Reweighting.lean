@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Algebra.BigOperators.Field
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.Ring
 
 /-!
 # Variance reweighting for a finite symmetric support
@@ -12,6 +14,8 @@ weights may be any positive probability vector.  For uniform weights on a
 simple graph, `degree` is normalized degree, `meanDegree` is twice the edge
 density, and `variance` is the normalized degree variance.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

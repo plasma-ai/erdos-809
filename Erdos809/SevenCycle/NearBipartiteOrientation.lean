@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteLocal
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteLocal
 
 /-!
 # Orienting an internal edge
@@ -7,6 +9,8 @@ import Erdos809.SevenCycle.NearBipartiteLocal
 An edge internal to the two vertex classes lies wholly on one side. The
 common cross-degree then counts common neighbors on the other side.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

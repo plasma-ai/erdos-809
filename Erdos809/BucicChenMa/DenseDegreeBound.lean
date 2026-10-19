@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.SparseDegreeBound
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.SparseDegreeBound
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Minimum degree in the dense branch
@@ -10,6 +12,8 @@ This isolates the gain over the basic degree bound that is needed in
 equation (15). It uses the identity between the two square-root arguments,
 avoiding the Taylor estimate in the paper.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

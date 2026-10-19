@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.JointCliqueMass
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.JointCliqueMass
 
 /-!
 # A maximum on a compact polytope of weights
@@ -8,6 +10,8 @@ The feasible weights have a uniform coordinate bound and finitely supported
 linear inequalities. A continuous objective attains a maximum whenever the
 feasible set is nonempty.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

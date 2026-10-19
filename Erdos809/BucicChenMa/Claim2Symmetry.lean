@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2Graph
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2Graph
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # Endpoint symmetry in Case 2, Claim 2
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.Paths
 Reversing a path preserves its length, simplicity, and avoided vertices.
 The two punctured neighborhoods exchange roles when the endpoints are swapped.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Combinatorics.SimpleGraph.Sum
-import Mathlib.Combinatorics.SimpleGraph.Density
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Combinatorics.SimpleGraph.Sum
+public import Mathlib.Combinatorics.SimpleGraph.Density
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Counting internal and missing crossing edges
@@ -12,6 +14,8 @@ internal edge. Missing crossing pairs are counted at most twice by the
 missing degrees of the cover; the pairs counted twice have both endpoints in
 the cover.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

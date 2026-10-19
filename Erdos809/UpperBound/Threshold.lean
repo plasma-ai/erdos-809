@@ -1,9 +1,13 @@
-import Erdos809.ThresholdArithmetic
-import Erdos809.UpperBound.FullDensity
+module
+
+public import Erdos809.ThresholdArithmetic
+public import Erdos809.UpperBound.FullDensity
 
 /-!
 # The upper bound at the threshold edge count
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

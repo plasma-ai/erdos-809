@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.CleaningCount
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.CleaningCount
 
 /-!
 # Interpreting regular-pair path sums as finite path families
@@ -8,6 +10,8 @@ The counting estimates in `CleaningCount` are sums of endpoint degrees.
 Here they are identified with cardinalities of sets of formal path
 assignments. Each internal occurrence remains an independent coordinate.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

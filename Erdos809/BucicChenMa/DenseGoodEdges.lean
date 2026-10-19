@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LargeDiameterThree
-import Erdos809.BucicChenMa.GreedyPath
-import Mathlib.Combinatorics.SimpleGraph.Walk.Decomp
-import Mathlib.Data.Finset.Image
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LargeDiameterThree
+public import Erdos809.BucicChenMa.GreedyPath
+public import Mathlib.Combinatorics.SimpleGraph.Walk.Decomp
+public import Mathlib.Data.Finset.Image
 
 /-!
 # Short paths between good edges
@@ -13,6 +15,8 @@ two good edges is chosen shortest among all four endpoint pairs. This choice
 ensures that its interior, and indeed its entire support, avoids the unused
 endpoint of each edge.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

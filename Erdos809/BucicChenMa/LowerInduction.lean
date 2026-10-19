@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DeletionStep
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Data.Nat.Choose.Cast
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DeletionStep
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Data.Nat.Choose.Cast
 
 /-!
 # The quantitative induction target in Bucić–Chen–Ma
@@ -12,6 +14,8 @@ condition forced when deleting a minimum-degree vertex does not already
 settle the induction step. The real-algebra conversion between these two
 inequalities is proved here.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,4 +1,6 @@
-import Erdos809.RainbowCycles
+module
+
+public import Erdos809.RainbowCycles
 
 /-!
 # Cycles as graph copies
@@ -7,6 +9,8 @@ For lengths at least three, a vertex-indexed cycle is the same as a copy of
 Mathlib's `cycleGraph`. This lets the proof use indexed cycles while the
 published statement uses the general maximal anti-Ramsey function.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

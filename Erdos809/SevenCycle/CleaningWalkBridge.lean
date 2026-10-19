@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.C7WalkBridge
-import Erdos809.SevenCycle.Statement
+module
+
+public import Erdos809.SevenCycle.C7WalkBridge
+public import Erdos809.SevenCycle.Statement
 
 /-!
 # From seven-walk lifting to color separation
@@ -9,6 +11,8 @@ regularity cleaning lemma. Once it is established, rainbow cycles in the
 original graph force color separation on closed seven-walks in the cleaned
 subgraph.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

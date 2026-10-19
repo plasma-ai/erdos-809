@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.UpperBound.FullDensity
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.UpperBound.FullDensity
 
 /-!
 # The remaining lower bound for longer odd cycles
@@ -9,6 +11,8 @@ formula. Thus, for `k ≥ 4`, the full formula is equivalent to its uniform
 lower half. This file states that remaining estimate precisely and proves
 the equivalence.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

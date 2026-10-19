@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # The neighborhood separation in Case 2, Claim 2
@@ -10,6 +12,8 @@ their neighborhoods outside that set are disjoint and have no crossing edges.
 The resulting separation gives a lower bound on degrees in the induced graph
 on either neighborhood.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,9 +1,11 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2GoodEdgeCount
-import Erdos809.BucicChenMa.CycleEdgeColors
-import Erdos809.BucicChenMa.SparseCaseProduct
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2GoodEdgeCount
+public import Erdos809.BucicChenMa.CycleEdgeColors
+public import Erdos809.BucicChenMa.SparseCaseProduct
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The final edge count in the sparse case
@@ -12,6 +14,8 @@ These are the numerical inequalities after the good-edge count in Case 2
 of Bucić–Chen–Ma. Equation (19) supplies the minimum-degree bound; equation
 (22) supplies the comparison with the main term.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

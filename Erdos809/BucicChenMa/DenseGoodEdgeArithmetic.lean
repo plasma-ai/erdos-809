@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LowerInduction
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Data.Nat.Choose.Cast
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LowerInduction
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Data.Nat.Choose.Cast
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The dense good-edge count
@@ -11,6 +13,8 @@ This is the last arithmetic inequality in Case 1 of the proof of
 Bucić–Chen–Ma Theorem 1.2. It starts from the size of the diameter-three
 set supplied by Lemma 3.1.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

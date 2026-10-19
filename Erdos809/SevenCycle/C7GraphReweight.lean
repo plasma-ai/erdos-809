@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.Reweighting
-import Erdos809.SevenCycle.C7ColorTransfer
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.Reweighting
+public import Erdos809.SevenCycle.C7ColorTransfer
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
 
 /-!
 # Variance reweighting for a finite graph
@@ -10,6 +12,8 @@ The adjacency indicator of a simple graph is the zero-one support matrix.
 This file specializes the finite variance perturbation to uniform vertex
 weights, in the notation used by the colored-graph bound.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

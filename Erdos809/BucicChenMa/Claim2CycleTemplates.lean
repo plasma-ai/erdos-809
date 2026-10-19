@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # Walks witnessing the cycles in Claim 2
@@ -7,6 +9,8 @@ import Mathlib.Combinatorics.SimpleGraph.Paths
 These are the two path-splicing constructions in Bucić–Chen–Ma's Claim 2.
 The density argument that supplies the paths and connectors is separate.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

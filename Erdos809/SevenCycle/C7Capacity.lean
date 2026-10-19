@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7FullSplit
-import Erdos809.SevenCycle.C7FiniteBound
-import Erdos809.SevenCycle.C7Sym2Sum
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7FullSplit
+public import Erdos809.SevenCycle.C7FiniteBound
+public import Erdos809.SevenCycle.C7Sym2Sum
 
 /-!
 # Edge capacities in the C7 palette model
@@ -11,6 +13,8 @@ except that a loop carries half the square of its vertex weight. This file
 identifies the resulting sum with the half-ordered supported edge mass and
 splits it across a selected joint clique, its cut, and the outside support.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

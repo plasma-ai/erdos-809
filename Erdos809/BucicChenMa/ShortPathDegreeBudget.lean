@@ -1,10 +1,12 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPathPartition
-import Erdos809.BucicChenMa.ShortPathCrossSum
-import Erdos809.BucicChenMa.ShortPathCommonDegree
-import Erdos809.BucicChenMa.ShortPathArithmetic
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPathPartition
+public import Erdos809.BucicChenMa.ShortPathCrossSum
+public import Erdos809.BucicChenMa.ShortPathCommonDegree
+public import Erdos809.BucicChenMa.ShortPathArithmetic
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The degree budget in the four-path lemma
@@ -14,6 +16,8 @@ Lemma 3.2 with the partition around adjacent vertices and the handshaking
 identity. The resulting inequality is the input to the final arithmetic
 contradiction.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

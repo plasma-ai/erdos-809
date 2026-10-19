@@ -1,9 +1,13 @@
-import Erdos809.UpperBound.TwoCliqueCounts
-import Erdos809.UpperBound.SumRainbow
+module
+
+public import Erdos809.UpperBound.TwoCliqueCounts
+public import Erdos809.UpperBound.SumRainbow
 
 /-!
 # Rainbow cycles in the two-clique construction
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

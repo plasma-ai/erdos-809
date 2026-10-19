@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DeletionStep
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DeletionStep
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Density after deleting a minimum-degree vertex
@@ -10,6 +12,8 @@ For graphs of order at least four, deleting a minimum-degree vertex preserves
 the strict Mantel-density edge range. The order-three complete graph is an
 exception, so the order hypothesis is necessary.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

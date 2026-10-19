@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Analysis.SpecialFunctions.Sqrt
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
 
 /-!
 # The outside-mass calculation for Erdős problem 809
@@ -11,6 +13,8 @@ Here `m` is the mass of the selected joint clique, `u` is the remaining
 mass, `c` is the outside edge mass, and `s` is the saving on cut palettes.
 The graph-theoretic arguments supply one of the two sets of hypotheses below.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

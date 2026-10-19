@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.Cleaning
-import Erdos809.SevenCycle.CleaningWalkBridge
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.Cleaning
+public import Erdos809.SevenCycle.CleaningWalkBridge
 
 /-!
 # Lifting a marked pair from a seven-walk
@@ -11,6 +13,8 @@ vertices. It also handles adjacent marked edges at arbitrary positions and
 orientations. In each case, sufficiently many path realizations in the
 original graph let us avoid collisions and complete a simple seven-cycle.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

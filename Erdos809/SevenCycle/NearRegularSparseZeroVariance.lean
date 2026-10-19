@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularSparseExtraction
-import Erdos809.SevenCycle.NearRegularSparseAlternating
-import Erdos809.SevenCycle.NearRegularVarianceBridge
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularSparseExtraction
+public import Erdos809.SevenCycle.NearRegularSparseAlternating
+public import Erdos809.SevenCycle.NearRegularVarianceBridge
 
 /-!
 # The zero-variance C7 bound on a sparse order sequence
@@ -10,6 +12,8 @@ The variance dichotomy may restrict the original graph sequence to a
 strictly increasing sequence of orders. Colored extraction and the
 pointwise near-regular structural split remain valid on that subsequence.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

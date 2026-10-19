@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7FiniteBound
-import Erdos809.SevenCycle.PaletteExactization
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7FiniteBound
+public import Erdos809.SevenCycle.PaletteExactization
 
 /-!
 # The finite C7 bound for covering palette allocations
@@ -9,6 +11,8 @@ Exactization trims excess coverage by deleting edge types from palettes. The
 finite bound therefore applies to every covering allocation, not just exact
 ones.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

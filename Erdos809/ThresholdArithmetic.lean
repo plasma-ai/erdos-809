@@ -1,6 +1,8 @@
-import Erdos809.MainTerm
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Topology.Instances.Real.Lemmas
+module
+
+public import Erdos809.MainTerm
+public import Mathlib.Analysis.SpecificLimits.Basic
+public import Mathlib.Topology.Instances.Real.Lemmas
 
 /-!
 # Arithmetic at the first edge count above the Turán threshold
@@ -8,6 +10,8 @@ import Mathlib.Topology.Instances.Real.Lemmas
 The full-density leading term becomes `n²/8 + o(n²)` here. The edge count is
 feasible for graphs on `n` vertices once `n ≥ 4`.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

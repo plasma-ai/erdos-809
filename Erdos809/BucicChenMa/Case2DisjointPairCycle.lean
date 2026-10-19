@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2DisjointCommonBook
-import Erdos809.BucicChenMa.Case2NoCommonSelected
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2DisjointCommonBook
+public import Erdos809.BucicChenMa.Case2NoCommonSelected
 
 /-!
 # Disjoint good edges in Case 2
@@ -8,6 +10,8 @@ import Erdos809.BucicChenMa.Case2NoCommonSelected
 The remaining distinction is whether the two unused endpoints have an
 auxiliary common neighbor outside the four named vertices.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 
