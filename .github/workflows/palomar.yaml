@@ -6,6 +6,14 @@ name: Palomar preflight
 # PalomarSubmission commit.
 on:
   workflow_dispatch:
+    inputs:
+      authorization_relationship:
+        description: Your relationship to this formalization, as Palomar records it
+        required: true
+        type: choice
+        options:
+          - I am a responsible author or maintainer
+          - I have approval from a responsible author or maintainer
 
 permissions:
   contents: read
@@ -20,4 +28,4 @@ jobs:
       request_id: preflight001
       mode: full
       execution_profile: palomar-standard-v1
-      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I am a responsible author or maintainer"}'
+      options: ${{ format('{{"comparator_config_path":"comparator.json","authorization_relationship":"{0}"}}', inputs.authorization_relationship) }}
