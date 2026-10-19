@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegular
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegular
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Colors on a dense induced side of a failed-path split
@@ -10,6 +12,8 @@ and `m` is large compared with `t`, every two distinct edges lie on a
 common seven-cycle. The resulting color separation is the finite input
 for the disjoint cleaned-neighborhood branch of the near-regular proof.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

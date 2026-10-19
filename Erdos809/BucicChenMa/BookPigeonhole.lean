@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Three adjacency bits
@@ -8,6 +10,8 @@ For any three vertices and a test vertex, two of the three adjacency
 indicators agree. This elementary observation underlies the weighted
 triangle count in the Edwards–Khadžiivanov–Nikiforov book theorem.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

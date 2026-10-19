@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7GraphReweight
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7GraphReweight
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
 
 /-!
 # Degree variance under edge deletion
@@ -10,6 +12,8 @@ Deleting a small fraction of the edges of a finite graph changes its
 normalized degree variance by at most four times that fraction. This makes
 the variance branch stable under the edge loss in graph cleaning.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

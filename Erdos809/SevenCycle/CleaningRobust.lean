@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.CleaningSizes
-import Erdos809.SevenCycle.CleaningPatternRealization
-import Erdos809.SevenCycle.CleaningWalkCases
-import Mathlib.Algebra.Order.Archimedean.Defs
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.CleaningSizes
+public import Erdos809.SevenCycle.CleaningPatternRealization
+public import Erdos809.SevenCycle.CleaningWalkCases
+public import Mathlib.Algebra.Order.Archimedean.Defs
 
 /-!
 # Robust short-walk realization after regularity cleaning
@@ -12,6 +14,8 @@ The three explicit margin inequalities are independent of the graph order.
 Once the order exceeds `Q·L`, all retained walks of lengths three through
 five can be replaced by simple paths in the original graph.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LargeDiameterThree
-import Erdos809.BucicChenMa.LargeDiameterThreeArithmetic
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LargeDiameterThree
+public import Erdos809.BucicChenMa.LargeDiameterThreeArithmetic
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
 
 /-!
 # Counting degrees in the high-degree set
@@ -9,6 +11,8 @@ import Mathlib.Combinatorics.SimpleGraph.DegreeSum
 This is the first edge-count inequality in the proof of Lemma 3.1 of
 Bucić, Chen, and Ma (2026).
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPaths
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPaths
+public import Mathlib.Data.Finset.Card
 
 /-!
 # The singleton common-neighbor case of Bucić–Chen–Ma Lemma 3.2
@@ -9,6 +11,8 @@ When adjacent vertices have just one common neighbor, property (P) forces
 that neighbor to avoid one of the two exclusive neighborhoods. This proves
 the singleton case of the degree estimate used in equation (7).
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

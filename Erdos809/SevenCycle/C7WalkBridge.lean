@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7Conflict
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7Conflict
 
 /-!
 # From closed seven-walks to conflict-independent color classes
@@ -9,6 +11,8 @@ pair of endpoints, and a three-walk between the other pair. Together these
 form a closed seven-edge walk. This observation transfers a coloring rule on
 closed walks to the template conflict graph.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

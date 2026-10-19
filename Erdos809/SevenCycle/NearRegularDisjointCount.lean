@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegular
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegular
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
 
 /-!
 # Edges inside a disjoint cleaned neighborhood
@@ -10,6 +12,8 @@ anticomplete and together cover almost all vertices. Minimum degree then
 forces almost all of each vertex's neighbors in the first set to remain in
 that set. Summing these internal degrees gives the edge bound below.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

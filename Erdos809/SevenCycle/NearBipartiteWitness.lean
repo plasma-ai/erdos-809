@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteDensity
-import Erdos809.SevenCycle.NearBipartite
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteDensity
+public import Erdos809.SevenCycle.NearBipartite
 
 /-!
 # Sets supported by a large common crossing neighborhood
@@ -9,6 +11,8 @@ From a left-side internal edge `u v`, remove vertices that miss too many
 crossing neighbors. The remaining left set and common right neighborhood are
 the marked rectangle used in the seven-cycle argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

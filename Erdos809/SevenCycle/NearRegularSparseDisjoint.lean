@@ -1,13 +1,15 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularDisjointPalette
-import Mathlib.Order.Filter.AtTopBot.Archimedean
-import Mathlib.Order.Filter.AtTopBot.Tendsto
-import Mathlib.Topology.Instances.Real.Lemmas
-import Mathlib.Topology.Algebra.Order.Field
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularDisjointPalette
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
+public import Mathlib.Order.Filter.AtTopBot.Tendsto
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Mathlib.Topology.Algebra.Order.Field
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Ring
 
 /-!
 # The disjoint branch along a sparse sequence of graph orders
@@ -16,6 +18,8 @@ The finite disjoint-neighborhood count is normalized by a strictly
 increasing ambient order `φ j`. The structural case may occur only on a
 subsequence, so the conclusion is an eventual pointwise implication.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

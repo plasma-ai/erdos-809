@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Data.Finset.Card
 
 /-!
 # The structural split for nearly regular seven-cycle hosts
@@ -11,6 +13,8 @@ removed, their cleaned neighborhoods have no edges between them. When those
 neighborhoods overlap, a vertex in the overlap has no neighbors in their
 union. These finite facts are the first step of the near-regular argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.PaletteSavings
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.PaletteSavings
 
 /-!
 # Restricting palettes to a family of edge types
@@ -8,6 +10,8 @@ A full palette on edge types restricts to the cut types it contains. Empty
 restrictions are discarded. This construction preserves exact coverage of
 cut demands and accounts for the cost consumed by an internal clique.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

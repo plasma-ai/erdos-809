@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2Numerical
-import Erdos809.BucicChenMa.Claim2Symmetry
-import Erdos809.BucicChenMa.Claim2InducedCycle
-import Erdos809.BucicChenMa.Claim2CountReduction
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2Numerical
+public import Erdos809.BucicChenMa.Claim2Symmetry
+public import Erdos809.BucicChenMa.Claim2InducedCycle
+public import Erdos809.BucicChenMa.Claim2CountReduction
 
 /-!
 # Conclusion of the sparse branch's Claim 2
@@ -11,6 +13,8 @@ When an avoiding path of length two or three does not exist, the induced
 neighborhood `Y` has enough internal degree to force distinct colors on
 all its edges. The count meets the quantitative induction target.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

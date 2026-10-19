@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPathDeltaBound
-import Mathlib.Data.Finset.Max
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPathDeltaBound
+public import Mathlib.Data.Finset.Max
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The exclusive-neighborhood degree sum in Lemma 3.2
@@ -11,6 +13,8 @@ vertex of the exclusive neighborhood of `x`, applying the cross-degree
 bound to the exclusive neighborhood of `y`, and then bounding this maximum
 by the complementary minimum-degree threshold.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

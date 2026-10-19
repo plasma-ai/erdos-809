@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2Graph
-import Mathlib.Combinatorics.SimpleGraph.Finite
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2Graph
+public import Mathlib.Combinatorics.SimpleGraph.Finite
 
 /-!
 # The return path in the disjoint-edge, no-common-neighbor subcase
@@ -9,6 +11,8 @@ The short-path branch of Claim 2 connects the endpoint of the greedy path
 to `w`, avoiding the five distinguished vertices and the interior of the
 greedy path.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

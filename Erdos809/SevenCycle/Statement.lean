@@ -1,6 +1,8 @@
-import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
-import Mathlib.Topology.Instances.Real.Lemmas
-import Erdos809.RainbowCycles
+module
+
+public import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Erdos809.RainbowCycles
 
 /-!
 # Exact-edge seven-cycle threshold
@@ -10,6 +12,8 @@ edges. A cycle is specified by seven distinct vertices in cyclic order, and
 its seven edge colors must be pairwise distinct. This exact-edge formulation
 is related to the general graph-copy formulation in `Erdos809/Comparison.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

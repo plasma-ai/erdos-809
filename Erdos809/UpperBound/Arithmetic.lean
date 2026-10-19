@@ -1,6 +1,8 @@
-import Erdos809.MainTerm
-import Mathlib.Data.Nat.Sqrt
-import Mathlib.Data.Nat.Choose.Cast
+module
+
+public import Erdos809.MainTerm
+public import Mathlib.Data.Nat.Sqrt
+public import Mathlib.Data.Nat.Choose.Cast
 
 /-!
 # Clique sizes for the full-density upper construction
@@ -8,6 +10,8 @@ import Mathlib.Data.Nat.Choose.Cast
 The component sizes depend on the excess over the Turán edge count.  The
 larger component is clipped at `n` near the complete-graph endpoint.
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

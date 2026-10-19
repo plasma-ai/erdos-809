@@ -1,11 +1,13 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.Cleaning
-import Mathlib.Combinatorics.SimpleGraph.Regularity.Lemma
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Data.Finset.CastCard
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.GCongr
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.Cleaning
+public import Mathlib.Combinatorics.SimpleGraph.Regularity.Lemma
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Data.Finset.CastCard
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.GCongr
 
 /-!
 # Generic edge deletion bound for regularity cleaning
@@ -14,6 +16,8 @@ Mathlib's regularity reduction keeps only edges between distinct uniform
 pairs of density at least `d`. The pair-regularity parameter `ε` and density
 cutoff `d` are independent here, as required for the short-path count.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

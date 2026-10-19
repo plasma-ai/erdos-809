@@ -1,10 +1,12 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7VarianceDichotomy
-import Erdos809.SevenCycle.C7PositiveVarianceSubsequence
-import Erdos809.SevenCycle.NearRegularVarianceBridge
-import Erdos809.SevenCycle.NearRegularSparseZeroVariance
-import Erdos809.SevenCycle.ThresholdSequence
-import Mathlib.Tactic.Positivity
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7VarianceDichotomy
+public import Erdos809.SevenCycle.C7PositiveVarianceSubsequence
+public import Erdos809.SevenCycle.NearRegularVarianceBridge
+public import Erdos809.SevenCycle.NearRegularSparseZeroVariance
+public import Erdos809.SevenCycle.ThresholdSequence
+public import Mathlib.Tactic.Positivity
 
 /-!
 # The seven-cycle sequence lower bound
@@ -13,6 +15,8 @@ The variance dichotomy reduces an arbitrary exact-edge rainbow sequence to
 positive-variance and zero-variance sparse subsequences. The positive case
 is checked here; the zero case is supplied by its sparse near-regular proof.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

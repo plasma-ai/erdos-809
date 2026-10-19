@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.SparseDegreeBound
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.SparseDegreeBound
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Numerical margin for the sparse case
@@ -9,6 +11,8 @@ import Mathlib.Tactic.Linarith
 This proves the implication from equation (20) to equation (21) in the
 proof of Bucić–Chen–Ma Claim 2. The parameter `y` stands for `|Y|`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

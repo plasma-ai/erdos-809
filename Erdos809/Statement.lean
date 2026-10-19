@@ -1,6 +1,8 @@
-import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
-import Mathlib.Topology.Instances.Real.Lemmas
-import Erdos809.RainbowCycles
+module
+
+public import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Erdos809.RainbowCycles
 
 /-!
 # Rainbow odd-cycle threshold statement
@@ -14,6 +16,8 @@ The seven-cycle proof uses an exact-edge formulation in
 to the general function used here. The mathematical sources are listed in
 `formalization.yaml`.
 -/
+
+@[expose] public section
 
 open scoped Asymptotics
 

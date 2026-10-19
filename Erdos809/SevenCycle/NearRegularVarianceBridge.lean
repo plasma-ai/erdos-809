@@ -1,9 +1,11 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularExtraction
-import Erdos809.SevenCycle.C7GraphReweight
-import Mathlib.Combinatorics.SimpleGraph.DegreeSum
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularExtraction
+public import Erdos809.SevenCycle.C7GraphReweight
+public import Mathlib.Combinatorics.SimpleGraph.DegreeSum
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
 
 /-!
 # Matching the two degree-variance normalizations
@@ -12,6 +14,8 @@ The variance used by the graph reweighting argument is the same quantity as
 the degree-sum variance used for near-regular extraction. This identity
 allows the positive-variance and zero-variance branches to use one parameter.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegularExtraction
 

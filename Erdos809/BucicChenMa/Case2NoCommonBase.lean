@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # The base path in the no-common-neighbor subcase of Case 2
@@ -8,6 +10,8 @@ The two disjoint good edges are `xy` and `zw`. A greedy path runs from `x`
 to `u`, and a short connecting path runs from `u` to `w`. The resulting
 path from `p` to `y` passes through both good edges.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

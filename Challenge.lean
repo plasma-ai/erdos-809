@@ -1,9 +1,11 @@
-import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
-import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
-import Mathlib.Combinatorics.SimpleGraph.CycleGraph
-import Mathlib.Order.Lattice.Nat
-import Mathlib.SetTheory.Cardinal.NatCard
-import Mathlib.Topology.Instances.Real.Lemmas
+module
+
+public import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
+public import Mathlib.Combinatorics.SimpleGraph.Coloring.EdgeLabeling
+public import Mathlib.Combinatorics.SimpleGraph.CycleGraph
+public import Mathlib.Order.Lattice.Nat
+public import Mathlib.SetTheory.Cardinal.NatCard
+public import Mathlib.Topology.Instances.Real.Lemmas
 
 /-!
 # Erdős Problem 809: rainbow odd cycles
@@ -36,6 +38,8 @@ branch formalizes the Bucić–Chen–Ma result.
 The theorem below has a deliberate proof hole. `Solution.lean` supplies the
 proof, and Comparator checks that it proves this exact statement.
 -/
+
+@[expose] public section
 
 open scoped Asymptotics
 

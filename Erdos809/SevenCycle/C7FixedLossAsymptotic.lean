@@ -1,9 +1,11 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7VarianceAsymptotic
-import Erdos809.SevenCycle.C7AsymptoticArithmetic
-import Erdos809.SevenCycle.CleaningRobust
-import Erdos809.SevenCycle.C7VarianceStability
-import Mathlib.Order.Filter.AtTopBot.Archimedean
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7VarianceAsymptotic
+public import Erdos809.SevenCycle.C7AsymptoticArithmetic
+public import Erdos809.SevenCycle.CleaningRobust
+public import Erdos809.SevenCycle.C7VarianceStability
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
 
 /-!
 # The variance branch with a fixed cleaning loss
@@ -14,6 +16,8 @@ of cleaned graphs with deletion fraction tending to zero. This theorem
 follows that quantifier order: for each positive deletion fraction, a
 possibly different cleaned sequence may be supplied.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPathAddEdge
-import Erdos809.BucicChenMa.ShortPathThreshold
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPathAddEdge
+public import Erdos809.BucicChenMa.ShortPathThreshold
 
 /-!
 # Four-edge paths at the Bucić–Chen–Ma density threshold
@@ -8,6 +10,8 @@ import Erdos809.BucicChenMa.ShortPathThreshold
 The adjacent-pair degree estimate and the missing-edge reduction are
 combined here to obtain Lemma 3.2.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

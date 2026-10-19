@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2AdjusterCycle
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2AdjusterCycle
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # The base path through adjacent good edges in Case 2
@@ -9,6 +11,8 @@ Given the short path from `p` to `z`, the two marked edges `zx` and `xy`,
 and the greedy extension from `y`, this builds the simple path to which the
 triangle length adjuster is applied.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPaths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPaths
 
 /-!
 # Degrees across the exclusive neighborhoods in Lemma 3.2
@@ -9,6 +11,8 @@ of `N(x) \ (N(y) ∪ {y})` and a vertex of `N(y) \ (N(x) ∪ {x})` have no commo
 neighbor. This gives the pointwise bound used in equation (10) of Bucić,
 Chen, and Ma (2026), as well as its summed form.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.CleaningRegularity
-import Erdos809.SevenCycle.CleaningCountBridge
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.CleaningRegularity
+public import Erdos809.SevenCycle.CleaningCountBridge
 
 /-!
 # Realizing retained short walks in the original graph
@@ -9,6 +11,8 @@ These lemmas combine endpoint degree trimming with the regular-pair counts.
 The numerical assumptions state exactly when the candidate count exceeds the
 finite collision and forbidden-vertex error.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

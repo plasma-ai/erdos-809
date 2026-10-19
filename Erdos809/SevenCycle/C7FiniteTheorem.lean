@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7Capacity
-import Erdos809.SevenCycle.C7CoverBound
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7Capacity
+public import Erdos809.SevenCycle.C7CoverBound
 
 /-!
 # Finite C7 palette bound
@@ -11,6 +13,8 @@ three-walk connectors. Any fractional allocation of compatible palettes
 covering those capacities has cost greater than one eighth when the supported
 edge mass is greater than one quarter.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

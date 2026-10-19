@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartitePalette
-import Erdos809.SevenCycle.NearBipartiteWitness
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartitePalette
+public import Erdos809.SevenCycle.NearBipartiteWitness
 
 /-!
 # A finite color bound at the near-bipartite boundary
@@ -10,6 +12,8 @@ marked rectangle after exceptional vertices and the edge endpoints are
 removed. Every pair of marked edges lies on a common seven-cycle, so a
 rainbow coloring uses at least one color per marked edge.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

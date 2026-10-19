@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.GreedyPath
-import Erdos809.BucicChenMa.Claim2CommonNeighbors
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.GreedyPath
+public import Erdos809.BucicChenMa.Claim2CommonNeighbors
 
 /-!
 # Paths and common neighbors for Claim 2
@@ -9,6 +11,8 @@ The induced graph in Claim 2 has minimum degree at least half its order
 plus `5k`. These lemmas record the two greedy path choices in the proof
 and the subsequent choice of a common neighbor outside the path.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

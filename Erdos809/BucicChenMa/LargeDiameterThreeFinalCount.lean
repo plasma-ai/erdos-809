@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LargeDiameterThreeFarPair
-import Erdos809.BucicChenMa.LargeDiameterThreeCounting
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LargeDiameterThreeFarPair
+public import Erdos809.BucicChenMa.LargeDiameterThreeCounting
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The final degree count in the diameter-three lemma
@@ -10,6 +12,8 @@ The distant pair yields a degree cap on its two closed neighborhoods. Low
 degree vertices receive an additional discount. Summing those pointwise
 bounds gives equation (5) of Bucić, Chen, and Ma (2026).
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

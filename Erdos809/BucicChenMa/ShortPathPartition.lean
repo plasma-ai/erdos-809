@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPathCrossDegree
-import Erdos809.BucicChenMa.ShortPathDegree
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPathCrossDegree
+public import Erdos809.BucicChenMa.ShortPathDegree
 
 /-!
 # Partition around an adjacent pair
@@ -10,6 +12,8 @@ their common neighbors, their two exclusive neighborhoods, and the vertices
 outside both neighborhoods. The degree-sum identity below is the starting
 point for equation (11) of Bucić, Chen, and Ma (2026).
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

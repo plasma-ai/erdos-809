@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseCycleWalk
-import Erdos809.BucicChenMa.ShortPathTheorem
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseCycleWalk
+public import Erdos809.BucicChenMa.ShortPathTheorem
 
 /-!
 # Cycle embedding in the dense case
@@ -10,6 +12,8 @@ four-edge path statement needed after deleting the internal vertices of a
 long path. The numerical inequalities used to apply Lemma 3.2 to every such
 deletion are separate from the cycle assembly.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

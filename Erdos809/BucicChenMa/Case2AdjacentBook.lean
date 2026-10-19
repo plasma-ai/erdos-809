@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2AdjacentRobust
-import Erdos809.BucicChenMa.Case2TriangleChoice
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2AdjacentRobust
+public import Erdos809.BucicChenMa.Case2TriangleChoice
 
 /-!
 # Adjacent good edges from the fixed book edge
@@ -8,6 +10,8 @@ import Erdos809.BucicChenMa.Case2TriangleChoice
 Choose the triangle vertex outside the three endpoints of the adjacent
 edges, then apply the adjacent-edge cycle construction.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

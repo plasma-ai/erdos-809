@@ -1,4 +1,6 @@
-import Mathlib.Analysis.Real.Sqrt
+module
+
+public import Mathlib.Analysis.Real.Sqrt
 
 /-!
 # The full-density anti-Ramsey leading term
@@ -6,6 +8,8 @@ import Mathlib.Analysis.Real.Sqrt
 This expression is the main term in the Bucić–Chen–Ma formula. The common
 two-clique upper construction is compared against the same expression.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

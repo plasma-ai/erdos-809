@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.CycleEdgeColors
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.CycleEdgeColors
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # A cycle walk gives two edges on an indexed cycle
@@ -9,6 +11,8 @@ Concrete odd-cycle constructions are convenient as walks. This lemma converts
 their edge membership facts to the indexed-cycle predicate used by the color
 counting argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

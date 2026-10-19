@@ -1,9 +1,11 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularExtraction
-import Erdos809.SevenCycle.NearRegularDisjointRelabel
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Data.Finset.Sort
-import Mathlib.Order.Filter.AtTopBot.Archimedean
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularExtraction
+public import Erdos809.SevenCycle.NearRegularDisjointRelabel
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Data.Finset.Sort
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
 
 /-!
 # Variance extraction along a sparse sequence
@@ -12,6 +14,8 @@ The graph orders need only form an unbounded increasing subsequence. The
 fourth-root variance scale and the finite extraction certificate are measured
 against the actual order at each index.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegularExtraction
 

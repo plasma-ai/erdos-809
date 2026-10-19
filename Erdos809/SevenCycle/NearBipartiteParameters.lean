@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteSqrt
-import Mathlib.Topology.Algebra.Order.Field
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteSqrt
+public import Mathlib.Topology.Algebra.Order.Field
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Parameters for a sparse balanced cut
@@ -11,6 +13,8 @@ The same square-root cutoff controls the exceptional vertices, the rectangle
 sizes, and the finite connection inequalities. All sizes below are natural
 numbers, so the eventual linear margin also covers rounding.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

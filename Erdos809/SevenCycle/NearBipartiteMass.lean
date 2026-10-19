@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCounting
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCounting
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
 
 /-!
 # Missing crossing pairs have negligible mass
@@ -9,6 +11,8 @@ Above the Turán threshold, every fixed cut has fewer missing crossing pairs
 than internal edges. Thus an `o(n²)` internal-edge count forces an `o(n²)`
 missing-crossing count.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

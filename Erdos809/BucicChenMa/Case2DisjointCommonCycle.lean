@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2DisjointCommonGreedy
-import Erdos809.BucicChenMa.Case2DisjointCommonBase
-import Erdos809.BucicChenMa.Claim2Graph
-import Erdos809.BucicChenMa.Claim2CycleWalkBridge
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2DisjointCommonGreedy
+public import Erdos809.BucicChenMa.Case2DisjointCommonBase
+public import Erdos809.BucicChenMa.Claim2Graph
+public import Erdos809.BucicChenMa.Claim2CycleWalkBridge
 
 /-!
 # Disjoint good edges with a common neighbor in Case 2
@@ -11,6 +13,8 @@ This is Figure 4(b): the common neighbor `u` of `y,w` joins the two marked
 edges, a greedy path extends from `x`, and Claim 2 closes the cycle through
 the triangle `pqr`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

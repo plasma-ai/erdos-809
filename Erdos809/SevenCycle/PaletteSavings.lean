@@ -1,11 +1,13 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Combinatorics.SimpleGraph.Clique
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Data.Fintype.Powerset
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Clique
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Data.Fintype.Powerset
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
 
 /-!
 # Savings from fractional palettes
@@ -16,6 +18,8 @@ finite vertex set, with positive weight only on independent sets. Its coverage
 is assumed exact. `PaletteExactization` shows that every nonnegative cover can
 be made exact without increasing its cost.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

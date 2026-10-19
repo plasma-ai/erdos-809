@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularNonRobust
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularNonRobust
 
 /-!
 # Passing a cleaned-cut bound to a maximum cut
@@ -9,6 +11,8 @@ cut. A maximum cut of the same graph has no more internal edges. This keeps the
 near-bipartite error bound when the cut is replaced by one suitable for the
 local degree argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

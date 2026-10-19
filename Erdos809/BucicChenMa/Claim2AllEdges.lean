@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2AdjacentCycle
-import Erdos809.BucicChenMa.Claim2DisjointCycle
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2AdjacentCycle
+public import Erdos809.BucicChenMa.Claim2DisjointCycle
 
 /-!
 # Every pair of edges is on a common cycle in Claim 2
@@ -8,6 +10,8 @@ import Erdos809.BucicChenMa.Claim2DisjointCycle
 The adjacent-edge and disjoint-edge constructions cover all pairs of
 distinct edges of the dense induced graph.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

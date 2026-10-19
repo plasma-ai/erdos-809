@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteCounting
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteCounting
 
 /-!
 # Local degree bounds across a cut
@@ -9,6 +11,8 @@ counts relate cross-neighbors, missing cross-neighbors, and common
 cross-neighbors. They are the local estimates used in the near-bipartite
 argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

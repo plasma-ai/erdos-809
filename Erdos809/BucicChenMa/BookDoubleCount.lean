@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.BookPigeonhole
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Data.Fintype.BigOperators
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.BookPigeonhole
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Data.Fintype.BigOperators
 
 /-!
 # Weighted count of oriented triangles
@@ -10,6 +12,8 @@ Every vertex agrees in adjacency status with at least one pair of a
 triangle. Summing this observation over vertices and oriented triangles
 gives the core incidence inequality for the book theorem.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7ColorAllocation
-import Erdos809.SevenCycle.C7ColorMaximum
-import Erdos809.SevenCycle.CleaningWalkBridge
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7ColorAllocation
+public import Erdos809.SevenCycle.C7ColorMaximum
+public import Erdos809.SevenCycle.CleaningWalkBridge
 
 /-!
 # From cleaned graph colors to the finite palette inequality
@@ -12,6 +14,8 @@ original rainbow coloring then separates colors along these walks. Each
 color's active edge types become one compatible palette, charged at their
 largest active capacity.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.GreedyPath
-import Mathlib.Combinatorics.SimpleGraph.Finite
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.GreedyPath
+public import Mathlib.Combinatorics.SimpleGraph.Finite
 
 /-!
 # The greedy path in the disjoint-edge, no-common-neighbor subcase
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.Finite
 Lemma 3.3 extends `x` by `2k-7` edges while avoiding the six vertices
 reserved for the two good edges and the triangle length adjuster.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

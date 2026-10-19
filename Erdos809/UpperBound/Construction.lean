@@ -1,5 +1,7 @@
-import Erdos809.RainbowCycles
-import Erdos809.UpperBound.TwoCliqueRainbow
+module
+
+public import Erdos809.RainbowCycles
+public import Erdos809.UpperBound.TwoCliqueRainbow
 
 /-!
 # The two-clique upper-bound construction
@@ -8,6 +10,8 @@ The same edge colors can be reused in two disjoint cliques, because each
 cycle lies in one component. At the top endpoint the construction takes a
 clique of size `n` and an empty second component.
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

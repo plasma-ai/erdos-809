@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.SubgraphTransfer
-import Erdos809.UpperBound.TwoCliqueRainbow
-import Mathlib.Order.Lattice.Nat
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.SubgraphTransfer
+public import Erdos809.UpperBound.TwoCliqueRainbow
+public import Mathlib.Order.Lattice.Nat
 
 /-!
 # From graphwise palette bounds to the anti-Ramsey minimum
@@ -10,6 +12,8 @@ The quantitative induction works with an arbitrary admissible graph and
 coloring. At a feasible edge count the admissible palette set is nonempty,
 so its natural-number infimum is itself witnessed by such a graph.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

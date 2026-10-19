@@ -1,11 +1,13 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularNonRobust
-import Mathlib.Order.Filter.AtTopBot.Archimedean
-import Mathlib.Topology.Instances.Real.Lemmas
-import Mathlib.Topology.Algebra.Order.Field
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularNonRobust
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Mathlib.Topology.Algebra.Order.Field
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
 
 /-!
 # Vanishing internal edge density in the overlap branch
@@ -15,6 +17,8 @@ cleaned-neighborhood cut by a quadratic edge-count error and linear errors
 in the degree deficit and forbidden set. This records its sequence-level
 consequence when all three errors vanish after normalization.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

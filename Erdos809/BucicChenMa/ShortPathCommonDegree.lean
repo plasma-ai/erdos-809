@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPaths
-import Erdos809.BucicChenMa.SingletonCommonNeighbor
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPaths
+public import Erdos809.BucicChenMa.SingletonCommonNeighbor
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The common-neighbor degree estimate in Lemma 3.2
@@ -16,6 +18,8 @@ The sentence after displayed equation (8) of their Lemma 3.2 says that
 near the complete-graph endpoint. We make that hypothesis explicit here;
 the dense endpoint requires a separate argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

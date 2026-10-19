@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2AdjusterCycle
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2AdjusterCycle
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # The triangle adjuster in the disjoint-edge, no-common-neighbor subcase
@@ -9,6 +11,8 @@ The short path between `u` and `w` is part of the base path. The triangle
 `pqr` supplies a route of length two or one back to `p`; the choice
 compensates for whether the short path has length two or three.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

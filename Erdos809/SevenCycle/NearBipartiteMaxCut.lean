@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteLocal
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteLocal
 
 /-!
 # A local degree consequence of a maximum cut
@@ -9,12 +11,14 @@ it removes. In the fixed two-class notation, this says that each vertex has
 at least as many neighbors across the cut as within its own class.
 -/
 
+@[expose] public section
+
 namespace Erdos809
 
 open Finset
 open Function
 
-private noncomputable def edgeIndicator {V : Type*} (G : SimpleGraph V) (u v : V) : ℕ := by
+noncomputable def edgeIndicator {V : Type*} (G : SimpleGraph V) (u v : V) : ℕ := by
   classical
   exact if G.Adj u v then 1 else 0
 

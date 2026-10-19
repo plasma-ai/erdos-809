@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7CutProjection
-import Erdos809.SevenCycle.PaletteSavings
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7CutProjection
+public import Erdos809.SevenCycle.PaletteSavings
 
 /-!
 # The cut-palette saving in the C7 finite template
@@ -9,6 +11,8 @@ This is equation (14) of the palette argument for an exact allocation of
 full cut capacities. The graph projection and neighborhood feasibility are
 proved in `C7Conflict` and `C7CutProjection`.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

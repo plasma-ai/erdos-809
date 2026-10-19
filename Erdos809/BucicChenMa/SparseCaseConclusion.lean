@@ -1,10 +1,12 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.SparseParameterBounds
-import Erdos809.BucicChenMa.Claim2Conclusion
-import Erdos809.BucicChenMa.BookFull
-import Erdos809.BucicChenMa.Case2PairwiseGoodEdges
-import Erdos809.BucicChenMa.Case2GoodEdgeArithmetic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.SparseParameterBounds
+public import Erdos809.BucicChenMa.Claim2Conclusion
+public import Erdos809.BucicChenMa.BookFull
+public import Erdos809.BucicChenMa.Case2PairwiseGoodEdges
+public import Erdos809.BucicChenMa.Case2GoodEdgeArithmetic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The sparse degree step
@@ -13,6 +15,8 @@ Claim 2 either supplies the quantitative palette bound directly or gives
 short paths avoiding small sets. In the latter branch, the book edge and the
 Case 2 cycle construction show that all good edges have different colors.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

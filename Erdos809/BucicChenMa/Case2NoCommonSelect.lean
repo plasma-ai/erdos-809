@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Data.Finset.Card
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Data.Finset.Card
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Choosing the triangle vertex in Case 2
@@ -12,6 +14,8 @@ the distinguished edge then meets that union outside the four prescribed
 vertices. This supplies the vertex `r` used in the second subcase of the
 Case 2 cycle construction.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

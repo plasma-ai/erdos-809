@@ -1,10 +1,12 @@
-import Erdos809.SevenCycle.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
 
 /-!
 # Extracting a large nearly regular induced graph
@@ -14,6 +16,8 @@ cutoff. Removing those vertices costs each retained vertex at most the number
 removed in degree. These finite estimates are the quantitative part of the
 variance-zero branch of the C7 argument.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegularExtraction
 

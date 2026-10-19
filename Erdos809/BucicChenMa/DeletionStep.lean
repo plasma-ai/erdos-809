@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.RainbowCycles
-import Mathlib.Combinatorics.SimpleGraph.DeleteEdges
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.RainbowCycles
+public import Mathlib.Combinatorics.SimpleGraph.DeleteEdges
 
 /-!
 # Deleting one vertex of a rainbow-colored graph
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.DeleteEdges
 Removing a vertex deletes exactly its degree many edges. The coloring of the
 remaining graph still makes every cycle rainbow.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2AllEdges
-import Erdos809.BucicChenMa.Claim2CycleMap
-import Erdos809.BucicChenMa.SparseInducedColorCount
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2AllEdges
+public import Erdos809.BucicChenMa.Claim2CycleMap
+public import Erdos809.BucicChenMa.SparseInducedColorCount
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Cycles through edges of the dense induced graph
@@ -10,6 +12,8 @@ import Mathlib.Tactic.Linarith
 The Claim 2 cycle construction is applied inside `G[Y]`; its cycles then
 embed in the ambient graph used by the edge coloring.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

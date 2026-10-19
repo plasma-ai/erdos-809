@@ -1,9 +1,13 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Data.Finset.Basic
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Data.Finset.Basic
 
 /-!
 # Distinctness bookkeeping for the two orientations of Figure 4(c)
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

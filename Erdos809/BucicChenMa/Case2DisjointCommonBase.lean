@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2AdjusterCycle
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2AdjusterCycle
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # The base path through disjoint good edges with a common neighbor
@@ -8,6 +10,8 @@ import Mathlib.Combinatorics.SimpleGraph.Paths
 This is the path `p-z-w-u-y-x-P-v` in Figure 4(b), where `u` is a common
 neighbor of `y` and `w`. The triangle adjuster closes it at `r`.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

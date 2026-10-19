@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7Conflict
-import Erdos809.SevenCycle.PaletteProjection
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7Conflict
+public import Erdos809.SevenCycle.PaletteProjection
 
 /-!
 # Projecting cut palettes in the C7 template
@@ -11,16 +13,18 @@ outside walk graph. Thus an exact cut allocation can be projected without
 changing its cost or its coverage after demands are aggregated at endpoints.
 -/
 
+@[expose] public section
+
 namespace Erdos809
 
 variable {V : Type*} [Fintype V] [DecidableEq V]
 
-private noncomputable instance cutTypeFintype (A : V → V → Prop) (K : Finset V) :
+noncomputable instance cutTypeFintype (A : V → V → Prop) (K : Finset V) :
     Fintype (CutType A K) := by
   classical
   infer_instance
 
-private noncomputable instance cutTypeDecidableEq (A : V → V → Prop) (K : Finset V) :
+noncomputable instance cutTypeDecidableEq (A : V → V → Prop) (K : Finset V) :
     DecidableEq (CutType A K) := Classical.decEq _
 
 /-- The full capacity of a cut type. -/

@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegular
-import Mathlib.Combinatorics.SimpleGraph.Density
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegular
+public import Mathlib.Combinatorics.SimpleGraph.Density
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Counting the cut from a failed robust path
@@ -10,6 +12,8 @@ The overlap branch of the near-regular argument produces a cut whose crossing
 edge count is close to the Turán bound. This module records the finite count,
 leaving the separate near-bipartite color theorem to handle the cut.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

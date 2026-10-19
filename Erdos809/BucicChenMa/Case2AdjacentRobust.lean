@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2AdjacentGreedy
-import Erdos809.BucicChenMa.Case2AdjacentBase
-import Erdos809.BucicChenMa.Claim2Graph
-import Erdos809.BucicChenMa.Claim2CycleWalkBridge
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2AdjacentGreedy
+public import Erdos809.BucicChenMa.Case2AdjacentBase
+public import Erdos809.BucicChenMa.Claim2Graph
+public import Erdos809.BucicChenMa.Claim2CycleWalkBridge
 
 /-!
 # Adjacent edges from the short-path branch of Claim 2
@@ -10,6 +12,8 @@ import Erdos809.BucicChenMa.Claim2CycleWalkBridge
 The first short path is explicit. The greedy extension comes from Lemma 3.3,
 and the return path comes from the short-path alternative of Claim 2.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

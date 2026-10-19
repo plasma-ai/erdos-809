@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.UpperBound.SevenCycle
-import Mathlib.Topology.Order.Basic
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.UpperBound.SevenCycle
+public import Mathlib.Topology.Order.Basic
 
 /-!
 # Closing the seven-cycle asymptotic argument
@@ -9,6 +11,8 @@ The exact-edge witness ensures the palette minimum is attained at large orders.
 An eventual lower bound for all admissible colorings then combines with the
 common upper bound to give the seven-cycle threshold.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

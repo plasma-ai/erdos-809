@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.ThresholdArithmetic
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.ThresholdArithmetic
 
 /-!
 # The threshold consequence of the Bucić–Chen–Ma formula
@@ -7,6 +9,8 @@ import Erdos809.ThresholdArithmetic
 The uniform full-density formula implies the threshold asymptotic for the
 longer odd cycles.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

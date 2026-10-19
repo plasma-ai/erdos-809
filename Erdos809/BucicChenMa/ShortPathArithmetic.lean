@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Arithmetic at the end of the four-path lemma
@@ -9,6 +11,8 @@ This isolates the calculation after equations (6), (7), and (11) in the
 proof of Bucić–Chen–Ma Lemma 3.2. Its assumptions are exactly the
 degree-sum budget and the common-neighbor estimate needed at that point.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

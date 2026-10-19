@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.JointCliqueMass
-import Mathlib.Data.Sym.Sym2
-import Mathlib.Combinatorics.SimpleGraph.Basic
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.JointCliqueMass
+public import Mathlib.Data.Sym.Sym2
+public import Mathlib.Combinatorics.SimpleGraph.Basic
 
 /-!
 # Conflicts between supported edge types in the C7 template
@@ -11,6 +13,8 @@ are unordered pairs, including loops. The graph `J23` has an edge precisely
 when two distinct active supported types admit the oriented two-walk and
 three-walk connectors of the C7 palette program.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

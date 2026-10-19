@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.ThresholdClosure
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.ThresholdClosure
 
 /-!
 # Passing from sequence lower bounds to the seven-cycle threshold
@@ -9,6 +11,8 @@ colorings. If a uniform eventual lower bound failed, we could select a bad
 coloring at every bad order and an admissible coloring at every other large
 order. That sequence would contradict the sequence lower-bound statement.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

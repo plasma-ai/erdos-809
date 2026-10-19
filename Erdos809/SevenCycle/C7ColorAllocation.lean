@@ -1,6 +1,8 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7FiniteTheorem
-import Erdos809.SevenCycle.C7WalkBridge
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7FiniteTheorem
+public import Erdos809.SevenCycle.C7WalkBridge
 
 /-!
 # Color classes as a fractional palette cover
@@ -9,6 +11,8 @@ Each color supplies one palette consisting of its active edge types. Several
 colors may have the same palette, so their weights are added. Empty palettes
 are discarded.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

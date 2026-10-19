@@ -1,8 +1,10 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearBipartiteAsymptotic
-import Erdos809.SevenCycle.NearBipartiteMass
-import Erdos809.SevenCycle.NearBipartiteParameters
-import Erdos809.SevenCycle.NearBipartiteBalance
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearBipartiteAsymptotic
+public import Erdos809.SevenCycle.NearBipartiteMass
+public import Erdos809.SevenCycle.NearBipartiteParameters
+public import Erdos809.SevenCycle.NearBipartiteBalance
 
 /-!
 # Near-bipartite lower bound from standard density hypotheses
@@ -11,6 +13,8 @@ A maximum cut with strict Turán excess and `o(n²)` internal edges
 has a rainbow seven-cycle palette of asymptotic size at least `n²/8`.
 The square-root cutoff supplies the finite exceptional-set parameters.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearBipartite
 

@@ -1,8 +1,10 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2Graph
-import Erdos809.BucicChenMa.SparseInducedColorCount
-import Erdos809.BucicChenMa.SparseCaseProduct
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2Graph
+public import Erdos809.BucicChenMa.SparseInducedColorCount
+public import Erdos809.BucicChenMa.SparseCaseProduct
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The counting conclusion of Claim 2
@@ -11,6 +13,8 @@ This joins the neighborhood separation, induced degree estimate, and
 equation (22). The cycle-containment premise is the remaining graph
 construction supplied separately by the Claim 2 cycle lemmas.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

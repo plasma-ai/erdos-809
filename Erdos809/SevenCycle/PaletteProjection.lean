@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.PaletteSavings
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.PaletteSavings
 
 /-!
 # Projecting palettes along their outside endpoints
@@ -9,6 +11,8 @@ when the projection is injective on every source palette. The target allocation
 groups all source palettes with the same image. Its cost and exact coverage are
 preserved after aggregating the source demands over fibers.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

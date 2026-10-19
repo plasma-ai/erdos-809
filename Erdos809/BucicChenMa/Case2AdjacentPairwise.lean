@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2AdjacentBook
-import Erdos809.BucicChenMa.DenseGoodEdges
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2AdjacentBook
+public import Erdos809.BucicChenMa.DenseGoodEdges
 
 /-!
 # Adjacent edges in the good-edge family
@@ -9,6 +11,8 @@ Two adjacent edges can have their endpoints listed in either order. Orient
 both edges at a shared vertex, apply the book-edge cycle construction, and
 then return to the original edge labels.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

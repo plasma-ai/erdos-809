@@ -1,7 +1,9 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegularDisjointCount
-import Erdos809.SevenCycle.NearRegularDisjointRelabel
-import Erdos809.SevenCycle.NearRegularDisjointFinite
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegularDisjointCount
+public import Erdos809.SevenCycle.NearRegularDisjointRelabel
+public import Erdos809.SevenCycle.NearRegularDisjointFinite
 
 /-!
 # Colors in the disjoint cleaned-neighborhood case
@@ -11,6 +13,8 @@ neighborhoods are disjoint. If it is large enough for seven-cycle connectors,
 its edges must all have different colors. The finite edge count then gives a
 lower bound on the full palette.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

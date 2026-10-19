@@ -1,14 +1,16 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LowerInduction
-import Erdos809.BucicChenMa.LowerWitnessTransfer
-import Erdos809.BucicChenMa.OrderThreshold
-import Erdos809.BucicChenMa.SparseParameterBounds
-import Erdos809.BucicChenMa.DenseCaseConclusion
-import Erdos809.BucicChenMa.DeletionDensity
-import Erdos809.BucicChenMa.QuantitativeConsequence
-import Erdos809.BucicChenMa.SparseCaseConclusion
-import Erdos809.BucicChenMa.ThresholdConsequence
-import Mathlib.Combinatorics.SimpleGraph.Finite
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LowerInduction
+public import Erdos809.BucicChenMa.LowerWitnessTransfer
+public import Erdos809.BucicChenMa.OrderThreshold
+public import Erdos809.BucicChenMa.SparseParameterBounds
+public import Erdos809.BucicChenMa.DenseCaseConclusion
+public import Erdos809.BucicChenMa.DeletionDensity
+public import Erdos809.BucicChenMa.QuantitativeConsequence
+public import Erdos809.BucicChenMa.SparseCaseConclusion
+public import Erdos809.BucicChenMa.ThresholdConsequence
+public import Mathlib.Combinatorics.SimpleGraph.Finite
 
 /-!
 # Assembling the quantitative lower induction
@@ -18,6 +20,8 @@ degree condition from equation (13). At smaller orders, the fixed penalty in
 equation (12) settles the bound. Deleting a minimum-degree vertex lets the
 induction hypothesis handle the remaining large-order cases.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

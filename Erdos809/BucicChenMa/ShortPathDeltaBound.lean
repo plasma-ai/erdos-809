@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPathCrossDegree
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPathCrossDegree
 
 /-!
 # The exclusive-neighborhood degree cap in Lemma 3.2
@@ -9,6 +11,8 @@ the minimum-degree assumption of Bucić, Chen, and Ma. A vertex exclusive
 to `y` gives this immediately. If there is none, a common neighbor of
 `x,y` not adjacent to `z₀` gives the same bound.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

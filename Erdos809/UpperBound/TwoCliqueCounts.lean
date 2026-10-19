@@ -1,10 +1,14 @@
-import Erdos809.RainbowCycles
-import Mathlib.Combinatorics.SimpleGraph.Sum
-import Mathlib.Logic.Equiv.Fin.Basic
+module
+
+public import Erdos809.RainbowCycles
+public import Mathlib.Combinatorics.SimpleGraph.Sum
+public import Mathlib.Logic.Equiv.Fin.Basic
 
 /-!
 # Counting and labeling the edges of two disjoint cliques
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 
@@ -26,7 +30,7 @@ def twoCliquesSumEdgeEquiv (a b : ℕ) :
       (⊤ : SimpleGraph (Fin a)).edgeSet ⊕ (⊤ : SimpleGraph (Fin b)).edgeSet :=
   SimpleGraph.edgeSetSumEquiv
 
-private theorem completeFin_edge_card (a : ℕ) :
+theorem completeFin_edge_card (a : ℕ) :
     Fintype.card (⊤ : SimpleGraph (Fin a)).edgeSet = a.choose 2 := by
   classical
   rw [SimpleGraph.card_edgeSet, SimpleGraph.card_edgeFinset_top_eq_card_choose_two,

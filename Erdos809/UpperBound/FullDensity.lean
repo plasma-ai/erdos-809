@@ -1,7 +1,9 @@
-import Erdos809.MainTerm
-import Erdos809.UpperBound.Construction
-import Erdos809.UpperBound.Error
-import Erdos809.UpperBound.Arithmetic
+module
+
+public import Erdos809.MainTerm
+public import Erdos809.UpperBound.Construction
+public import Erdos809.UpperBound.Error
+public import Erdos809.UpperBound.Arithmetic
 
 /-!
 # The common upper half of the full-density formula
@@ -11,6 +13,8 @@ the first uses the rainbow property of cycles in disjoint cliques, while the
 second estimates the chosen clique sizes. This upper estimate works for
 seven-cycles as well as the longer cycles in the Bucić–Chen–Ma theorem.
 -/
+
+@[expose] public section
 
 namespace Erdos809.UpperBound
 

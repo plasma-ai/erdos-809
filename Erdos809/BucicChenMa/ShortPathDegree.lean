@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.ShortPaths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.ShortPaths
 
 /-!
 # The outside-neighborhood degree bound in Lemma 3.2
@@ -8,6 +10,8 @@ This proves the local estimate behind equation (6) of Bucić, Chen, and Ma:
 when no four-edge path connects adjacent vertices `x,y`, a vertex outside
 both neighborhoods has too few neighbors to have high degree.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

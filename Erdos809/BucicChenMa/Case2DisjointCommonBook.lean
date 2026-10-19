@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Case2DisjointCommonCycle
-import Erdos809.BucicChenMa.Case2TriangleChoice
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Case2DisjointCommonCycle
+public import Erdos809.BucicChenMa.Case2TriangleChoice
 
 /-!
 # Selecting the triangle in the common-neighbor subcase
@@ -9,6 +11,8 @@ Lemma 3.4 supplies enough common neighbors of the fixed book edge `pq` to
 choose the triangle vertex after the two disjoint edges and their auxiliary
 common neighbor have been fixed.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseCycleWalk
-import Mathlib.Combinatorics.SimpleGraph.Paths
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseCycleWalk
+public import Mathlib.Combinatorics.SimpleGraph.Paths
 
 /-!
 # The triangle length adjuster in Case 2
@@ -9,6 +11,8 @@ The edge `pq` and a common neighbor `r` give two routes from `r` to `p`,
 of lengths two and one. Choosing the route according to whether the return
 path has length two or three produces the same odd-cycle length.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

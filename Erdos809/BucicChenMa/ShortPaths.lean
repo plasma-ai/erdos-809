@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Combinatorics.SimpleGraph.Paths
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Combinatorics.SimpleGraph.Paths
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
 
 /-!
 # Short paths in dense graphs
@@ -11,6 +13,8 @@ The first obstruction in the proof of Lemma 3.2 of Bucić, Chen, and Ma
 in their respective punctured neighborhoods cannot share a third neighbor.
 This is property (P) in the paper.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Arithmetic in Bucić–Chen–Ma Lemma 3.1
@@ -10,6 +12,8 @@ The two degree-count estimates in the proof of Lemma 3.1 each contradict
 the assumption that the maximum degree is smaller than `C₁ - 1`. These
 lemmas isolate the calculations after displayed equations (3) and (5).
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.C7FixedLossAsymptotic
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.C7FixedLossAsymptotic
 
 /-!
 # Positive variance along a subsequence of graph orders
@@ -8,6 +10,8 @@ The finite cleaning and reweighting argument works at each selected order
 `φ j`. This avoids constructing a graph sequence whose index is different
 from its vertex count.
 -/
+
+@[expose] public section
 
 namespace Erdos809
 

@@ -1,5 +1,7 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Data.Finset.Card
 
 /-!
 # Distinct colors forced by a common cycle
@@ -8,6 +10,8 @@ The lower-bound proof repeatedly identifies a family of edges such that
 every pair appears on one cycle. A rainbow coloring then uses at least one
 color for each edge in the family.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.Claim2PathSelection
-import Erdos809.BucicChenMa.Claim2CycleTemplates
-import Erdos809.BucicChenMa.Claim2CycleWalkBridge
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.Claim2PathSelection
+public import Erdos809.BucicChenMa.Claim2CycleTemplates
+public import Erdos809.BucicChenMa.Claim2CycleWalkBridge
 
 /-!
 # A cycle through two adjacent edges in Claim 2
@@ -9,6 +11,8 @@ import Erdos809.BucicChenMa.Claim2CycleWalkBridge
 The large minimum degree gives a path from one nonshared endpoint and then
 a common neighbor joining the path back to the other endpoint.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

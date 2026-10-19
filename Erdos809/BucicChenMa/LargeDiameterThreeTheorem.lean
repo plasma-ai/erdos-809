@@ -1,13 +1,17 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.LargeDiameterThreeDenominator
-import Erdos809.BucicChenMa.LargeDiameterThreeFinalCount
-import Mathlib.Data.Nat.Choose.Cast
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.LargeDiameterThreeDenominator
+public import Erdos809.BucicChenMa.LargeDiameterThreeFinalCount
+public import Mathlib.Data.Nat.Choose.Cast
 
 /-!
 # A large vertex set of ambient diameter at most three
 
 This file assembles the proof of Lemma 3.1 of Bucić, Chen, and Ma (2026).
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

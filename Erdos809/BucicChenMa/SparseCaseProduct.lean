@@ -1,9 +1,11 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.SparseCaseArithmetic
-import Erdos809.BucicChenMa.LowerInduction
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.SparseCaseArithmetic
+public import Erdos809.BucicChenMa.LowerInduction
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The product estimate in the sparse case
@@ -11,6 +13,8 @@ import Mathlib.Tactic.Linarith
 This is the numerical second inequality in equation (22) of Bucić–Chen–Ma.
 It is stated independently of the graph count that supplies the product.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

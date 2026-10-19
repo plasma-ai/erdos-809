@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseCycleEmbedding
-import Mathlib.Combinatorics.SimpleGraph.Finite
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseCycleEmbedding
+public import Mathlib.Combinatorics.SimpleGraph.Finite
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
 
 /-!
 # Edge and degree losses under a small vertex deletion
@@ -10,6 +12,8 @@ These are the coarse deletion bounds used before applying Lemma 3.2 in
 the dense case. Deleting a vertex set `S` removes at most `|S| n` edges
 and at most `|S|` neighbors of each retained vertex.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

@@ -1,6 +1,8 @@
-import Erdos809.BucicChenMa.Statement
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
 
 /-!
 # The dense endpoint of the four-path lemma
@@ -11,6 +13,8 @@ When `δ₁ < 3`, integer-valued vertex degrees allow the proof to use
 `δ₀ = max 3 δ₁` instead. This file verifies the numerical repair and the
 resulting final degree-budget contradiction.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 

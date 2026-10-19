@@ -1,5 +1,7 @@
-import Erdos809.SevenCycle.Statement
-import Erdos809.SevenCycle.NearRegular
+module
+
+public import Erdos809.SevenCycle.Statement
+public import Erdos809.SevenCycle.NearRegular
 
 /-!
 # The pointwise near-regular structural split
@@ -10,6 +12,8 @@ neighborhoods of that witness are disjoint or share a vertex. This is a
 pointwise split, so it applies even when the alternatives change with the
 graph order.
 -/
+
+@[expose] public section
 
 namespace Erdos809.NearRegular
 

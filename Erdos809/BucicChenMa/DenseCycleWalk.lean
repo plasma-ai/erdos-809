@@ -1,7 +1,9 @@
-import Erdos809.BucicChenMa.Statement
-import Erdos809.BucicChenMa.DenseGoodEdges
-import Mathlib.Combinatorics.SimpleGraph.Paths
-import Mathlib.Data.Finset.Card
+module
+
+public import Erdos809.BucicChenMa.Statement
+public import Erdos809.BucicChenMa.DenseGoodEdges
+public import Mathlib.Combinatorics.SimpleGraph.Paths
+public import Mathlib.Data.Finset.Card
 
 /-!
 # The long path through two good edges
@@ -10,6 +12,8 @@ The first two pieces of the dense-case cycle construction form a simple
 path from the unused endpoint of the second edge to the endpoint of the
 greedy extension. This module records its length and its two marked edges.
 -/
+
+@[expose] public section
 
 namespace Erdos809.BucicChenMa
 
